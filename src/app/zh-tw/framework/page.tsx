@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 export default function Framework() {
   return (
     <div className="flex flex-col min-h-screen">
-      <Navbar />
+      <Navbar lang="zh-tw" />
       
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-navy-800 to-navy-700 text-white py-20">
@@ -222,7 +222,7 @@ export default function Framework() {
         </div>
       </section>
 
-      <Footer />
+      <Footer lang="zh-tw" />
     </div>
   )
 }

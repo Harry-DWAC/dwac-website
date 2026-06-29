@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 export default function WhyDWAC() {
   return (
     <div className="flex flex-col min-h-screen">
-      <Navbar />
+      <Navbar lang="zh-cn" />
       
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-navy-800 to-navy-700 text-white py-20">
@@ -225,7 +225,7 @@ export default function WhyDWAC() {
         </div>
       </section>
 
-      <Footer />
+      <Footer lang="zh-cn" />
     </div>
   )
 }

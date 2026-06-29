@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
-import Navbar from '@/components/NavbarZhCn'
+import Navbar from '@/components/Navbar'
 import ErrorBoundary from '@/components/ErrorBoundary'
-import Footer from '@/components/FooterZhCn'
+import Footer from '@/components/Footer'
 
 export const metadata: Metadata = {
   alternates: {
@@ -21,13 +21,13 @@ export default function ZhCnLayout({
 }) {
   return (
     <>
-      <Navbar />
+      <Navbar lang="zh-cn" />
       <main className="flex-1">
         <ErrorBoundary>
           {children}
         </ErrorBoundary>
       </main>
-      <Footer />
+      <Footer lang="zh-cn" />
     </>
   )
 }

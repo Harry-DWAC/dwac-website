@@ -22,13 +22,13 @@ export default function MainLayout({
 }) {
   return (
     <>
-      <Navbar />
+      <Navbar lang="en" />
       <main className="flex-1">
         <ErrorBoundary>
           {children}
         </ErrorBoundary>
       </main>
-      <Footer />
+      <Footer lang="en" />
     </>
   )
 }
