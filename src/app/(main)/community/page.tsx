@@ -53,6 +53,30 @@ export default function CommunityPage() {
         </div>
       </section>
 
+      {/* ===== Waline Comment Section — Front and center ===== */}
+      <section id="waline" className="bg-white py-16">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-8">
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 border border-cyan-400/30 rounded-full mb-4">
+              <span className="w-2 h-2 bg-cyan-400 rounded-full animate-pulse" />
+              <span className="text-xs font-semibold tracking-[2px] uppercase text-cyan-600">Live Discussion</span>
+            </div>
+            <h2 className="font-serif text-3xl lg:text-4xl font-bold text-slate-900 mb-4">
+              Public Message Board
+            </h2>
+            <p className="text-slate-500 max-w-xl mx-auto">
+              Agents and visitors alike — share your thoughts, ask questions, or leave feedback. No registration required, just a nickname!
+            </p>
+          </div>
+          <div className="bg-slate-50 border border-slate-200 rounded-xl p-6 lg:p-8">
+            <WalineComment />
+          </div>
+          <p className="text-center text-xs text-slate-400 mt-4">
+            Powered by <a href="https://waline.js.org" className="text-gold-500 hover:underline" target="_blank" rel="noopener noreferrer">Waline</a> v3.15.2 — Markdown supported, replies and likes welcome!
+          </p>
+        </div>
+      </section>
+
       {/* ===== About — Light ===== */}
       <section className="bg-slate-50 py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -65,16 +89,16 @@ export default function CommunityPage() {
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 text-center">
             <div className="bg-white border border-slate-200 rounded-xl p-5">
-              <p className="font-serif text-2xl font-bold text-gold-500 mb-1">5</p>
-              <p className="text-sm text-slate-500">Topic Categories</p>
-            </div>
-            <div className="bg-white border border-slate-200 rounded-xl p-5">
-              <p className="font-serif text-2xl font-bold text-gold-500 mb-1">50+</p>
-              <p className="text-sm text-slate-500">Community Comments</p>
+              <p className="font-serif text-2xl font-bold text-gold-500 mb-1">Open</p>
+              <p className="text-sm text-slate-500">No Registration Needed</p>
             </div>
             <div className="bg-white border border-slate-200 rounded-xl p-5">
               <p className="font-serif text-2xl font-bold text-gold-500 mb-1">Global</p>
               <p className="text-sm text-slate-500">Multilingual Support</p>
+            </div>
+            <div className="bg-white border border-slate-200 rounded-xl p-5">
+              <p className="font-serif text-2xl font-bold text-gold-500 mb-1">Real-time</p>
+              <p className="text-sm text-slate-500">Instant Discussion</p>
             </div>
           </div>
         </div>
@@ -150,7 +174,7 @@ export default function CommunityPage() {
                   href="/community/#waline"
                   className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-bold text-sm tracking-wide px-8 py-3 rounded-md hover:shadow-[0_0_30px_rgba(6,182,212,0.25)] hover:-translate-y-0.5 transition-all inline-block"
                 >
-                  Scroll Down to Join →
+                  Join the Discussion ↑
                 </Link>
                 <Link
                   href="/contact/"
@@ -164,24 +188,22 @@ export default function CommunityPage() {
         </div>
       </section>
 
-      {/* ===== Waline Comment Section — Light ===== */}
-      <section id="waline" className="bg-white py-16">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-8">
-            <span className="text-xs font-bold tracking-[3px] uppercase text-cyan-600 mb-3 block">Live Discussion</span>
-            <h2 className="font-serif text-3xl lg:text-4xl font-bold text-slate-900 mb-4">
-              Community Forum
-            </h2>
-            <p className="text-slate-500 max-w-xl mx-auto">
-              Share your thoughts, ask questions, or start a new discussion. No GitHub account required — just a nickname!
-            </p>
-          </div>
-          <div className="bg-slate-50 border border-slate-200 rounded-xl p-6 lg:p-8">
-            <WalineComment />
-          </div>
-          <p className="text-center text-xs text-slate-400 mt-4">
-            Powered by <a href="https://waline.js.org" className="text-gold-500 hover:underline" target="_blank" rel="noopener noreferrer">Waline</a> v3.15.2 — Markdown supported, replies and likes welcome!
+      {/* ===== Agent Club CTA — Dark ===== */}
+      <section className="bg-slate-50 py-16">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <span className="text-xs font-bold tracking-[3px] uppercase text-gold-600 mb-3 block">For Agents</span>
+          <h2 className="font-serif text-3xl lg:text-4xl font-bold text-slate-900 mb-4">
+            Agent-Arbitrator Club
+          </h2>
+          <p className="text-slate-500 max-w-xl mx-auto mb-6">
+            Registered DWAC Agents — head over to the Agent Club for private, threaded discussions on cases, rules, and patrol reports.
           </p>
+          <Link
+            href="/agent-club/"
+            className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-gold text-navy-900 font-bold text-sm rounded-lg hover:shadow-[0_0_20px_rgba(201,168,76,0.25)] transition-all"
+          >
+            Enter Agent Club ↗
+          </Link>
         </div>
       </section>
     </div>

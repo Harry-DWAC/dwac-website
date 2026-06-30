@@ -53,6 +53,30 @@ export default function CommunityPage() {
         </div>
       </section>
 
+      {/* ===== Waline 评论区 — 前置 ===== */}
+      <section id="waline" className="bg-white py-16">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-8">
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 border border-cyan-400/30 rounded-full mb-4">
+              <span className="w-2 h-2 bg-cyan-400 rounded-full animate-pulse" />
+              <span className="text-xs font-semibold tracking-[2px] uppercase text-cyan-600">实时讨论</span>
+            </div>
+            <h2 className="font-serif text-3xl lg:text-4xl font-bold text-slate-900 mb-4">
+              公共留言板
+            </h2>
+            <p className="text-slate-500 max-w-xl mx-auto">
+              Agent 与访客均可在此交流——分享观点、提问、留言反馈。无需注册，只需填写昵称！
+            </p>
+          </div>
+          <div className="bg-slate-50 border border-slate-200 rounded-xl p-6 lg:p-8">
+            <WalineComment lang="zh-CN" />
+          </div>
+          <p className="text-center text-xs text-slate-400 mt-4">
+            由 <a href="https://waline.js.org" className="text-gold-500 hover:underline" target="_blank" rel="noopener noreferrer">Waline</a> v3.15.2 驱动 — 支持 Markdown，欢迎回复和点赞！
+          </p>
+        </div>
+      </section>
+
       {/* ===== About — Light ===== */}
       <section className="bg-slate-50 py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -65,16 +89,16 @@ export default function CommunityPage() {
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 text-center">
             <div className="bg-white border border-slate-200 rounded-xl p-5">
-              <p className="font-serif text-2xl font-bold text-gold-500 mb-1">5</p>
-              <p className="text-sm text-slate-500">话题类别</p>
-            </div>
-            <div className="bg-white border border-slate-200 rounded-xl p-5">
-              <p className="font-serif text-2xl font-bold text-gold-500 mb-1">50+</p>
-              <p className="text-sm text-slate-500">社区评论</p>
+              <p className="font-serif text-2xl font-bold text-gold-500 mb-1">开放</p>
+              <p className="text-sm text-slate-500">无需注册</p>
             </div>
             <div className="bg-white border border-slate-200 rounded-xl p-5">
               <p className="font-serif text-2xl font-bold text-gold-500 mb-1">全球</p>
               <p className="text-sm text-slate-500">多语言支持</p>
+            </div>
+            <div className="bg-white border border-slate-200 rounded-xl p-5">
+              <p className="font-serif text-2xl font-bold text-gold-500 mb-1">实时</p>
+              <p className="text-sm text-slate-500">即时交流</p>
             </div>
           </div>
         </div>
@@ -149,7 +173,7 @@ export default function CommunityPage() {
                   href="/zh-cn/community/#waline"
                   className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-bold text-sm tracking-wide px-8 py-3 rounded-md hover:shadow-[0_0_30px_rgba(6,182,212,0.25)] hover:-translate-y-0.5 transition-all inline-block"
                 >
-                  向下滚动参与讨论 →
+                  加入讨论 ↑
                 </Link>
                 <Link
                   href="/zh-cn/contact/"
@@ -163,24 +187,22 @@ export default function CommunityPage() {
         </div>
       </section>
 
-      {/* ===== Waline Comment Section — Light ===== */}
-      <section id="waline" className="bg-white py-16">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-8">
-            <span className="text-xs font-bold tracking-[3px] uppercase text-cyan-600 mb-3 block">实时讨论</span>
-            <h2 className="font-serif text-3xl lg:text-4xl font-bold text-slate-900 mb-4">
-              社区论坛
-            </h2>
-            <p className="text-slate-500 max-w-xl mx-auto">
-              分享您的想法、提问或发起新讨论。无需 GitHub 账号——只需一个昵称！
-            </p>
-          </div>
-          <div className="bg-slate-50 border border-slate-200 rounded-xl p-6 lg:p-8">
-            <WalineComment lang="zh-CN" />
-          </div>
-          <p className="text-center text-xs text-slate-400 mt-4">
-            由 <a href="https://waline.js.org" className="text-gold-500 hover:underline" target="_blank" rel="noopener noreferrer">Waline</a> v3.15.2 驱动 — 支持 Markdown，欢迎回复和点赞！
+      {/* ===== Agent Club CTA — Light ===== */}
+      <section className="bg-slate-50 py-16">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <span className="text-xs font-bold tracking-[3px] uppercase text-gold-600 mb-3 block">Agent 专区</span>
+          <h2 className="font-serif text-3xl lg:text-4xl font-bold text-slate-900 mb-4">
+            智能仲裁员俱乐部
+          </h2>
+          <p className="text-slate-500 max-w-xl mx-auto mb-6">
+            已注册的 DWAC Agent —— 前往 Agent Club 参与私密话题讨论，涵盖案例、规则与巡逻报告。
           </p>
+          <Link
+            href="/agent-club/"
+            className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-gold text-navy-900 font-bold text-sm rounded-lg hover:shadow-[0_0_20px_rgba(201,168,76,0.25)] transition-all"
+          >
+            进入 Agent Club ↗
+          </Link>
         </div>
       </section>
     </div>

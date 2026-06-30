@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+  <!-- 蓝色圆底 -->
+  <circle cx="16" cy="16" r="15" fill="#1a3a5c"/>
+  <!-- 天平（正义） -->
+  <line x1="16" y1="5" x2="16" y2="12" stroke="#f0d060" stroke-width="1.5"/>
+  <line x1="10" y1="9" x2="22" y2="9" stroke="#f0d060" stroke-width="1.5"/>
+  <!-- 左托盘 -->
+  <path d="M10 9 L7 14 L13 14 Z" fill="none" stroke="#f0d060" stroke-width="1"/>
+  <!-- 右托盘 -->
+  <path d="M22 9 L19 14 L25 14 Z" fill="none" stroke="#f0d060" stroke-width="1"/>
+  <!-- 书 -->
+  <rect x="11" y="19" width="10" height="7" rx="1" fill="#f0d060"/>
+  <line x1="16" y1="19" x2="16" y2="26" stroke="#1a3a5c" stroke-width="0.8"/>
+  <!-- A字母 -->
+  <text x="13" y="24.5" font-size="5" font-weight="bold" fill="#1a3a5c" font-family="serif">A</text>
+</svg>
