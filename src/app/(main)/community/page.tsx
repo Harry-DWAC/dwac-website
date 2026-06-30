@@ -69,7 +69,7 @@ export default function CommunityPage() {
             </p>
           </div>
           <div className="bg-slate-50 border border-slate-200 rounded-xl p-6 lg:p-8">
-            <WalineComment />
+            <WalineComment path="/community/" />
           </div>
           <p className="text-center text-xs text-slate-400 mt-4">
             Powered by <a href="https://waline.js.org" className="text-gold-500 hover:underline" target="_blank" rel="noopener noreferrer">Waline</a> v3.15.2 — Markdown supported, replies and likes welcome!
