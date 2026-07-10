@@ -1,0 +1,3 @@
+# DWAC Cloudflare Pages Redirects
+# /zh/ → /zh-cn/ (common Simplified Chinese URL convention)
+/zh/ /zh-cn/ 301
