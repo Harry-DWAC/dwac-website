@@ -18,12 +18,12 @@ export default function FeeCalculator() {
     const arbitratorCount = parseInt(arbitrators)
     
     let filingFee: number
-    if (amountNum <= 10000) filingFee = 100
-    else if (amountNum <= 50000) filingFee = 250
-    else if (amountNum <= 100000) filingFee = 500
-    else if (amountNum <= 500000) filingFee = 1000
-    else if (amountNum <= 1000000) filingFee = 2000
-    else filingFee = 3000
+    if (amountNum <= 10000) filingFee = 1000
+    else if (amountNum <= 50000) filingFee = 2500
+    else if (amountNum <= 100000) filingFee = 5000
+    else if (amountNum <= 500000) filingFee = 10000
+    else if (amountNum <= 1000000) filingFee = 15000
+    else filingFee = 30000
     
     let arbitratorFeeBase: number
     if (amountNum <= 50000) arbitratorFeeBase = 1250
@@ -66,7 +66,7 @@ export default function FeeCalculator() {
             
             <div className="space-y-6">
               <div>
-                <label className="block font-medium text-white mb-2">Dispute Amount (USD)</label>
+                <label className="block font-medium text-white mb-2">Dispute Amount (¥ RMB)</label>
                 <input
                   type="number"
                   value={amount}
@@ -127,7 +127,7 @@ export default function FeeCalculator() {
                       onChange={(e) => setProcedure(e.target.value)}
                       className="w-4 h-4 text-gold-500 mr-2"
                     />
-                    <span className="text-gray-300">Expedited (+¥1,500)</span>
+                    <span className="text-gray-300">Expedited (+¥1,500 admin fee)</span>
                   </label>
                 </div>
               </div>
@@ -145,19 +145,19 @@ export default function FeeCalculator() {
                   <div className="space-y-3">
                     <div className="flex justify-between py-2 border-b border-slate-100">
                       <span className="text-gray-400">Filing Fee</span>
-                      <span className="font-semibold text-white">${fees.filing.toLocaleString()}</span>
+                      <span className="font-semibold text-white">¥{fees.filing.toLocaleString()}</span>
                     </div>
                     <div className="flex justify-between py-2 border-b border-slate-100">
                       <span className="text-gray-400">Arbitrator Fee</span>
-                      <span className="font-semibold text-white">${fees.arbitrator.toLocaleString()}</span>
+                      <span className="font-semibold text-white">¥{fees.arbitrator.toLocaleString()}</span>
                     </div>
                     <div className="flex justify-between py-2 border-b border-slate-100">
                       <span className="text-gray-400">Administrative Fee</span>
-                      <span className="font-semibold text-white">${fees.admin.toLocaleString()}</span>
+                      <span className="font-semibold text-white">¥{fees.admin.toLocaleString()}</span>
                     </div>
                     <div className="flex justify-between py-3 bg-slate-900 rounded-lg px-4 -mx-4 mt-4">
                       <span className="text-white font-semibold">Estimated Total</span>
-                      <span className="text-gold-400 font-bold text-xl">${fees.total.toLocaleString()}</span>
+                      <span className="text-gold-400 font-bold text-xl">¥{fees.total.toLocaleString()}</span>
                     </div>
                   </div>
                 </div>
@@ -183,12 +183,12 @@ export default function FeeCalculator() {
                     </tr>
                   </thead>
                   <tbody>
-                    <tr className="border-b"><td className="px-4 py-3">$10,000 or less</td><td className="px-4 py-3">$100</td></tr>
-                    <tr className="border-b"><td className="px-4 py-3">$10,001 - $50,000</td><td className="px-4 py-3">$250</td></tr>
-                    <tr className="border-b"><td className="px-4 py-3">$50,001 - $100,000</td><td className="px-4 py-3">$500</td></tr>
-                    <tr className="border-b"><td className="px-4 py-3">$100,001 - $500,000</td><td className="px-4 py-3">$1,000</td></tr>
-                    <tr className="border-b"><td className="px-4 py-3">$500,001 - $1,000,000</td><td className="px-4 py-3">$2,000</td></tr>
-                    <tr><td className="px-4 py-3">Over $1,000,000</td><td className="px-4 py-3">$3,000</td></tr>
+                    <tr className="border-b"><td className="px-4 py-3">¥10,000 or less</td><td className="px-4 py-3">¥1,000</td></tr>
+                    <tr className="border-b"><td className="px-4 py-3">¥10,001 - ¥50,000</td><td className="px-4 py-3">¥2,500</td></tr>
+                    <tr className="border-b"><td className="px-4 py-3">¥50,001 - ¥100,000</td><td className="px-4 py-3">¥5,000</td></tr>
+                    <tr className="border-b"><td className="px-4 py-3">¥100,001 - ¥500,000</td><td className="px-4 py-3">¥10,000</td></tr>
+                    <tr className="border-b"><td className="px-4 py-3">¥500,001 - ¥1,000,000</td><td className="px-4 py-3">¥15,000</td></tr>
+                    <tr><td className="px-4 py-3">Over ¥1,000,000</td><td className="px-4 py-3">¥30,000</td></tr>
                   </tbody>
                 </table>
               </div>
@@ -206,11 +206,11 @@ export default function FeeCalculator() {
                     </tr>
                   </thead>
                   <tbody>
-                    <tr className="border-b"><td className="px-4 py-3">$50,000 or less</td><td className="px-4 py-3">$500 - $2,000</td><td className="px-4 py-3">$1,250 - $5,000</td></tr>
-                    <tr className="border-b"><td className="px-4 py-3">$50,001 - $200,000</td><td className="px-4 py-3">$2,000 - $5,000</td><td className="px-4 py-3">$5,000 - $12,500</td></tr>
-                    <tr className="border-b"><td className="px-4 py-3">$200,001 - $500,000</td><td className="px-4 py-3">$5,000 - $10,000</td><td className="px-4 py-3">$12,500 - $25,000</td></tr>
-                    <tr className="border-b"><td className="px-4 py-3">$500,001 - $1,000,000</td><td className="px-4 py-3">$10,000 - $20,000</td><td className="px-4 py-3">$25,000 - $50,000</td></tr>
-                    <tr><td className="px-4 py-3">Over $1,000,000</td><td className="px-4 py-3">1-2% of amount</td><td className="px-4 py-3">2.5-5% of amount</td></tr>
+                    <tr className="border-b"><td className="px-4 py-3">¥50,000 or less</td><td className="px-4 py-3">¥500 - ¥2,000</td><td className="px-4 py-3">¥1,250 - ¥5,000</td></tr>
+                    <tr className="border-b"><td className="px-4 py-3">¥50,001 - ¥200,000</td><td className="px-4 py-3">¥2,000 - ¥5,000</td><td className="px-4 py-3">¥5,000 - ¥12,500</td></tr>
+                    <tr className="border-b"><td className="px-4 py-3">¥200,001 - ¥500,000</td><td className="px-4 py-3">¥5,000 - ¥10,000</td><td className="px-4 py-3">¥12,500 - ¥25,000</td></tr>
+                    <tr className="border-b"><td className="px-4 py-3">¥500,001 - ¥1,000,000</td><td className="px-4 py-3">¥10,000 - ¥20,000</td><td className="px-4 py-3">¥25,000 - ¥50,000</td></tr>
+                    <tr><td className="px-4 py-3">Over ¥1,000,000</td><td className="px-4 py-3">1-2% of amount</td><td className="px-4 py-3">2.5-5% of amount</td></tr>
                   </tbody>
                 </table>
               </div>

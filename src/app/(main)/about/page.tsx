@@ -178,7 +178,7 @@ export default function About() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-white mb-8 text-center">Founder</h2>
           <div className="max-w-2xl mx-auto bg-navy-800/30 rounded-xl p-8">
-            <h3 className="text-2xl font-bold text-white mb-2">Yongjun Zhou</h3>
+            <h3 className="text-2xl font-bold text-white mb-2">Harry (Yongjun Zhou)</h3>
             <p className="text-gold-600 font-medium mb-4">Founder of DWAC</p>
             <ul className="space-y-2 text-gray-400">
               <li>�?Compiler of the "Global Cyber Law Compendium"</li>
