@@ -102,7 +102,7 @@ export default function WhyDwacPage() {
           <blockquote className="font-serif text-2xl italic mb-6">
             &ldquo;DWAC resolved our cross-border domain dispute in 45 days, at a fraction of the cost of traditional arbitration. The online process was seamless.&rdquo;
           </blockquote>
-          <cite className="text-gold-400 not-italic">— Dr. Yongjun Zhou, Founder of DWAC</cite>
+          <cite className="text-gold-400 not-italic">— Dr. Harry (Yongjun Zhou), Founder of DWAC</cite>
         </div>
       </section>
 

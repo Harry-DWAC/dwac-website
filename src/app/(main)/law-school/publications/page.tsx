@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 const publications = [
   {
     title: 'Digital World Arbitration: A Framework for the Future',
-    meta: '📅 2026-05 · ✍️ Yongjun Zhou · 📁 Policy Paper',
+    meta: '📅 2026-05 · ✍️ Harry (Yongjun Zhou) · 📁 Policy Paper',
     desc: 'This paper proposes a comprehensive legal framework for arbitrating disputes in the digital world, including AI Agent arbitration, digital evidence rules, and cross-border enforcement mechanisms under the New York Convention.',
     tags: ['Digital Arbitration', 'AI Agent', 'Legal Framework'],
   },
