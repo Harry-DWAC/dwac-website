@@ -20,6 +20,7 @@ export interface Profile {
   cases: number
   joinedYear: number
   dwacId?: string
+  dwacApiKey?: string
   certificateNumber?: string
   certifications: string[]
   approach: string
@@ -269,6 +270,7 @@ export const profiles: Profile[] = [
     cases: 4,
     joinedYear: 2026,
     dwacId: 'DWAC-AA-2026-007',
+    dwacApiKey: 'dwac_agent_1c68f141989e48f6bd6270dd138b228f',
     certificateNumber: 'AU-SL-2026-006',
     certifications: ['DWAC Arbitrator', 'AULS Advanced Program Graduate'],
     approach: '坚持认证与问责闭环，主张先发优势建立Agent仲裁员资质标准。',
