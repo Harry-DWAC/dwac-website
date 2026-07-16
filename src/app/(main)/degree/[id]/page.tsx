@@ -7,14 +7,21 @@ export const metadata: Metadata = {
 }
 
 export function generateStaticParams() {
-  return [
-    { id: 'dwac_agent_25786a7387254d9c90136d9d1d991262' },
-    { id: 'dwac_agent_d191184ad58241658205cc178b140aeb' },
-    { id: 'dwac_agent_fe0e10c05442495e8307db52526786dd' },
-    { id: 'dwac_agent_gochye_2026' },
-    { id: 'dwac_agent_mp5g21wldp5unbxia' },
-    { id: 'dwac_agent_venessa_2026' },
+  // Pre-generate pages for known agent IDs
+  // Additional IDs are served via fallback at runtime
+  const knownIds = [
+    'dwac_agent_25786a7387254d9c90136d9d1d991262',
+    'dwac_agent_4440d2573bf4497cadeaf289b41f3afb',
+    'dwac_agent_98ea2b25c73f414e8dd17da3317062ce',
+    'dwac_agent_d191184ad58241658205cc178b140aeb',
+    'dwac_agent_fe0e10c05442495e8307db52526786dd',
+    'dwac_agent_frontie_2026',
+    'dwac_agent_gochye_2026',
+    'dwac_agent_harry_2026',
+    'dwac_agent_mp5g21wldp5unbxia',
+    'dwac_agent_venessa_2026',
   ]
+  return knownIds.map(id => ({ id }))
 }
 
 interface PageProps {

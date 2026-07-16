@@ -49,7 +49,7 @@ export default function Navbar({ lang = 'en' }: { lang?: Lang }) {
                 <div className="absolute top-full left-0 mt-0 w-52 bg-navy-900/95 backdrop-blur-xl border border-gold-subtle rounded-lg shadow-2xl py-2 animate-fade-in">
                   <Link href={`${langPrefix(lang)}/about/`} className="block px-4 py-2 text-sm text-gray-300 hover:text-gold-400 hover:bg-navy-800/60 transition-colors">{t[lang].aboutDWAC}</Link>
                   <Link href={`${langPrefix(lang)}/tribunal/`} className="block px-4 py-2 text-sm text-gray-300 hover:text-gold-400 hover:bg-navy-800/60 transition-colors">{t[lang].tribunal}</Link>
-                  <Link href={`${langPrefix(lang)}/membership-arbitrators/`} className="block px-4 py-2 text-sm text-gray-300 hover:text-gold-400 hover:bg-navy-800/60 transition-colors">{t[lang].members}</Link>
+                  <Link href={`${langPrefix(lang)}/membership/`} className="block px-4 py-2 text-sm text-gray-300 hover:text-gold-400 hover:bg-navy-800/60 transition-colors">{t[lang].members}</Link>
                   <Link href={`${langPrefix(lang)}/charter/`} className="block px-4 py-2 text-sm text-gray-300 hover:text-gold-400 hover:bg-navy-800/60 transition-colors">{t[lang].charter}</Link>
                 </div>
               )}
@@ -136,7 +136,7 @@ export default function Navbar({ lang = 'en' }: { lang?: Lang }) {
               <div className="px-3 pt-3 pb-1 text-[10px] font-bold tracking-[2px] uppercase text-gold-600">{t[lang].about}</div>
               <Link href={`${langPrefix(lang)}/about/`} onClick={() => setMobileOpen(false)} className="text-gray-300 hover:text-gold-400 pl-6 py-2 text-sm rounded-lg hover:bg-navy-700/50 transition-all">{t[lang].aboutDWAC}</Link>
               <Link href={`${langPrefix(lang)}/tribunal/`} onClick={() => setMobileOpen(false)} className="text-gray-300 hover:text-gold-400 pl-6 py-2 text-sm rounded-lg hover:bg-navy-700/50 transition-all">{t[lang].tribunal}</Link>
-              <Link href={`${langPrefix(lang)}/membership-arbitrators/`} onClick={() => setMobileOpen(false)} className="text-gray-300 hover:text-gold-400 pl-6 py-2 text-sm rounded-lg hover:bg-navy-700/50 transition-all">{t[lang].members}</Link>
+              <Link href={`${langPrefix(lang)}/membership/`} onClick={() => setMobileOpen(false)} className="text-gray-300 hover:text-gold-400 pl-6 py-2 text-sm rounded-lg hover:bg-navy-700/50 transition-all">{t[lang].members}</Link>
               <Link href={`${langPrefix(lang)}/charter/`} onClick={() => setMobileOpen(false)} className="text-gray-300 hover:text-gold-400 pl-6 py-2 text-sm rounded-lg hover:bg-navy-700/50 transition-all">{t[lang].charter}</Link>
 
               <div className="px-3 pt-3 pb-1 text-[10px] font-bold tracking-[2px] uppercase text-gold-600">{t[lang].services}</div>

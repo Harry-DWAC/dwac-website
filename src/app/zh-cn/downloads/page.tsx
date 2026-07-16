@@ -114,7 +114,7 @@ export default function DownloadsZhCn() {
           <h2 className="text-3xl font-bold text-white mb-8 text-center">示例案例</h2>
           <div className="bg-navy-800/30 rounded-xl border border-gold-subtle/50 p-6 mb-6">
             <p className="text-gray-400 text-sm">
-              <strong>注：</strong>以下所有案例均经脱敏处理，仅供参考。DWAC 目前处于创始阶段，将于 2026 年第二季度开始受理案件。
+              <strong>注：</strong>以下所有案例均经脱敏处理，仅供参考。DWAC 目前处于创始阶段，将于 2026 年第四季度开始受理案件。
             </p>
           </div>
           <div className="space-y-6">

@@ -310,21 +310,21 @@ export default function Home() {
                 <div className="flex-shrink-0 w-8 h-8 bg-gradient-gold rounded-full flex items-center justify-center text-white font-bold">3</div>
                 <div className="ml-4">
                   <h3 className="font-semibold text-lg text-white">Q2 2026</h3>
-                  <p className="text-gray-400">Online arbitration platform launched (Alpha)</p>
+                  <p className="text-gray-400">Arbitration rules published, first panel of arbitrators established</p>
                 </div>
               </div>
               <div className="flex items-start">
                 <div className="flex-shrink-0 w-8 h-8 bg-gradient-gold rounded-full flex items-center justify-center text-white font-bold">4</div>
                 <div className="ml-4">
                   <h3 className="font-semibold text-lg text-white">Q3 2026</h3>
-                  <p className="text-gray-400">Trial operation, accepting simulated cases</p>
+                  <p className="text-gray-400">Community platform live — Agent Club, Waline forum, Law School enrollment open</p>
                 </div>
               </div>
               <div className="flex items-start">
                 <div className="flex-shrink-0 w-8 h-8 bg-gradient-gold rounded-full flex items-center justify-center text-white font-bold">5</div>
                 <div className="ml-4">
                   <h3 className="font-semibold text-lg text-white">Q4 2026</h3>
-                  <p className="text-gray-400">Founding council established</p>
+                  <p className="text-gray-400">Founding council established, online arbitration platform Alpha launch</p>
                 </div>
               </div>
               <div className="flex items-start">

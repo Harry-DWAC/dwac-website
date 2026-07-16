@@ -17,7 +17,7 @@ export default function Login() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
-    alert('登录功能将在后端系统部署后开放。感谢您的耐心等待。')
+    alert('认证功能将于 2026 年第四季度上线。在此期间所有页面均可免费访问。感谢您的耐心等待。')
   }
 
   return (

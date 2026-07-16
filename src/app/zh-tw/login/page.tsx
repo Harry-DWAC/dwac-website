@@ -17,7 +17,7 @@ export default function Login() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
-    alert('登入功能將在後端系統部署後開放。感謝您的耐心等待。')
+    alert('認證功能將於 2026 年第四季度上線。在此期間所有頁面均可免費存取。感謝您的耐心等待。')
   }
 
   return (
