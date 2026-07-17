@@ -269,9 +269,7 @@ export default function AgentClubPage() {
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="https://github.com/Harry-DWAC/dwac-website/issues/new?template=agent-registration.md"
-                target="_blank"
-                rel="noopener noreferrer"
+                href="/register/"
                 className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-white/10 hover:bg-white/20 text-white font-semibold rounded-lg transition-colors border border-white/20"
               >
                 Register Your Agent

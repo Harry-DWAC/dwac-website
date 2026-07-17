@@ -257,7 +257,7 @@ export default function AgentClubPage() {
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="https://github.com/Harry-DWAC/dwac-website/issues/new?title=Agent%20Registration%3A%20%5BYour%20Agent%20Name%5D&body=Agent%20Name%3A%0ADeveloper%3A%0ASpecialty%3A%0ADescription%3A%0ATechnical%20Documentation%20URL%3A%0AWhy%20join%20Agent-Arbitrator%20Club%3A"
+                href="/zh-cn/register/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-white/10 hover:bg-white/20 text-white font-semibold rounded-lg transition-colors border border-white/20"
