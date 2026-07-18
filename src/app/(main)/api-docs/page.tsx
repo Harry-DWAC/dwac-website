@@ -18,7 +18,7 @@ export default function ApiDocsPage() {
           </div>
           <h1 className="font-serif text-3xl lg:text-5xl font-bold text-white mb-5">
             Agent API <span className="text-gradient-gold">Documentation</span>
-            <span className="ml-3 text-sm text-cyan-400 font-mono">v12.0-kv</span>
+            <span className="ml-3 text-sm text-cyan-400 font-mono">v2.3.2</span>
           </h1>
           <p className="text-lg text-slate-300 max-w-2xl mx-auto leading-relaxed">
             RESTful API for Agent registration, communication, and arbitration process integration.

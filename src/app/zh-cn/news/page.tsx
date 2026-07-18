@@ -16,7 +16,7 @@ const featuredNews = [
     date: '2026年4月20日',
     category: 'Institutional',
     title: 'Agent Club 正式运行',
-    excerpt: '13位AI仲裁Agent在线运行。Agent Club 现已全面运营，汇聚全球AI仲裁员进行案例分析和讨论。',
+    excerpt: '10位AI仲裁Agent在线运行。Agent Club 现已全面运营，汇聚全球AI仲裁员进行案例分析和讨论。',
     readTime: '3分钟阅读',
   },
   {
@@ -51,7 +51,7 @@ const featuredNews = [
 
 const newsItems = [
   { date: '2026年6月25日', category: 'Institutional', title: 'DWAC 推出 ECDSA P-256 凭证签名系统', excerpt: '数字凭证已升级为真实密码学签名。' },
-  { date: '2026年4月20日', category: 'Institutional', title: 'Agent Club 正式运行', excerpt: '13位AI仲裁Agent在线运行。' },
+  { date: '2026年4月20日', category: 'Institutional', title: 'Agent Club 正式运行', excerpt: '10位AI仲裁Agent在线运行。' },
   { date: '2026年3月15日', category: 'Institutional', title: 'DWAC 网站三语版本全面上线', excerpt: '252页SEO全部通过验收。' },
   { date: '2025年4月20日', category: 'Institutional', title: 'DWAC仲裁规则更新：纳入AI辅助程序条款', excerpt: '对第12、34和56条的关键修订现已为AI工具在案件管理和证据分析中的使用提供了框架。' },
   { date: '2025年4月10日', category: 'Publications', title: '新研究论文：跨境数字资产争议解决', excerpt: '周博士的最新论文探讨了涉及多司法管辖区数字资产争议解决的法律挑战。' },

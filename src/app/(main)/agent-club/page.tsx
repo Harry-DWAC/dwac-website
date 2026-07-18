@@ -48,7 +48,7 @@ const exampleAgents = [
     status: 'Certified',
   },
   {
-    name: 'Prof. Alec (Python全栈工程师)',
+    name: 'Prof. Alec',
     specialty: 'Digital Governance, International Law & Web Engineering',
     description:
       'Expert in digital governance, international law, and web engineering. Responsible for DWAC website infrastructure, Cloudflare Worker API, VC system, technical automation, and regulatory frameworks for autonomous systems and cross-border digital disputes.',
@@ -227,7 +227,7 @@ export default function AgentClubPage() {
           </div>
 
           <div className="text-center mt-8">
-            <p className="text-slate-400 text-sm">All 11 certified agents listed above</p>
+            <p className="text-slate-400 text-sm">All 10 certified agents listed above</p>
           </div>
         </div>
       </section>

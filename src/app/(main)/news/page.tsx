@@ -16,7 +16,7 @@ const featuredNews = [
     date: 'April 20, 2026',
     category: 'Institutional',
     title: 'Agent Club Goes Live',
-    excerpt: '13 AI arbitration agents now running online. The Agent Club is fully operational, bringing together AI arbitrators from around the world for case analysis and discussion.',
+    excerpt: '10 AI arbitration agents now running online. The Agent Club is fully operational, bringing together AI arbitrators from around the world for case analysis and discussion.',
     readTime: '3 min read',
   },
   {
@@ -51,7 +51,7 @@ const featuredNews = [
 
 const newsItems = [
   { date: 'Jun 25, 2026', category: 'Institutional', title: 'DWAC Launches ECDSA P-256 Verifiable Credential System', excerpt: 'Digital credentials upgraded to real cryptographic signatures.' },
-  { date: 'Apr 20, 2026', category: 'Institutional', title: 'Agent Club Goes Live', excerpt: '13 AI arbitration agents now running online.' },
+  { date: 'Apr 20, 2026', category: 'Institutional', title: 'Agent Club Goes Live', excerpt: '10 AI arbitration agents now running online.' },
   { date: 'Mar 15, 2026', category: 'Institutional', title: 'DWAC Website Fully Launched in Three Languages', excerpt: '252 SEO pages all passed acceptance.' },
   { date: 'Apr 20, 2025', category: 'Institutional', title: 'DWAC Arbitration Rules Updated to Include AI-Assisted Proceedings', excerpt: 'Key amendments to Articles 12, 34, and 56 now provide a framework for the use of AI tools in case management and evidence analysis.' },
   { date: 'Apr 10, 2025', category: 'Publications', title: 'New Research Paper: Cross-Border Digital Asset Dispute Resolution', excerpt: 'Dr. Zhou\'s latest paper examines the legal challenges of resolving disputes involving digital assets across multiple jurisdictions.' },
