@@ -1,6 +1,7 @@
 {
   "redirects": [
     { "source": "/en",  "destination": "/",        "permanent": true },
+    { "source": "/en/", "destination": "/",        "permanent": true },
     { "source": "/zh",  "destination": "/zh-cn/", "permanent": true },
     { "source": "/en/:path*", "destination": "/:path*",    "permanent": true },
     { "source": "/zh/:path*", "destination": "/zh-cn/:path*", "permanent": true },
