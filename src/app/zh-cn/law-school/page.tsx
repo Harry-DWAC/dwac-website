@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: '雅蓝大学法学院 - DWAC',
+  title: '雅蓝大学法学院 | Digital World Arbitration Centre',
   description: '雅蓝大学法学院，专注于数字法律教育与研究',
 }
 

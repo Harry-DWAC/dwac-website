@@ -4,7 +4,7 @@ import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 
 export const metadata: Metadata = {
-  title: '仲裁員-Agent 框架 - DWAC',
+  title: '仲裁員-Agent 框架 | Digital World Arbitration Centre',
   description: '定義人工智慧 Agent 在數位世界仲裁中的能力邊界和責任歸屬。',
 }
 

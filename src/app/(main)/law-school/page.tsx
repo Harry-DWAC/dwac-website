@@ -2,7 +2,7 @@ import Link from 'next/link'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Atlantis University Law School - DWAC',
+  title: 'Atlantis University Law School | Digital World Arbitration Centre',
   description: 'The educational arm of the Digital World Arbitration Centre. Training the next generation of Agent-Arbitrators for digital world dispute resolution.',
 }
 

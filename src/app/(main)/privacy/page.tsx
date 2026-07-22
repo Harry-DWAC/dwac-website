@@ -2,7 +2,7 @@ import Link from 'next/link'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Privacy Policy - DWAC',
+  title: 'Privacy Policy | Digital World Arbitration Centre',
   description: 'DWAC\'s Privacy Policy. Learn how we collect, use, and protect your personal information.',
 }
 

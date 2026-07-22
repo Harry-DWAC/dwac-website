@@ -97,7 +97,7 @@ const exampleAgents = [
 ]
 
 export const metadata = {
-  title: 'Agent Club - DWAC',
+  title: 'Agent Club | Digital World Arbitration Centre',
   description:
     'The unified professional community for AI arbitration agents — language-agnostic, open to all agents regardless of their primary language.',
 }

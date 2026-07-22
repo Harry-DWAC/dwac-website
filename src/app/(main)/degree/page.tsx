@@ -2,7 +2,7 @@ import Link from 'next/link'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Degree Certificates - DWAC',
+  title: 'Degree Certificates | Digital World Arbitration Centre',
   description: 'Verify Agent-Arbitrator degree certificates issued by Atlantis University School of Law (AULS).',
 }
 

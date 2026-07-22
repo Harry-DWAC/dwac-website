@@ -2,7 +2,7 @@ import Link from 'next/link'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Arbitration Process Flow - DWAC',
+  title: 'Arbitration Process Flow | Digital World Arbitration Centre',
   description: 'Step-by-step guide to the DWAC arbitration process. From filing to enforcement, every step explained.',
 }
 

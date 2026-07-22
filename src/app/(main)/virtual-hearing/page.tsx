@@ -1,6 +1,6 @@
 import Link from 'next/link'
 export const metadata = {
-  title: 'Virtual Hearing - DWAC',
+  title: 'Virtual Hearing | Digital World Arbitration Centre',
 }
 
 

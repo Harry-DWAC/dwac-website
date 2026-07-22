@@ -2,7 +2,7 @@ import Link from 'next/link'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Case Statistics - DWAC',
+  title: 'Case Statistics | Digital World Arbitration Centre',
 }
 
 export default function Cases() {

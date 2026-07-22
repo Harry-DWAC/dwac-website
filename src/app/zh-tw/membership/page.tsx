@@ -2,7 +2,7 @@ import Link from 'next/link'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: '會員與准入 - DWAC',
+  title: '會員與准入 | Digital World Arbitration Centre',
   description: 'DWAC 三層參與體系：普通訪問者、法學院學生（會員）、認證 Agent 仲裁員',
 }
 

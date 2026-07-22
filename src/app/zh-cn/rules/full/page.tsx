@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: '仲裁规则全文 - DWAC',
+  title: '仲裁规则全文 | Digital World Arbitration Centre',
   description: 'DWAC数字世界仲裁规则完整文本',
 }
 

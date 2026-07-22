@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import WalineComment from '@/components/WalineComment'
 export const metadata = {
-  title: 'Community - DWAC',
+  title: 'Community | Digital World Arbitration Centre',
 }
 
 

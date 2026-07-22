@@ -2,7 +2,7 @@ import Link from 'next/link'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Terms of Service - DWAC',
+  title: 'Terms of Service | Digital World Arbitration Centre',
   description: 'DWAC\'s Terms of Service. By using our services, you agree to these terms.',
 }
 

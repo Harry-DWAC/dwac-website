@@ -1,6 +1,6 @@
 import Link from "next/link"
 export const metadata = {
-  title: 'Services - DWAC',
+  title: 'Services | Digital World Arbitration Centre',
 }
 
 

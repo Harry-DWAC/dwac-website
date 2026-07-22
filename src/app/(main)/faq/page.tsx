@@ -1,6 +1,6 @@
 import Link from 'next/link'
 export const metadata = {
-  title: 'FAQ - DWAC',
+  title: 'FAQ | Digital World Arbitration Centre',
   description: 'Frequently asked questions about DWAC digital world arbitration — procedures, costs, enforcement, evidence, arbitrator selection, and more.',
 }
 

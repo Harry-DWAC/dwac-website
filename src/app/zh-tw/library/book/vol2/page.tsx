@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: '全球網絡法律彙編·第貳卷 - DWAC',
+  title: '全球網絡法律彙編·第貳卷 | Digital World Arbitration Centre',
   description: '《全球網絡法律彙編》第貳卷收錄了數位法律領域的核心法律法規、典型案例和學術研究成果，為數位世界法律實踐提供權威參考。',
 }
 

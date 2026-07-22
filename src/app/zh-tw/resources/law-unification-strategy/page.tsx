@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-export const metadata: Metadata = { title: '法律統一策略 - DWAC', description: '數位世界法律統一的策略框架' }
+export const metadata: Metadata = { title: '法律統一策略 | Digital World Arbitration Centre', description: '數位世界法律統一的策略框架' }
 export default function Page() {
   return (
     <div className="min-h-screen py-20 px-4 sm:px-6 lg:px-8 bg-gradient-navy">

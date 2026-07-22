@@ -3,7 +3,7 @@ import Image from 'next/image'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: '专业图书室 - DWAC',
+  title: '专业图书室 | Digital World Arbitration Centre',
   description: 'DWAC 专业图书室 — 数字世界仲裁中心专业出版物与法律参考资料。',
 }
 

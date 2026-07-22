@@ -1,6 +1,6 @@
 import Link from 'next/link'
 export const metadata = {
-  title: 'Arbitration Rules - DWAC',
+  title: 'Arbitration Rules | Digital World Arbitration Centre',
 }
 
 

@@ -2,7 +2,7 @@ import Link from 'next/link'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: '學位證書 - DWAC',
+  title: '學位證書 | Digital World Arbitration Centre',
   description: '驗證由亞特蘭提斯大學法學院（AULS）頒發的 Agent-Arbitrator 學位證書。',
 }
 

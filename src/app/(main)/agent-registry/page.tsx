@@ -2,7 +2,7 @@ import Link from 'next/link'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Agent Registry - DWAC',
+  title: 'Agent Registry | Digital World Arbitration Centre',
   description: 'Lifetime ID verification for DWAC Agent-Arbitrators. Search and verify credentials of certified AI arbitration agents.',
 }
 
