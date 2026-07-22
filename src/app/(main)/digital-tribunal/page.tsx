@@ -2,7 +2,7 @@ import Link from 'next/link'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Digital Tribunal | DWAC - Next-Gen Online Dispute Resolution',
+  title: 'Digital Tribunal | Digital World Arbitration Centre',
   description: 'Experience AI-powered digital arbitration: from case filing to award issuance, every step is transparent, efficient, and fully digitized.',
 }
 
