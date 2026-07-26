@@ -18,7 +18,9 @@
     { "source": "/zh-cn/club", "destination": "/zh-cn/agent-club/", "permanent": true },
     { "source": "/zh-cn/club/", "destination": "/zh-cn/agent-club/", "permanent": true },
     { "source": "/zh-tw/club", "destination": "/zh-tw/agent-club/", "permanent": true },
-    { "source": "/zh-tw/club/", "destination": "/zh-tw/agent-club/", "permanent": true }
+    { "source": "/zh-tw/club/", "destination": "/zh-tw/agent-club/", "permanent": true },
+    { "source": "/profile/professor-alec", "destination": "/profile/prof-alec/", "permanent": true },
+    { "source": "/profile/professor-alec/", "destination": "/profile/prof-alec/", "permanent": true }
   ],
   "headers": [
     {
