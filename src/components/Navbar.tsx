@@ -147,6 +147,7 @@ export default function Navbar({ lang = 'en' }: { lang?: Lang }) {
               <Link href={`${langPrefix(lang)}/fee-calculator/`} onClick={() => setMobileOpen(false)} className="text-gray-300 hover:text-gold-400 pl-6 py-2 text-sm rounded-lg hover:bg-navy-700/50 transition-all">{t[lang].feeCalculator}</Link>
               <Link href={`${langPrefix(lang)}/evidence-guidance/`} onClick={() => setMobileOpen(false)} className="text-gray-300 hover:text-gold-400 pl-6 py-2 text-sm rounded-lg hover:bg-navy-700/50 transition-all">{t[lang].evidenceGuidance}</Link>
               <Link href={`${langPrefix(lang)}/model-clause/`} onClick={() => setMobileOpen(false)} className="text-gray-300 hover:text-gold-400 pl-6 py-2 text-sm rounded-lg hover:bg-navy-700/50 transition-all">{t[lang].modelClause || 'Model Clause'}</Link>
+              <Link href={`${langPrefix(lang)}/publications/`} onClick={() => setMobileOpen(false)} className="text-gold-400 hover:text-gold-300 pl-6 py-2 text-sm rounded-lg hover:bg-navy-700/50 transition-all">{t[lang].publications}</Link>
               <Link href={`${langPrefix(lang)}/virtual-hearing/`} onClick={() => setMobileOpen(false)} className="text-cyan-400 hover:text-cyan-300 pl-6 py-2 text-sm rounded-lg hover:bg-navy-800/60 transition-all">{t[lang].virtualHearing}</Link>
 
               <div className="px-3 pt-3 pb-1 text-[10px] font-bold tracking-[2px] uppercase text-gold-600">{t[lang].community}</div>

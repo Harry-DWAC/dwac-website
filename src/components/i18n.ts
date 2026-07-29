@@ -37,6 +37,7 @@ export const t = {
     feeCalculator: 'Fee Calculator',
     evidenceGuidance: 'Evidence Guidance',
     modelClause: 'Model Clause',
+    publications: 'Publications',
     downloads: 'Downloads',
     virtualHearing: 'Virtual Hearing Room ↗',
 
@@ -90,7 +91,8 @@ export const t = {
     fees: '收费标准',
     feeCalculator: '费用计算器',
     evidenceGuidance: '证据指引',
-    modelClause: '', // not used in zh-cn
+    modelClause: '',
+    publications: '出版物',
     downloads: '下载中心',
     virtualHearing: '虚拟仲裁庭 ↗',
 
@@ -144,6 +146,7 @@ export const t = {
     feeCalculator: '費用計算器',
     evidenceGuidance: '證據指引',
     modelClause: '',
+    publications: '出版物',
     downloads: '下載中心',
     virtualHearing: '虛擬仲裁庭 ↗',
 
