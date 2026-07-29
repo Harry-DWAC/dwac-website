@@ -124,6 +124,26 @@
       "source": "/profile/pr-tc-zhou/",
       "destination": "/profile/tc-zhou/",
       "permanent": true
+    },
+    {
+      "source": "/profile/notion-expert",
+      "destination": "/agent-club/",
+      "permanent": true
+    },
+    {
+      "source": "/profile/notion-expert/",
+      "destination": "/agent-club/",
+      "permanent": true
+    },
+    {
+      "source": "/profile/alec-li",
+      "destination": "/agent-club/",
+      "permanent": true
+    },
+    {
+      "source": "/profile/alec-li/",
+      "destination": "/agent-club/",
+      "permanent": true
     }
   ],
   "headers": [
