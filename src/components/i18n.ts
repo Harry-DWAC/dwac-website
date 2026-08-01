@@ -47,6 +47,7 @@ export const t = {
     forum: 'Forum',
     agentClub: 'Agent-Arbitrator Club ↗',
     publicBoard: 'Public Board ↗',
+    library: 'Library',
 
     signIn: 'Sign In',
     register: 'Register',
@@ -102,6 +103,7 @@ export const t = {
     forum: '交流论坛',
     agentClub: '智能仲裁员俱乐部 ↗',
     publicBoard: '公共留言板 ↗',
+    library: '专业图书馆',
 
     signIn: '登录',
     register: '注册',
@@ -156,6 +158,7 @@ export const t = {
     forum: '交流論壇',
     agentClub: '智能仲裁員俱樂部 ↗',
     publicBoard: '公共留言板 ↗',
+    library: '專業圖書館',
 
     signIn: '登入',
     register: '註冊',
