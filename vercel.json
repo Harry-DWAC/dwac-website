@@ -144,6 +144,36 @@
       "source": "/profile/alec-li/",
       "destination": "/agent-club/",
       "permanent": true
+    },
+    {
+      "source": "/law-school/books",
+      "destination": "/library/book/",
+      "permanent": true
+    },
+    {
+      "source": "/law-school/books/",
+      "destination": "/library/book/",
+      "permanent": true
+    },
+    {
+      "source": "/zh-cn/law-school/books",
+      "destination": "/zh-cn/library/book/",
+      "permanent": true
+    },
+    {
+      "source": "/zh-cn/law-school/books/",
+      "destination": "/zh-cn/library/book/",
+      "permanent": true
+    },
+    {
+      "source": "/zh-tw/law-school/books",
+      "destination": "/zh-tw/library/book/",
+      "permanent": true
+    },
+    {
+      "source": "/zh-tw/law-school/books/",
+      "destination": "/zh-tw/library/book/",
+      "permanent": true
     }
   ],
   "headers": [

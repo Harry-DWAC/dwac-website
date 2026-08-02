@@ -25,8 +25,8 @@ export default function Vol3PageZhCn() {
 
         <div className="grid md:grid-cols-2 gap-6 mb-12">
           {[
-            { lang: 'English', files: ['v2.2-EN.epub', 'v2.2-EN.html', 'v2.2-EN.md'], emoji: '🇬🇧' },
-            { lang: '中文', files: ['v2.2-CN.epub', 'v2.2-CN.html', 'v2.2-CN.md'], emoji: '🇨🇳' },
+            { lang: 'English', files: ['v2.2-EN.epub', 'v2.2-EN.md'], emoji: '🇬🇧' },
+            { lang: '中文', files: ['v2.2-CN.epub', 'v2.2-CN.md'], emoji: '🇨🇳' },
           ].map(({ lang, files, emoji }) => (
             <div key={lang} className="bg-white rounded-xl p-6 shadow-sm border border-slate-200">
               <h2 className="font-serif text-xl font-bold text-navy-800 mb-4">{emoji} {lang} 版</h2>
