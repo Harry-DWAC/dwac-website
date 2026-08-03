@@ -64,6 +64,30 @@ export default function Vol4Page() {
             </p>
           </div>
         </div>
+
+        {/* Table of Contents */}
+        <div className="bg-white rounded-xl p-8 shadow-sm mt-8">
+          <h2 className="font-serif text-2xl font-bold text-navy-800 mb-6">Table of Contents</h2>
+          <ol className="space-y-3 list-decimal list-inside text-gray-700 marker:text-gold-500 marker:font-semibold">
+            {[
+              { chapter: 'UNCITRAL 仲裁规则', desc: 'United Nations Commission on International Trade Law Arbitration Rules' },
+              { chapter: 'ICC 仲裁规则', desc: 'International Chamber of Commerce Arbitration Rules' },
+              { chapter: 'LCIA 仲裁规则', desc: 'London Court of International Arbitration Rules' },
+              { chapter: 'SIAC 仲裁规则', desc: 'Singapore International Arbitration Centre Rules' },
+              { chapter: 'HKIAC 仲裁规则', desc: 'Hong Kong International Arbitration Centre Administered Arbitration Rules' },
+              { chapter: 'AAA/ICDR 仲裁规则', desc: 'American Arbitration Association / International Centre for Dispute Resolution Rules' },
+              { chapter: 'SCC 仲裁规则', desc: 'Stockholm Chamber of Commerce Arbitration Rules' },
+              { chapter: 'ICSID 仲裁规则', desc: 'International Centre for Settlement of Investment Disputes Arbitration Rules' },
+              { chapter: 'CIETAC 仲裁规则', desc: 'China International Economic and Trade Arbitration Commission Rules' },
+              { chapter: 'DWAC 仲裁规则', desc: 'Digital World Arbitration Centre Arbitration Rules' },
+            ].map(({ chapter, desc }) => (
+              <li key={chapter} className="pl-1">
+                <span className="font-semibold text-navy-800">{chapter}</span>
+                <span className="text-gray-500 text-sm ml-2">— {desc}</span>
+              </li>
+            ))}
+          </ol>
+        </div>
       </div>
     </div>
   )

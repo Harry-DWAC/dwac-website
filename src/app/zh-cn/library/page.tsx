@@ -34,6 +34,22 @@ const books = [
     href: '/zh-cn/library/book/vol2',
     desc: '数字世界争议解决的高级实践与案例研究。',
   },
+  {
+    vol: '第三卷',
+    titleZh: '全球网络法汇编（卷三）— AI 法律问题研究',
+    titleEn: 'Global Cyber Law Compendium (Volume III)',
+    cover: '/images/library/vol3-cover.jpg',
+    href: '/zh-cn/library/book/vol3',
+    desc: '人工智能时代的法律框架与治理模型。',
+  },
+  {
+    vol: '第四卷',
+    titleZh: '全球仲裁规则汇编（卷四）',
+    titleEn: 'Global Arbitration Rules Reference (Volume IV)',
+    cover: '/images/library/vol4-cover.jpg',
+    href: '/zh-cn/library/book/vol4',
+    desc: '全球主要仲裁机构规则全面参考指南。',
+  },
 ]
 
 export default function LibraryPageZhCn() {
@@ -66,16 +82,25 @@ export default function LibraryPageZhCn() {
                 className="group block bg-gray-50 rounded-xl border border-gray-200 overflow-hidden hover:shadow-lg transition-shadow"
               >
                 <div className="aspect-[3/4] bg-navy-50 flex items-center justify-center overflow-hidden">
-                  <picture>
-                    <source media="(min-width: 1024px)" srcSet={book.coverSrcSet.lg} type="image/jpeg" />
-                    <source media="(min-width: 768px)" srcSet={book.coverSrcSet.md} type="image/jpeg" />
+                  {book.coverSrcSet ? (
+                    <picture>
+                      <source media="(min-width: 1024px)" srcSet={book.coverSrcSet.lg} type="image/jpeg" />
+                      <source media="(min-width: 768px)" srcSet={book.coverSrcSet.md} type="image/jpeg" />
+                      <img
+                        src={book.coverSrcSet.sm}
+                        alt={book.titleZh}
+                        className="w-auto h-full object-contain shadow-lg group-hover:scale-105 transition-transform duration-300"
+                        loading="lazy"
+                      />
+                    </picture>
+                  ) : (
                     <img
-                      src={book.coverSrcSet.sm}
+                      src={book.cover}
                       alt={book.titleZh}
                       className="w-auto h-full object-contain shadow-lg group-hover:scale-105 transition-transform duration-300"
                       loading="lazy"
                     />
-                  </picture>
+                  )}
                 </div>
                 <div className="p-6">
                   <p className="text-gold-500 text-sm font-semibold mb-1">{book.vol}</p>

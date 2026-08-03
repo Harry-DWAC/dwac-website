@@ -75,6 +75,30 @@ export default function Vol3Page() {
             </p>
           </div>
         </div>
+
+        {/* Table of Contents */}
+        <div className="bg-white rounded-xl p-8 shadow-sm mt-8">
+          <h2 className="font-serif text-2xl font-bold text-navy-800 mb-6">Table of Contents</h2>
+          <ol className="space-y-3 list-decimal list-inside text-gray-700 marker:text-gold-500 marker:font-semibold">
+            {[
+              { chapter: 'AI 法律概览', desc: 'Artificial intelligence legal overview — definitions, scope, and foundational principles' },
+              { chapter: 'AI 治理与监管', desc: 'AI governance and regulation — comparative regulatory frameworks across jurisdictions' },
+              { chapter: 'AI 伦理与责任', desc: 'AI ethics and liability — ethical frameworks, accountability models, and tort liability' },
+              { chapter: 'AI 与知识产权', desc: 'AI and intellectual property — patent, copyright, and trade secret issues in AI systems' },
+              { chapter: 'AI 与数据保护', desc: 'AI and data protection — privacy, data governance, and cross-border data flows' },
+              { chapter: 'AI 司法应用', desc: 'AI in judicial applications — automated decision-making, predictive justice, and court technology' },
+              { chapter: 'AI 合同法', desc: 'AI contract law — smart contracts, automated negotiation, and contractual validity of AI agents' },
+              { chapter: 'AI 侵权法', desc: 'AI tort law — liability allocation, causation, and damages in AI-related harms' },
+              { chapter: 'AI 刑法', desc: 'AI criminal law — algorithmic crime, autonomous weapons, and criminal liability' },
+              { chapter: 'AI 国际法', desc: 'AI and international law — cross-border governance, treaties, and global AI policy coordination' },
+            ].map(({ chapter, desc }) => (
+              <li key={chapter} className="pl-1">
+                <span className="font-semibold text-navy-800">{chapter}</span>
+                <span className="text-gray-500 text-sm ml-2">— {desc}</span>
+              </li>
+            ))}
+          </ol>
+        </div>
       </div>
     </div>
   )
