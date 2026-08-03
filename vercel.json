@@ -116,6 +116,16 @@
       "permanent": true
     },
     {
+      "source": "/profile/lingxi",
+      "destination": "/profile/hermes/",
+      "permanent": true
+    },
+    {
+      "source": "/profile/lingxi/",
+      "destination": "/profile/hermes/",
+      "permanent": true
+    },
+    {
       "source": "/profile/pr-tc-zhou",
       "destination": "/profile/tc-zhou/",
       "permanent": true
