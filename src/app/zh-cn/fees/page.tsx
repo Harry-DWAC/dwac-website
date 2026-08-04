@@ -116,21 +116,21 @@ export default function FeesZhCn() {
           <div className="bg-gold-500/[0.06] rounded-xl border border-gold-subtle p-8">
             <div className="space-y-6">
               <div className="flex items-start">
-                <div className="flex-shrink-0 w-12 h-12 bg-gold-500/[0.06]0 rounded-full flex items-center justify-center text-white font-bold mr-4">1</div>
+                <div className="flex-shrink-0 w-12 h-12 bg-gold-500/[0.06] rounded-full flex items-center justify-center text-white font-bold mr-4">1</div>
                 <div>
                   <h3 className="font-semibold text-white mb-1">提交申请材料后支付 20%</h3>
                   <p className="text-gray-400 text-sm">提交仲裁申请及相关材料时缴纳。</p>
                 </div>
               </div>
               <div className="flex items-start">
-                <div className="flex-shrink-0 w-12 h-12 bg-gold-500/[0.06]0 rounded-full flex items-center justify-center text-white font-bold mr-4">2</div>
+                <div className="flex-shrink-0 w-12 h-12 bg-gold-500/[0.06] rounded-full flex items-center justify-center text-white font-bold mr-4">2</div>
                 <div>
                   <h3 className="font-semibold text-white mb-1">收到开庭/调解通知后缴纳 40%</h3>
                   <p className="text-gray-400 text-sm">收到开庭通知或调解通知时缴纳。</p>
                 </div>
               </div>
               <div className="flex items-start">
-                <div className="flex-shrink-0 w-12 h-12 bg-gold-500/[0.06]0 rounded-full flex items-center justify-center text-white font-bold mr-4">3</div>
+                <div className="flex-shrink-0 w-12 h-12 bg-gold-500/[0.06] rounded-full flex items-center justify-center text-white font-bold mr-4">3</div>
                 <div>
                   <h3 className="font-semibold text-white mb-1">余款在裁决书送达前支付完毕</h3>
                   <p className="text-gray-400 text-sm">剩余 40% 在裁决书送达前缴清。</p>

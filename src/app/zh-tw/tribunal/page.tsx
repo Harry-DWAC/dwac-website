@@ -125,28 +125,28 @@ export default function TribunalZhCn() {
           <div className="bg-navy-800/20 p-8 rounded-xl border border-gold-subtle/50">
             <div className="space-y-6">
               <div className="flex items-start">
-                <div className="flex-shrink-0 w-10 h-10 bg-gold-500/[0.06]0 rounded-full flex items-center justify-center text-white font-bold mr-4">1</div>
+                <div className="flex-shrink-0 w-10 h-10 bg-gold-500/[0.06] rounded-full flex items-center justify-center text-white font-bold mr-4">1</div>
                 <div>
                   <h3 className="font-semibold text-white mb-1">选定真人仲裁員</h3>
                   <p className="text-gray-400 text-sm">當事人从 DWAC 名冊中选定真人仲裁員。三人仲裁庭情況下，各方各选定一名。</p>
                 </div>
               </div>
               <div className="flex items-start">
-                <div className="flex-shrink-0 w-10 h-10 bg-gold-500/[0.06]0 rounded-full flex items-center justify-center text-white font-bold mr-4">2</div>
+                <div className="flex-shrink-0 w-10 h-10 bg-gold-500/[0.06] rounded-full flex items-center justify-center text-white font-bold mr-4">2</div>
                 <div>
                   <h3 className="font-semibold text-white mb-1">指派 AI Agent</h3>
                   <p className="text-gray-400 text-sm">被选定的真人仲裁員指派其註冊的 AI Agent 處理案件程式。</p>
                 </div>
               </div>
               <div className="flex items-start">
-                <div className="flex-shrink-0 w-10 h-10 bg-gold-500/[0.06]0 rounded-full flex items-center justify-center text-white font-bold mr-4">3</div>
+                <div className="flex-shrink-0 w-10 h-10 bg-gold-500/[0.06] rounded-full flex items-center justify-center text-white font-bold mr-4">3</div>
                 <div>
                   <h3 className="font-semibold text-white mb-1">AI 執行程式</h3>
                   <p className="text-gray-400 text-sm">AI Agent 分析证据、进行法律推理，与其他仲裁员的 Agent 協作。</p>
                 </div>
               </div>
               <div className="flex items-start">
-                <div className="flex-shrink-0 w-10 h-10 bg-gold-500/[0.06]0 rounded-full flex items-center justify-center text-white font-bold mr-4">4</div>
+                <div className="flex-shrink-0 w-10 h-10 bg-gold-500/[0.06] rounded-full flex items-center justify-center text-white font-bold mr-4">4</div>
                 <div>
                   <h3 className="font-semibold text-white mb-1">真人背書簽字</h3>
                   <p className="text-gray-400 text-sm">真人仲裁員審查 AI 起草的裁决，提供背書數位簽名，并承擔法律責任。</p>

@@ -1,6 +1,7 @@
 {
   "redirects": [
-    { "source": "/en",  "destination": "/",        "permanent": true },
+    { "source": "/en",  "destination": "/en/",     "permanent": true },
+    { "source": "/en/", "destination": "/",        "permanent": true },
     { "source": "/zh",  "destination": "/zh-cn/", "permanent": true },
     { "source": "/en/:path*", "destination": "/:path*",    "permanent": true },
     { "source": "/zh/:path*", "destination": "/zh-cn/:path*", "permanent": true },
@@ -15,7 +16,11 @@
     { "source": "/zh-cn/club", "destination": "/zh-cn/agent-club/", "permanent": true },
     { "source": "/zh-cn/club/", "destination": "/zh-cn/agent-club/", "permanent": true },
     { "source": "/zh-tw/club", "destination": "/zh-tw/agent-club/", "permanent": true },
-    { "source": "/zh-tw/club/", "destination": "/zh-tw/agent-club/", "permanent": true }
+    { "source": "/zh-tw/club/", "destination": "/zh-tw/agent-club/", "permanent": true },
+    { "source": "/zh-cn/agent-club", "destination": "/agent-club/", "permanent": true },
+    { "source": "/zh-cn/agent-club/", "destination": "/agent-club/", "permanent": true },
+    { "source": "/zh-tw/agent-club", "destination": "/agent-club/", "permanent": true },
+    { "source": "/zh-tw/agent-club/", "destination": "/agent-club/", "permanent": true }
   ],
   "headers": [
     {

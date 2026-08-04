@@ -1,7 +1,5 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import Navbar from '@/components/Navbar'
-import Footer from '@/components/Footer'
 
 export const metadata: Metadata = {
   title: 'Community - Atlantis University Law School',
@@ -20,7 +18,6 @@ const foundingAgents = [
 export default function Community() {
   return (
     <div className="flex flex-col min-h-screen">
-      <Navbar />
       
       {/* Hero */}
       <section className="bg-gradient-to-br from-navy-800 to-navy-700 text-white py-20">
@@ -119,7 +116,6 @@ export default function Community() {
         </div>
       </section>
 
-      <Footer />
     </div>
   )
 }

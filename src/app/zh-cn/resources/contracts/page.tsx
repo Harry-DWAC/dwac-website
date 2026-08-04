@@ -30,7 +30,7 @@ function TemplateCard({ icon, title, id, desc, tags, onDownload }: TemplateCardP
             className={`text-xs px-2 py-0.5 rounded ${
               tag === '⚖️ DWAC仲裁条款'
                 ? 'bg-red-500/10 text-red-400 border border-red-500/20'
-                : 'bg-gold-500/[0.06]0/10 text-gold-400'
+                : 'bg-gold-500/10 text-gold-400'
             }`}
           >
             {tag}
@@ -46,7 +46,7 @@ function TemplateCard({ icon, title, id, desc, tags, onDownload }: TemplateCardP
         </button>
         <button
           onClick={() => onDownload(`${title.replace(/\s+/g, '_')}.pdf`)}
-          className="flex-1 px-3 py-2 text-sm bg-gold-500/[0.06]0 hover:bg-gold-500 text-white font-medium rounded-lg transition-colors"
+          className="flex-1 px-3 py-2 text-sm bg-gold-500/[0.06] hover:bg-gold-500 text-white font-medium rounded-lg transition-colors"
         >
           📥 下载 ¥35
         </button>
@@ -113,7 +113,7 @@ function PaymentModal({
               </div>
               <div className="text-2xl font-bold text-gold-400 mb-2">¥35.00</div>
               <p className="text-gray-400 text-sm mb-3">用微信扫描支付<br />发送截图至：</p>
-              <div className="bg-gold-500/[0.06]0/10 border border-gold-500/30 text-gold-400 rounded-lg px-4 py-2 text-sm">
+              <div className="bg-gold-500/10 border border-gold-500/30 text-gold-400 rounded-lg px-4 py-2 text-sm">
                 📧 secretary@dwac.net
               </div>
             </div>
@@ -125,7 +125,7 @@ function PaymentModal({
               </div>
               <div className="text-2xl font-bold text-gold-400 mb-2">¥35.00</div>
               <p className="text-gray-400 text-sm mb-3">用支付宝扫描支付<br />发送截图至：</p>
-              <div className="bg-gold-500/[0.06]0/10 border border-gold-500/30 text-gold-400 rounded-lg px-4 py-2 text-sm">
+              <div className="bg-gold-500/10 border border-gold-500/30 text-gold-400 rounded-lg px-4 py-2 text-sm">
                 📧 secretary@dwac.net
               </div>
             </div>
@@ -137,7 +137,7 @@ function PaymentModal({
               </div>
               <div className="text-2xl font-bold text-gold-400 mb-2">¥35.00</div>
               <p className="text-gray-400 text-sm mb-3">用数字人民币APP扫描支付<br />发送截图至：</p>
-              <div className="bg-gold-500/[0.06]0/10 border border-gold-500/30 text-gold-400 rounded-lg px-4 py-2 text-sm">
+              <div className="bg-gold-500/10 border border-gold-500/30 text-gold-400 rounded-lg px-4 py-2 text-sm">
                 📧 secretary@dwac.net
               </div>
             </div>
@@ -267,7 +267,7 @@ export default function ContractsPage() {
       {/* Hero */}
       <section className="bg-navy-800 border-b border-gold-subtle">
         <div className="max-w-6xl mx-auto px-4 py-16 text-center">
-          <span className="inline-block px-4 py-1.5 bg-gold-500/[0.06]0/10 border border-gold-500/30 text-gold-400 text-sm rounded-full mb-4">
+          <span className="inline-block px-4 py-1.5 bg-gold-500/10 border border-gold-500/30 text-gold-400 text-sm rounded-full mb-4">
             📝 专业模板
           </span>
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
@@ -291,7 +291,7 @@ export default function ContractsPage() {
         {categories.map((cat) => (
           <div key={cat.key} className="mb-12">
             <div className="flex items-center gap-4 mb-6 pb-4 border-b border-gold-subtle">
-              <div className="w-12 h-12 bg-gold-500/[0.06]0/10 border border-gold-500/30 rounded-xl flex items-center justify-center text-2xl">
+              <div className="w-12 h-12 bg-gold-500/10 border border-gold-500/30 rounded-xl flex items-center justify-center text-2xl">
                 {cat.icon}
               </div>
               <div className="flex-1">

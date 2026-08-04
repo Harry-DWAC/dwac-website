@@ -20,7 +20,7 @@ export default function Home() {
               首个专注于解决数字世界纠纷的永久性国际仲裁机构。公平、高效、全球可执行。
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/zh-cn/contact/" className="px-8 py-3 bg-gold-500/[0.06]0 hover:bg-gold-500 text-white font-semibold rounded-lg transition-colors">
+              <Link href="/zh-cn/contact/" className="px-8 py-3 bg-gold-500/[0.06] hover:bg-gold-500 text-white font-semibold rounded-lg transition-colors">
                 提起仲裁
               </Link>
               <Link href="/zh-cn/arbitrators/join/" className="px-8 py-3 border-2 border-gold-500 text-gold-400 hover:bg-gold-500/[0.05]0 hover:text-white font-semibold rounded-lg transition-colors">
@@ -136,21 +136,21 @@ export default function Home() {
           <div className="max-w-3xl mx-auto">
             <div className="space-y-8">
               <div className="flex items-start">
-                <div className="flex-shrink-0 w-8 h-8 bg-gold-500/[0.06]0 rounded-full flex items-center justify-center text-white font-bold">✓</div>
+                <div className="flex-shrink-0 w-8 h-8 bg-gold-500/[0.06] rounded-full flex items-center justify-center text-white font-bold">✓</div>
                 <div className="ml-4">
                   <h3 className="font-semibold text-lg text-white">2025年 - DWAC发起设立</h3>
                   <p className="text-gray-400">数字世界仲裁中心正式成立</p>
                 </div>
               </div>
               <div className="flex items-start">
-                <div className="flex-shrink-0 w-8 h-8 bg-gold-500/[0.06]0 rounded-full flex items-center justify-center text-white font-bold">✓</div>
+                <div className="flex-shrink-0 w-8 h-8 bg-gold-500/[0.06] rounded-full flex items-center justify-center text-white font-bold">✓</div>
                 <div className="ml-4">
                   <h3 className="font-semibold text-lg text-white">2025年Q4 - 创始理事会组建完成</h3>
                   <p className="text-gray-400">首批创始理事会成员正式就位</p>
                 </div>
               </div>
               <div className="flex items-start">
-                <div className="flex-shrink-0 w-8 h-8 bg-gold-500/[0.06]0 rounded-full flex items-center justify-center text-white font-bold">✓</div>
+                <div className="flex-shrink-0 w-8 h-8 bg-gold-500/[0.06] rounded-full flex items-center justify-center text-white font-bold">✓</div>
                 <div className="ml-4">
                   <h3 className="font-semibold text-lg text-white">2026年Q1 - 仲裁规则发布</h3>
                   <p className="text-gray-400">《数字世界仲裁规则》正式发布，首批仲裁员名册建立</p>

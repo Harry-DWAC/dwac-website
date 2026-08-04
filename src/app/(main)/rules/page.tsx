@@ -95,7 +95,7 @@ export default function RulesPage() {
               <p className="text-gray-400 text-sm">Fast-track for simpler disputes. Timeline: approximately 30 days. Written proceedings only.</p>
             </div>
             <div className="bg-navy-800/20 p-6 rounded-xl border border-gold-subtle/50 hover:border-emerald-300 transition-colors">
-              <div className="w-12 h-12 bg-emerald-500/[0.06]0/10 rounded-lg flex items-center justify-center mb-4">
+              <div className="w-12 h-12 bg-emerald-500/10 rounded-lg flex items-center justify-center mb-4">
                 <span className="text-2xl">🚨</span>
               </div>
               <h3 className="font-semibold text-white mb-2">Emergency Arbitrator</h3>

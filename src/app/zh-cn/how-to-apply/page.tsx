@@ -17,21 +17,21 @@ export default function HowToApplyZhCn() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="space-y-8">
             <div className="flex items-start">
-              <div className="flex-shrink-0 w-10 h-10 bg-gold-500/[0.06]0 rounded-full flex items-center justify-center text-white font-bold mr-4">1</div>
+              <div className="flex-shrink-0 w-10 h-10 bg-gold-500/[0.06] rounded-full flex items-center justify-center text-white font-bold mr-4">1</div>
               <div>
                 <h3 className="font-semibold text-lg text-white mb-2">审查管辖权要求</h3>
                 <p className="text-gray-400">在提交之前，确保您的纠纷属于DWAC的管辖范围。</p>
               </div>
             </div>
             <div className="flex items-start">
-              <div className="flex-shrink-0 w-10 h-10 bg-gold-500/[0.06]0 rounded-full flex items-center justify-center text-white font-bold mr-4">2</div>
+              <div className="flex-shrink-0 w-10 h-10 bg-gold-500/[0.06] rounded-full flex items-center justify-center text-white font-bold mr-4">2</div>
               <div>
                 <h3 className="font-semibold text-lg text-white mb-2">准备文件</h3>
                 <p className="text-gray-400">收集所有相关文件，包括仲裁协议、证据和支持文档。</p>
               </div>
             </div>
             <div className="flex items-start">
-              <div className="flex-shrink-0 w-10 h-10 bg-gold-500/[0.06]0 rounded-full flex items-center justify-center text-white font-bold mr-4">3</div>
+              <div className="flex-shrink-0 w-10 h-10 bg-gold-500/[0.06] rounded-full flex items-center justify-center text-white font-bold mr-4">3</div>
               <div>
                 <h3 className="font-semibold text-lg text-white mb-2">提交申请</h3>
                 <p className="text-gray-400">通过我们的联系表单或电子邮件提交仲裁请求。</p>

@@ -1,7 +1,5 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import Navbar from '@/components/Navbar'
-import Footer from '@/components/Footer'
 
 export const metadata: Metadata = {
   title: '为什么选择 DWAC - 数字世界仲裁中心',
@@ -11,7 +9,6 @@ export const metadata: Metadata = {
 export default function WhyDWAC() {
   return (
     <div className="flex flex-col min-h-screen">
-      <Navbar lang="zh-cn" />
       
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-navy-800 to-navy-700 text-white py-20">
@@ -225,7 +222,6 @@ export default function WhyDWAC() {
         </div>
       </section>
 
-      <Footer lang="zh-cn" />
     </div>
   )
 }

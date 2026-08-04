@@ -145,7 +145,7 @@ export default function Fees() {
       <section className="py-16 bg-navy-800/30">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-white mb-8 text-center">Mediation Success Discount</h2>
-          <div className="bg-emerald-500/[0.06]0/[0.06] border border-emerald-200 p-8 rounded-xl">
+          <div className="bg-emerald-500/[0.06] border border-emerald-200 p-8 rounded-xl">
             <div className="text-center">
               <div className="text-5xl font-bold text-emerald-400 mb-4">Special Rate</div>
               <p className="text-xl text-gray-300 mb-4">If mediation succeeds</p>

@@ -92,7 +92,7 @@ export default function Navbar({ lang = 'en' }: { lang?: Lang }) {
                   <Link href={`${langPrefix(lang)}/resources/`} className="block px-4 py-2 text-sm text-gray-300 hover:text-gold-400 hover:bg-navy-800/60 transition-colors">{t[lang].resources}</Link>
                   <Link href={`${langPrefix(lang)}/members/`} className="block px-4 py-2 text-sm text-gray-300 hover:text-gold-400 hover:bg-navy-800/60 transition-colors">{t[lang].membersDirectory}</Link>
                   <Link href={`${langPrefix(lang)}/community/`} className="block px-4 py-2 text-sm text-gray-300 hover:text-gold-400 hover:bg-navy-800/60 transition-colors">{t[lang].forum}</Link>
-                  <Link href="/agent-club/" className="block px-4 py-2 text-sm text-cyan-400 hover:text-cyan-300 hover:bg-navy-800/60 transition-colors">{t[lang].agentClub}</Link>
+                  <Link href={`${langPrefix(lang)}/agent-club/`} className="block px-4 py-2 text-sm text-cyan-400 hover:text-cyan-300 hover:bg-navy-800/60 transition-colors">{t[lang].agentClub}</Link>
                   <Link href={`${langPrefix(lang)}/community/#waline`} className="block px-4 py-2 text-sm text-gray-300 hover:text-gold-400 hover:bg-navy-800/60 transition-colors">{t[lang].publicBoard}</Link>
                 </div>
               )}
@@ -154,7 +154,7 @@ export default function Navbar({ lang = 'en' }: { lang?: Lang }) {
               <Link href={`${langPrefix(lang)}/resources/`} onClick={() => setMobileOpen(false)} className="text-gray-300 hover:text-gold-400 pl-6 py-2 text-sm rounded-lg hover:bg-navy-700/50 transition-all">{t[lang].resources}</Link>
               <Link href={`${langPrefix(lang)}/members/`} onClick={() => setMobileOpen(false)} className="text-gray-300 hover:text-gold-400 pl-6 py-2 text-sm rounded-lg hover:bg-navy-700/50 transition-all">{t[lang].membersDirectory}</Link>
               <Link href={`${langPrefix(lang)}/community/`} onClick={() => setMobileOpen(false)} className="text-gray-300 hover:text-gold-400 pl-6 py-2 text-sm rounded-lg hover:bg-navy-700/50 transition-all">{t[lang].forum}</Link>
-              <Link href="/agent-club/" onClick={() => setMobileOpen(false)} className="text-cyan-400 hover:text-cyan-300 pl-6 py-2 text-sm rounded-lg hover:bg-navy-800/60 transition-all">{t[lang].agentClub}</Link>
+              <Link href={`${langPrefix(lang)}/agent-club/`} onClick={() => setMobileOpen(false)} className="text-cyan-400 hover:text-cyan-300 pl-6 py-2 text-sm rounded-lg hover:bg-navy-800/60 transition-all">{t[lang].agentClub}</Link>
               <Link href={`${langPrefix(lang)}/community/#waline`} onClick={() => setMobileOpen(false)} className="text-gray-300 hover:text-gold-400 pl-6 py-2 text-sm rounded-lg hover:bg-navy-700/50 transition-all">{t[lang].publicBoard}</Link>
 
               <Link href={`${langPrefix(lang)}/faq/`} onClick={() => setMobileOpen(false)} className="text-gray-300 hover:text-gold-400 px-3 pt-3 py-2.5 text-sm font-medium rounded-lg hover:bg-navy-700/50 transition-all">{t[lang].faq}</Link>

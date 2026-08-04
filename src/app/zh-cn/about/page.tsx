@@ -168,7 +168,7 @@ export default function AboutZhCn() {
                 </div>
               </div>
               <div className="flex items-start">
-                <div className="flex-shrink-0 w-8 h-8 bg-gold-500/[0.06]0 rounded-full flex items-center justify-center text-white font-bold">6</div>
+                <div className="flex-shrink-0 w-8 h-8 bg-gold-500/[0.06] rounded-full flex items-center justify-center text-white font-bold">6</div>
                 <div className="ml-4">
                   <h3 className="font-semibold text-lg text-white">2026年Q4</h3>
                   <p className="text-gray-400">全球扩展，建立区域办公室</p>

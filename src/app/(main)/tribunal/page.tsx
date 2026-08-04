@@ -146,7 +146,7 @@ export default function Tribunal() {
                 </div>
               </div>
               <div className="flex items-start">
-                <div className="flex-shrink-0 w-10 h-10 bg-gold-500/[0.06]0 rounded-full flex items-center justify-center text-white font-bold mr-4">4</div>
+                <div className="flex-shrink-0 w-10 h-10 bg-gold-500/[0.06] rounded-full flex items-center justify-center text-white font-bold mr-4">4</div>
                 <div>
                   <h3 className="font-semibold text-white mb-1">Human Endorsement</h3>
                   <p className="text-gray-400 text-sm">The human arbitrator reviews the AI-drafted award, provides endorsement digital signature, and bears legal responsibility.</p>
