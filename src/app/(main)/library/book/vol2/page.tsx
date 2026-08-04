@@ -29,7 +29,7 @@ export default function Vol2Page() {
 
       <div className="max-w-4xl mx-auto w-full px-4 py-12">
         {/* Cover */}
-        <div className="rounded-xl overflow-hidden shadow-xl mb-12">
+        <div className="rounded-xl overflow-hidden shadow-xl mb-12 relative">
           <picture>
             <source media="(min-width: 1024px)" srcSet="/images/library/vol2-cover-en-1024.jpg" type="image/jpeg" />
             <source media="(min-width: 768px)" srcSet="/images/library/vol2-cover-en-512.jpg" type="image/jpeg" />
@@ -40,6 +40,7 @@ export default function Vol2Page() {
               loading="eager"
             />
           </picture>
+          <div className="absolute inset-0 bg-navy-900/10 backdrop-blur-[2px] pointer-events-none" />
         </div>
 
         {/* TOC */}
