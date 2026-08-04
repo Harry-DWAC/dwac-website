@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   description: '人工智慧在數位時代的法律框架與治理模式。免費下載 EPUB、HTML、Markdown 格式。',
 }
 
-const gclcBase = '/publications/gclc/vol-iii/Global-Cyber-Law-Compendium-Volume-III'
+const gclcBase = '/gclc-downloads/vol-iii/Global-Cyber-Law-Compendium-Volume-III'
 
 export default function Vol3PageZhTw() {
   return (

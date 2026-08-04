@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   description: '人工智能在数字时代的法律框架与治理模式。免费下载 EPUB、HTML、Markdown 格式。',
 }
 
-const gclcBase = '/publications/gclc/vol-iii/Global-Cyber-Law-Compendium-Volume-III'
+const gclcBase = '/gclc-downloads/vol-iii/Global-Cyber-Law-Compendium-Volume-III'
 
 export default function Vol3PageZhCn() {
   return (

@@ -75,7 +75,7 @@ export default function Vol2Page() {
                   return (
                     <a
                       key={f}
-                      href={`/publications/gclc/vol-ii/Global-Cyber-Law-Compendium-${f}`}
+                      href={`/gclc-downloads/vol-ii/Global-Cyber-Law-Compendium-${f}`}
                       download
                       className="flex items-center justify-between p-3 bg-slate-50 hover:bg-gold-50 rounded-lg border border-slate-200 hover:border-gold-300 transition-colors group"
                     >

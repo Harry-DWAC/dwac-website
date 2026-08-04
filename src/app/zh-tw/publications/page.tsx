@@ -61,7 +61,7 @@ const volumes = [
     desc: '系統收錄90+個法域的網路相關法律法規。涵蓋資料保護、網路安全、數位證據、電子商務和網路犯罪立法。',
     specs: '約1,200頁 · 90+法域 · 中英雙語',
     status: '正式版可購',
-    href: '/publications/gclc/',
+    href: '/gclc-downloads/',
   },
   {
     num: 'II',
@@ -70,7 +70,7 @@ const volumes = [
     desc: '精選案例研究，涵蓋線上爭議解決、跨境資料糾紛、AI責任、平台治理和數位資產訴訟，源自全球法院和仲裁庭。',
     specs: '約1,500頁 · 1,001個案例 · 50+法域',
     status: '正式版可購',
-    href: '/publications/gclc/',
+    href: '/gclc-downloads/',
   },
   {
     num: 'III',
@@ -79,7 +79,7 @@ const volumes = [
     desc: '全球最全面的AI治理參考書。涵蓋EU AI Act、中國AI法規、美國行政令、韓國AI框架法、WAICO及51個重大AI相關判例。',
     specs: '約83萬字 · 51個案例 · 中英雙語',
     status: 'v1.9 正式版可購',
-    href: '/publications/gclc/',
+    href: '/gclc-downloads/',
   },
 ]
 

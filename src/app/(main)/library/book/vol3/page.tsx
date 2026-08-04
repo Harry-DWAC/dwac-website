@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   description: 'Legal frameworks and governance models for artificial intelligence in the digital age. Free download in EPUB, HTML, and Markdown formats.',
 }
 
-const gclcBase = '/publications/gclc/vol-iii/Global-Cyber-Law-Compendium-Volume-III'
+const gclcBase = '/gclc-downloads/vol-iii/Global-Cyber-Law-Compendium-Volume-III'
 
 export default function Vol3Page() {
   return (

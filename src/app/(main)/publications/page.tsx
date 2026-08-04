@@ -61,7 +61,7 @@ const volumes = [
     desc: 'A comprehensive collection of cyber-related laws and regulations from 90+ jurisdictions. Covers data protection, cybersecurity, digital evidence, e-commerce, and cybercrime legislation.',
     specs: '~1,200 pages · 90+ jurisdictions · Chinese & English',
     status: 'Final Edition Available',
-    href: '/publications/gclc/',
+    href: '/gclc-downloads/',
   },
   {
     num: 'II',
@@ -70,7 +70,7 @@ const volumes = [
     desc: 'Curated case studies spanning online dispute resolution, cross-border data disputes, AI liability, platform governance, and digital asset litigation from courts and arbitral tribunals worldwide.',
     specs: '~1,500 pages · 1,001 cases · 50+ jurisdictions',
     status: 'Final Edition Available',
-    href: '/publications/gclc/',
+    href: '/gclc-downloads/',
   },
   {
     num: 'III',
@@ -79,7 +79,7 @@ const volumes = [
     desc: 'The most comprehensive reference on AI governance worldwide. Covers the EU AI Act, China\'s AI regulations, US executive orders, Korea\'s AI Framework Act, WAICO, and 51 major AI-related court cases.',
     specs: '~830,000 words · 51 cases · Bilingual CN/EN',
     status: 'v1.9 Final Edition Available',
-    href: '/publications/gclc/',
+    href: '/gclc-downloads/',
   },
 ]
 

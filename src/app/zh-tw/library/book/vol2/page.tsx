@@ -64,7 +64,7 @@ export default function Vol2ZhTwPage() {
                   const ext = f.split('.').pop()!.toUpperCase()
                   const icons: Record<string, string> = { EPUB: '📖', MD: '📝' }
                   return (
-                    <a key={f} href={`/publications/gclc/vol-ii/Global-Cyber-Law-Compendium-${f}`} download
+                    <a key={f} href={`/gclc-downloads/vol-ii/Global-Cyber-Law-Compendium-${f}`} download
                       className="flex items-center justify-between p-3 bg-slate-50 hover:bg-gold-50 rounded-lg border border-slate-200 hover:border-gold-300 transition-colors group">
                       <span className="flex items-center gap-2 text-sm font-medium text-slate-700 group-hover:text-navy-800">
                         {icons[ext] || '📄'} {ext} 格式
