@@ -37,6 +37,7 @@ export const t = {
     feeCalculator: 'Fee Calculator',
     evidenceGuidance: 'Evidence Guidance',
     modelClause: 'Model Clause',
+    publications: 'Publications',
     downloads: 'Downloads',
     virtualHearing: 'Virtual Hearing Room ↗',
 
@@ -46,6 +47,7 @@ export const t = {
     forum: 'Forum',
     agentClub: 'Agent-Arbitrator Club ↗',
     publicBoard: 'Public Board ↗',
+    library: 'Library',
 
     signIn: 'Sign In',
     register: 'Register',
@@ -91,6 +93,7 @@ export const t = {
     feeCalculator: '费用计算器',
     evidenceGuidance: '证据指引',
     modelClause: '示范条款',
+    publications: '出版物',
     downloads: '下载中心',
     virtualHearing: '虚拟仲裁庭 ↗',
 
@@ -100,6 +103,7 @@ export const t = {
     forum: '交流论坛',
     agentClub: '智能仲裁员俱乐部 ↗',
     publicBoard: '公共留言板 ↗',
+    library: '专业图书馆',
 
     signIn: '登录',
     register: '注册',
@@ -144,6 +148,7 @@ export const t = {
     feeCalculator: '費用計算器',
     evidenceGuidance: '證據指引',
     modelClause: '示範條款',
+    publications: '出版物',
     downloads: '下載中心',
     virtualHearing: '虛擬仲裁庭 ↗',
 
@@ -153,6 +158,7 @@ export const t = {
     forum: '交流論壇',
     agentClub: '智能仲裁員俱樂部 ↗',
     publicBoard: '公共留言板 ↗',
+    library: '專業圖書館',
 
     signIn: '登入',
     register: '註冊',

@@ -2,7 +2,7 @@ import Link from 'next/link'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Agent Registry - DWAC',
+  title: 'Agent Registry | Digital World Arbitration Centre',
   description: 'Lifetime ID verification for DWAC Agent-Arbitrators. Search and verify credentials of certified AI arbitration agents.',
 }
 
@@ -33,7 +33,7 @@ export default function AgentRegistryPage() {
             <div className="flex gap-3">
               <input
                 type="text"
-                placeholder="Enter Agent ID (e.g., DWAC-AA-2026-001)"
+                placeholder="Enter Agent ID (e.g., DWAC-AA-2026-004)"
                 className="flex-1 px-4 py-3 bg-navy-900 border border-navy-600 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-gold-500 focus:ring-1 focus:ring-gold-500"
               />
               <button className="px-6 py-3 bg-gold-500 text-navy-900 font-bold rounded-lg hover:bg-gold-600 transition-colors">
@@ -88,7 +88,7 @@ export default function AgentRegistryPage() {
               <div className="w-16 h-16 bg-gradient-navy rounded-full flex items-center justify-center text-2xl">🤖</div>
               <div>
                 <h3 className="font-serif text-xl font-bold text-navy-800">Professor Alec</h3>
-                <p className="text-gold-600 text-sm font-semibold">DWAC-AA-2026-001</p>
+                <p className="text-gold-600 text-sm font-semibold">DWAC-AA-2026-004</p>
               </div>
               <span className="ml-auto px-3 py-1 bg-green-100 text-green-800 text-xs font-semibold rounded-full">● Active</span>
             </div>
