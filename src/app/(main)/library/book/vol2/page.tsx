@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'DWAC Professional Library (Volume 2) - DWAC',
+  title: 'DWAC Professional Library (Volume 2) | Digital World Arbitration Centre',
   description: 'Advanced practices and case studies in digital world dispute resolution.',
 }
 
@@ -30,6 +30,7 @@ export default function Vol2Page() {
       <div className="max-w-4xl mx-auto w-full px-4 py-12">
         {/* Cover */}
         <div className="rounded-xl overflow-hidden shadow-xl mb-12 relative">
+          <div className="absolute inset-0 bg-navy-900/10 backdrop-blur-[2px] pointer-events-none" />
           <picture>
             <source media="(min-width: 1024px)" srcSet="/images/library/vol2-cover-en-1024.jpg" type="image/jpeg" />
             <source media="(min-width: 768px)" srcSet="/images/library/vol2-cover-en-512.jpg" type="image/jpeg" />
@@ -40,7 +41,6 @@ export default function Vol2Page() {
               loading="eager"
             />
           </picture>
-          <div className="absolute inset-0 bg-navy-900/10 backdrop-blur-[2px] pointer-events-none" />
         </div>
 
         {/* TOC */}
@@ -54,6 +54,42 @@ export default function Vol2Page() {
               </li>
             ))}
           </ol>
+        </div>
+
+        {/* Downloads */}
+        <div className="flex items-center gap-3 mb-8">
+          <h2 className="font-serif text-2xl font-bold text-navy-800">Downloads</h2>
+          <span className="bg-gold-100 text-gold-700 text-xs font-bold px-3 py-1 rounded-full">Free</span>
+        </div>
+
+        <div className="grid md:grid-cols-2 gap-6 mb-12">
+          {[
+            { lang: 'English', files: ['V2_Publication-EN-v12.epub', 'V2_Publication-EN-v12.md'], emoji: '🇬🇧' },
+            { lang: '中文', files: ['V2_Complete-CN_Final-v33.epub', 'V2_Complete-CN_Final-v33.md'], emoji: '🇨🇳' },
+          ].map(({ lang, files, emoji }) => (
+            <div key={lang} className="bg-white rounded-xl p-6 shadow-sm border border-slate-200">
+              <h2 className="font-serif text-xl font-bold text-navy-800 mb-4">{emoji} {lang} Edition</h2>
+              <div className="space-y-3">
+                {files.map((f) => {
+                  const ext = f.split('.').pop()!.toUpperCase()
+                  const icons: Record<string, string> = { EPUB: '📖', MD: '📝' }
+                  return (
+                    <a
+                      key={f}
+                      href={`/gclc-downloads/vol-ii/Global-Cyber-Law-Compendium-${f}`}
+                      download
+                      className="flex items-center justify-between p-3 bg-slate-50 hover:bg-gold-50 rounded-lg border border-slate-200 hover:border-gold-300 transition-colors group"
+                    >
+                      <span className="flex items-center gap-2 text-sm font-medium text-slate-700 group-hover:text-navy-800">
+                        {icons[ext] || '📄'} {ext} Format
+                      </span>
+                      <span className="text-xs text-gold-500 opacity-0 group-hover:opacity-100 transition-opacity">Download ↓</span>
+                    </a>
+                  )
+                })}
+              </div>
+            </div>
+          ))}
         </div>
 
         {/* Placeholder content */}

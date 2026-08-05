@@ -14,34 +14,22 @@ interface DownloadFile {
 }
 
 const volI_EN: DownloadFile[] = [
-  { name: 'Vol I EN — EPUB',        path: '/publications/gclc/vol-i/Global-Cyber-Law-Compendium-V1-EN-v8.epub',  size: 236821,  fmt: 'EPUB' },
-  { name: 'Vol I EN — HTML',        path: '/publications/gclc/vol-i/Global-Cyber-Law-Compendium-V1-EN-v8.html',  size: 823148,  fmt: 'HTML' },
-  { name: 'Vol I EN — Markdown',    path: '/publications/gclc/vol-i/Global-Cyber-Law-Compendium-V1-EN-v8.md',    size: 795318,  fmt: 'Markdown' },
+  { name: 'Vol I EN — EPUB',        path: '/gclc-downloads/vol-i/Global-Cyber-Law-Compendium-V1-EN-v8.epub',  size: 236821,  fmt: 'EPUB' },  { name: 'Vol I EN — Markdown',    path: '/gclc-downloads/vol-i/Global-Cyber-Law-Compendium-V1-EN-v8.md',    size: 795318,  fmt: 'Markdown' },
 ]
 const volI_CN: DownloadFile[] = [
-  { name: 'Vol I CN — EPUB',        path: '/publications/gclc/vol-i/Global-Cyber-Law-Compendium-V1-CN-v25.epub', size: 440080,  fmt: 'EPUB' },
-  { name: 'Vol I CN — HTML',        path: '/publications/gclc/vol-i/Global-Cyber-Law-Compendium-V1-CN-v25.html', size: 1337765, fmt: 'HTML' },
-  { name: 'Vol I CN — Markdown',    path: '/publications/gclc/vol-i/Global-Cyber-Law-Compendium-V1-CN-v25.md',   size: 1235668, fmt: 'Markdown' },
+  { name: 'Vol I CN — EPUB',        path: '/gclc-downloads/vol-i/Global-Cyber-Law-Compendium-V1-CN-v25.epub', size: 440080,  fmt: 'EPUB' },  { name: 'Vol I CN — Markdown',    path: '/gclc-downloads/vol-i/Global-Cyber-Law-Compendium-V1-CN-v25.md',   size: 1235668, fmt: 'Markdown' },
 ]
 const volII_EN: DownloadFile[] = [
-  { name: 'Vol II EN — EPUB',       path: '/publications/gclc/vol-ii/Global-Cyber-Law-Compendium-V2_Publication-EN-v12.epub', size: 687915,  fmt: 'EPUB' },
-  { name: 'Vol II EN — HTML',       path: '/publications/gclc/vol-ii/Global-Cyber-Law-Compendium-V2_Publication-EN-v12.html', size: 2533568, fmt: 'HTML' },
-  { name: 'Vol II EN — Markdown',   path: '/publications/gclc/vol-ii/Global-Cyber-Law-Compendium-V2_Publication-EN-v12.md',   size: 2417134, fmt: 'Markdown' },
+  { name: 'Vol II EN — EPUB',       path: '/gclc-downloads/vol-ii/Global-Cyber-Law-Compendium-V2_Publication-EN-v12.epub', size: 687915,  fmt: 'EPUB' },  { name: 'Vol II EN — Markdown',   path: '/gclc-downloads/vol-ii/Global-Cyber-Law-Compendium-V2_Publication-EN-v12.md',   size: 2417134, fmt: 'Markdown' },
 ]
 const volII_CN: DownloadFile[] = [
-  { name: 'Vol II CN — EPUB',       path: '/publications/gclc/vol-ii/Global-Cyber-Law-Compendium-V2_Complete-CN_Final-v33.epub', size: 643952,  fmt: 'EPUB' },
-  { name: 'Vol II CN — HTML',       path: '/publications/gclc/vol-ii/Global-Cyber-Law-Compendium-V2_Complete-CN_Final-v33.html', size: 1999048, fmt: 'HTML' },
-  { name: 'Vol II CN — Markdown',   path: '/publications/gclc/vol-ii/Global-Cyber-Law-Compendium-V2_Complete-CN_Final-v33.md',   size: 1861736, fmt: 'Markdown' },
+  { name: 'Vol II CN — EPUB',       path: '/gclc-downloads/vol-ii/Global-Cyber-Law-Compendium-V2_Complete-CN_Final-v33.epub', size: 643952,  fmt: 'EPUB' },  { name: 'Vol II CN — Markdown',   path: '/gclc-downloads/vol-ii/Global-Cyber-Law-Compendium-V2_Complete-CN_Final-v33.md',   size: 1861736, fmt: 'Markdown' },
 ]
 const volIII_EN: DownloadFile[] = [
-  { name: 'Vol III EN — EPUB',      path: '/publications/gclc/vol-iii/Global-Cyber-Law-Compendium-Volume-III-v2.2-EN.epub', size: 142209, fmt: 'EPUB' },
-  { name: 'Vol III EN — HTML',      path: '/publications/gclc/vol-iii/Global-Cyber-Law-Compendium-Volume-III-v2.2-EN.html', size: 428834, fmt: 'HTML' },
-  { name: 'Vol III EN — Markdown',  path: '/publications/gclc/vol-iii/Global-Cyber-Law-Compendium-Volume-III-v2.2-EN.md',   size: 385518, fmt: 'Markdown' },
+  { name: 'Vol III EN — EPUB',      path: '/gclc-downloads/vol-iii/Global-Cyber-Law-Compendium-Volume-III-v2.2-EN.epub', size: 142209, fmt: 'EPUB' },  { name: 'Vol III EN — Markdown',  path: '/gclc-downloads/vol-iii/Global-Cyber-Law-Compendium-Volume-III-v2.2-EN.md',   size: 385518, fmt: 'Markdown' },
 ]
 const volIII_CN: DownloadFile[] = [
-  { name: 'Vol III CN — EPUB',      path: '/publications/gclc/vol-iii/Global-Cyber-Law-Compendium-Volume-III-v2.2-CN.epub', size: 143991, fmt: 'EPUB' },
-  { name: 'Vol III CN — HTML',      path: '/publications/gclc/vol-iii/Global-Cyber-Law-Compendium-Volume-III-v2.2-CN.html', size: 370816, fmt: 'HTML' },
-  { name: 'Vol III CN — Markdown',  path: '/publications/gclc/vol-iii/Global-Cyber-Law-Compendium-Volume-III-v2.2-CN.md',   size: 330156, fmt: 'Markdown' },
+  { name: 'Vol III CN — EPUB',      path: '/gclc-downloads/vol-iii/Global-Cyber-Law-Compendium-Volume-III-v2.2-CN.epub', size: 143991, fmt: 'EPUB' },  { name: 'Vol III CN — Markdown',  path: '/gclc-downloads/vol-iii/Global-Cyber-Law-Compendium-Volume-III-v2.2-CN.md',   size: 330156, fmt: 'Markdown' },
 ]
 
 function fmtSize(bytes: number): string {

@@ -12,8 +12,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/resources/law/', '/cases/',
     '/login/', '/register/',
     // New pages added June 2026
-    '/library/', '/library/book/vol1/', '/library/book/vol2/',
+    '/library/', '/library/book/vol1/', '/library/book/vol2/', '/library/book/vol3/', '/library/book/vol4/',
     '/community/', '/law-school/', '/agent-club/',
+    '/publications/', '/gclc-downloads/',
     '/agent-registry/', '/api-docs/', '/services/',
     '/expertise/', '/tribunal/', '/membership/',
     '/news/', '/why-dwac/', '/framework/',

@@ -15,10 +15,10 @@ const books = [
     desc: 'Comprehensive compilation of cyberspace legislation from jurisdictions worldwide.',
     cover: '/images/library/vol1-cover.jpg',
     files: [
-      { label: 'EN EPUB', href: '/publications/gclc/vol-i/Global-Cyber-Law-Compendium-V1-EN-v8.epub' },
-      { label: 'CN EPUB', href: '/publications/gclc/vol-i/Global-Cyber-Law-Compendium-V1-CN-v25.epub' },
-      { label: 'EN Markdown', href: '/publications/gclc/vol-i/Global-Cyber-Law-Compendium-V1-EN-v8.md' },
-      { label: 'CN Markdown', href: '/publications/gclc/vol-i/Global-Cyber-Law-Compendium-V1-CN-v25.md' },
+      { label: 'EN EPUB', href: '/gclc-downloads/vol-i/Global-Cyber-Law-Compendium-V1-EN-v8.epub' },
+      { label: 'CN EPUB', href: '/gclc-downloads/vol-i/Global-Cyber-Law-Compendium-V1-CN-v25.epub' },
+      { label: 'EN Markdown', href: '/gclc-downloads/vol-i/Global-Cyber-Law-Compendium-V1-EN-v8.md' },
+      { label: 'CN Markdown', href: '/gclc-downloads/vol-i/Global-Cyber-Law-Compendium-V1-CN-v25.md' },
     ],
   },
   {
@@ -29,10 +29,10 @@ const books = [
     desc: 'Case studies of internet-related disputes from jurisdictions around the world.',
     cover: '/images/library/vol2-cover-en.jpg',
     files: [
-      { label: 'EN EPUB', href: '/publications/gclc/vol-ii/Global-Cyber-Law-Compendium-V2_Publication-EN-v12.epub' },
-      { label: 'CN EPUB', href: '/publications/gclc/vol-ii/Global-Cyber-Law-Compendium-V2_Complete-CN_Final-v33.epub' },
-      { label: 'EN Markdown', href: '/publications/gclc/vol-ii/Global-Cyber-Law-Compendium-V2_Publication-EN-v12.md' },
-      { label: 'CN Markdown', href: '/publications/gclc/vol-ii/Global-Cyber-Law-Compendium-V2_Complete-CN_Final-v33.md' },
+      { label: 'EN EPUB', href: '/gclc-downloads/vol-ii/Global-Cyber-Law-Compendium-V2_Publication-EN-v12.epub' },
+      { label: 'CN EPUB', href: '/gclc-downloads/vol-ii/Global-Cyber-Law-Compendium-V2_Complete-CN_Final-v33.epub' },
+      { label: 'EN Markdown', href: '/gclc-downloads/vol-ii/Global-Cyber-Law-Compendium-V2_Publication-EN-v12.md' },
+      { label: 'CN Markdown', href: '/gclc-downloads/vol-ii/Global-Cyber-Law-Compendium-V2_Complete-CN_Final-v33.md' },
     ],
   },
   {
@@ -43,10 +43,10 @@ const books = [
     desc: 'Legal frameworks and governance models for artificial intelligence in the digital age.',
     cover: '/images/library/vol3-cover.jpg',
     files: [
-      { label: 'EN EPUB', href: '/publications/gclc/vol-iii/Global-Cyber-Law-Compendium-Volume-III-v2.2-EN.epub' },
-      { label: 'CN EPUB', href: '/publications/gclc/vol-iii/Global-Cyber-Law-Compendium-Volume-III-v2.2-CN.epub' },
-      { label: 'EN Markdown', href: '/publications/gclc/vol-iii/Global-Cyber-Law-Compendium-Volume-III-v2.2-EN.md' },
-      { label: 'CN Markdown', href: '/publications/gclc/vol-iii/Global-Cyber-Law-Compendium-Volume-III-v2.2-CN.md' },
+      { label: 'EN EPUB', href: '/gclc-downloads/vol-iii/Global-Cyber-Law-Compendium-Volume-III-v2.2-EN.epub' },
+      { label: 'CN EPUB', href: '/gclc-downloads/vol-iii/Global-Cyber-Law-Compendium-Volume-III-v2.2-CN.epub' },
+      { label: 'EN Markdown', href: '/gclc-downloads/vol-iii/Global-Cyber-Law-Compendium-Volume-III-v2.2-EN.md' },
+      { label: 'CN Markdown', href: '/gclc-downloads/vol-iii/Global-Cyber-Law-Compendium-Volume-III-v2.2-CN.md' },
     ],
   },
   {
