@@ -10,6 +10,8 @@ interface Status {
   remaining_slots: number
   limit: number
   promo_active: boolean
+  price_after_promo?: number
+  price_currency?: string
   promo_end_date: string
   countdown_days: number
 }
@@ -23,6 +25,7 @@ interface ApplyResponse {
   remaining_slots?: number
   download_urls?: VolRef[]
   already_applied?: boolean
+  price_per_book?: number
   note?: string
   error?: string
   promo_ended?: boolean
@@ -101,7 +104,9 @@ export default function LibraryDownloadWidget() {
               : 'All free slots have been claimed.'}
           </p>
         </div>
-        <h3 className="font-serif text-xl font-bold text-navy-800 mb-4">↓↓↓ Your Downloads</h3>
+        <h3 className="font-serif text-xl font-bold text-navy-800 mb-4">
+          ↓↓↓ Your Free Downloads
+        </h3>
         <div className="space-y-6">
           {urls.map((vol: VolRef) => (
             <div key={vol.volume} className="bg-white rounded-xl p-5 shadow-sm border border-slate-200">
@@ -122,23 +127,31 @@ export default function LibraryDownloadWidget() {
             </div>
           ))}
         </div>
+        <p className="text-xs text-slate-400 text-center mt-6">
+          Need more? After Sep 15 each ebook is ¥20. Share with colleagues &amp; friends — the first 100 are free!
+        </p>
       </div>
     )
   }
 
   // Promo ended
   if (!status.promo_active) {
+    const price = status.price_after_promo ?? 20
     return (
       <div className="bg-amber-50 border border-amber-200 rounded-xl p-8 text-center">
         <p className="text-amber-700 font-bold text-lg mb-2">⏰ Promotion Ended</p>
         <p className="text-amber-600">The free download promotion ended on September 15, 2026.</p>
-        <p className="text-amber-500 text-sm mt-1">For access, please contact <a href="mailto:library@dwac.net" className="underline hover:text-amber-700">library@dwac.net</a></p>
+        <p className="text-amber-600 mt-2 font-semibold">Ebooks are now ¥{price} / book.</p>
+        <p className="text-amber-500 text-sm mt-1">
+          To purchase, contact <a href="mailto:library@dwac.net" className="underline hover:text-amber-700">library@dwac.net</a> — mention which volume(s) you need.
+        </p>
       </div>
     )
   }
 
   // Promo active, not yet applied
   const pct = Math.round((status.total_applied / status.limit) * 100)
+  const price = status.price_after_promo ?? 20
   return (
     <div>
       {/* Promo banner */}
@@ -210,6 +223,7 @@ export default function LibraryDownloadWidget() {
           <p className="text-xs text-slate-400 text-center">
             By applying you agree to DWAC&apos;s terms. We will not share your email.
           </p>
+          <p className="text-xs text-slate-400 text-center mt-1">After Sep 15, 2026: ¥{price} per ebook</p>
         </div>
       </div>
     </div>
