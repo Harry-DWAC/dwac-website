@@ -110,7 +110,7 @@ export default function LibraryPageZhTw() {
                   <p className="text-gray-500 text-sm mb-3">{book.titleEn}</p>
                   <p className="text-gray-600 text-sm">{book.desc}</p>
                   <p className="text-gold-500 text-sm font-semibold mt-4 group-hover:underline">
-                    免費預覽 →
+                    限時免費獲取 →
                   </p>
                 </div>
               </Link>

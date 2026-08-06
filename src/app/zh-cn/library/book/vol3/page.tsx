@@ -1,11 +1,11 @@
 import type { Metadata } from 'next'
+import LibraryDownloadWidget from '@/components/library/LibraryDownloadWidget'
 
 export const metadata: Metadata = {
   title: '人工智能法律汇编（第三卷）| DWAC 专业图书馆',
   description: '人工智能在数字时代的法律框架与治理模式。免费下载 EPUB、HTML、Markdown 格式。',
 }
 
-const gclcBase = '/gclc-downloads/vol-iii/Global-Cyber-Law-Compendium-Volume-III'
 
 export default function Vol3PageZhCn() {
   return (
@@ -23,35 +23,8 @@ export default function Vol3PageZhCn() {
           <p className="text-lg text-slate-500">第三卷 · AI Law Compendium</p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-6 mb-12">
-          {[
-            { lang: 'English', files: ['v2.2-EN.epub', 'v2.2-EN.md'], emoji: '🇬🇧' },
-            { lang: '中文', files: ['v2.2-CN.epub', 'v2.2-CN.md'], emoji: '🇨🇳' },
-          ].map(({ lang, files, emoji }) => (
-            <div key={lang} className="bg-white rounded-xl p-6 shadow-sm border border-slate-200">
-              <h2 className="font-serif text-xl font-bold text-navy-800 mb-4">{emoji} {lang} 版</h2>
-              <div className="space-y-3">
-                {files.map((f) => {
-                  const fmt = f.split('.').slice(-1)[0].toUpperCase()
-                  const icons: Record<string, string> = { EPUB: '📖', HTML: '🌐', MD: '📝' }
-                  return (
-                    <a
-                      key={f}
-                      href={`${gclcBase}-${f}`}
-                      download
-                      className="flex items-center justify-between p-3 bg-slate-50 hover:bg-gold-50 rounded-lg border border-slate-200 hover:border-gold-300 transition-colors group"
-                    >
-                      <span className="flex items-center gap-2 text-sm font-medium text-slate-700 group-hover:text-navy-800">
-                        {icons[fmt] || '📄'} {fmt} 格式
-                      </span>
-                      <span className="text-xs text-gold-500 group-hover:translate-x-0.5 transition-transform">下载 →</span>
-                    </a>
-                  )
-                })}
-              </div>
-            </div>
-          ))}
-        </div>
+        {/* Downloads — Limited-Time Free Access */}
+        <LibraryDownloadWidget />
 
         <div className="bg-white rounded-xl p-8 shadow-sm prose max-w-none">
           <h2 className="font-serif text-2xl font-bold text-navy-800 mb-4">关于本卷</h2>

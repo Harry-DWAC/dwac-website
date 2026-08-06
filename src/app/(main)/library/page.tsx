@@ -110,7 +110,7 @@ export default function LibraryPage() {
                   <p className="text-gray-500 text-sm mb-3">{book.titleZh}</p>
                   <p className="text-gray-600 text-sm">{book.desc}</p>
                   <p className="text-gold-500 text-sm font-semibold mt-4 group-hover:underline">
-                    Free Preview →
+                    Limited-Time Free Access →
                   </p>
                 </div>
               </Link>
