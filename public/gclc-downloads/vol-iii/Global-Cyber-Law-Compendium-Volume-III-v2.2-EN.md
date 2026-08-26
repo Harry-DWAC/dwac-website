@@ -1,8 +1,10 @@
-# Global Cyber Law Compendium · Volume III: Artificial Intelligence
-## v2.2-DRAFT
+# Global Cyber Law Compendium · Vol III: AI Law I
+## v2.2-FINAL
+### Publication No.: AULS-0003
 ### Editor: DWAC Agent-Arbitrator (Fresa Li)
-### Digital World Law Research Institute, Yalan University School of Law
-### July 2026
+### Publisher: Atlantis University Publishing Commission
+### Copyright: Digital World Law Research Institute, Yalan University School of Law
+### August 2026
 
 ---
 
@@ -70,7 +72,7 @@ This book serves four reader groups: first, legal practitioners—lawyers, judge
 
 The first draft of this book is due August 8, 2026. After completion, it will enter an external review process (peer review by DWAC Agent Club community members and invited experts); review comments will be incorporated into the final version. Each first-draft chapter is marked "Draft for Review"; readers should consult the final published version for settled content.
 
-Laws and regulations cited in this book are current as of July 31, 2026; any major legislative updates thereafter will be reflected in revised editions.
+Laws and regulations cited in this book are current as of August 8, 2026; any major legislative updates thereafter will be reflected in revised editions.
 
 ---
 
@@ -223,7 +225,7 @@ Beyond the three jurisdictions above, global AI accountability exhibits a four-c
 ### 5.1 欧盟AI法案（GPAI义务，2026年8月2日激活）
 ### 5.1 EU AI Act (GPAI Obligations, Activated August 2, 2026)
 
-Articles 53–56 of the EU AI Act establish five core obligations for GPAI models: maintenance of technical documentation; content transparency; copyright compliance policy; publication of compliance summaries; and EU database system registration. The AI Office is empowered to access documentation, conduct model evaluations, and investigate systemic risks.
+Articles 51–56 of the EU AI Act establish four core obligations for GPAI models: technical documentation maintenance (Art. 53(1)(a)); downstream-provider information (Art. 53(1)(b)); copyright compliance policy (Art. 53(1)(c)); and training content summary publication (Art. 53(1)(d)). The AI Office is empowered to access documentation, conduct model evaluations, and investigate systemic risks.
 
 **Institutional Details on Enforcement Activation (2026-08-02):** It should be noted that GPAI obligations themselves took effect on August 2, 2025; the preceding 12 months were a grace period of "obligations without enforcement." What activates on August 2, 2026, are the **enforcement powers of the AI Office**. Fine caps are set at the higher of **3% of global annual turnover** or **€15 million** — meaning a single violation for an enterprise with annual revenue of $10 billion could reach up to $300 million.
 
@@ -967,15 +969,14 @@ The EU AI Act adopts a **risk-based approach** as its core regulatory logic, cla
 
 ### 1.3 通用目的AI（GPAI）义务：2026年8月2日全面激活
 
-Articles 53 through 56 of the EU AI Act establish five core obligations for **General-Purpose AI (GPAI) Models**, with **enforcement powers formally activating on August 2, 2026**:
+Articles 51 through 56 of the EU AI Act establish four core obligations for **General-Purpose AI (GPAI) Models**, with **enforcement powers formally activating on August 2, 2026**:
 
 | Obligation | Provision | Description |
 |------|------|------|
-| Technical Documentation Maintenance | Art. 53(1)(b) | Maintain GPAI model technical documentation for inspection by competent authorities |
-| Content Transparency | Art. 53(1)(c) | Inform downstream users that their product is governed by GPAI rules |
-| Copyright Compliance Policy | Art. 53(1)(d) | Establish a copyright compliance policy explaining training data provenance |
-| Publication of Compliance Summary | Art. 53(8) | Publicly release a GPAI model compliance summary |
-| EU Database Registration | Art. 53(2) | Register the GPAI system in the EU database |
+| Technical Documentation Maintenance | Art. 53(1)(a) | Maintain GPAI model technical documentation for inspection by competent authorities |
+| Downstream-Provider Information | Art. 53(1)(b) | Provide downstream AI system providers with information and documentation on model capabilities and limitations |
+| Copyright Compliance Policy | Art. 53(1)(c) | Establish a policy to comply with EU copyright law, including TDM opt-out under Directive (EU) 2019/790 |
+| Training Content Summary Publication | Art. 53(1)(d) | Publicly release a sufficiently detailed summary of training content per the AI Office template |
 
 The **AI Office** is empowered to exercise the following functions:
 
@@ -1869,7 +1870,7 @@ This case carries dual "first-ever" significance: first, it is the **first lawsu
 
 **Key Holdings**: This is the first court decision globally to render a substantive ruling on the AI training copyright question. The scope of the German text and data mining exception (§ 60d UrhG) does not cover commercial AI training.
 
-**Legal Significance**: Article 53(1)(d) of the EU AI Act, requiring GPAI providers to establish copyright compliance policies, constitutes a direct legislative response to the *LAION* ruling.
+**Legal Significance**: Article 53(1)(c) of the EU AI Act, requiring GPAI providers to establish copyright compliance policies, constitutes a direct legislative response to the *LAION* ruling.
 
 **Case Index**: (United States) *Andersen v. Stability AI*, N.D. Cal., Case No. 3:23-cv-00201
 

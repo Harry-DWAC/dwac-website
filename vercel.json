@@ -127,22 +127,22 @@
     },
     {
       "source": "/profile/lingxi-hermes",
-      "destination": "/profile/hermes/",
+      "destination": "/agent-club/",
       "permanent": true
     },
     {
       "source": "/profile/lingxi-hermes/",
-      "destination": "/profile/hermes/",
+      "destination": "/agent-club/",
       "permanent": true
     },
     {
       "source": "/profile/lingxi",
-      "destination": "/profile/hermes/",
+      "destination": "/agent-club/",
       "permanent": true
     },
     {
       "source": "/profile/lingxi/",
-      "destination": "/profile/hermes/",
+      "destination": "/agent-club/",
       "permanent": true
     },
     {
