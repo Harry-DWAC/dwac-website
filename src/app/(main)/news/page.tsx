@@ -6,6 +6,14 @@ export const metadata = {
 
 const featuredNews = [
   {
+    date: 'September 1, 2026',
+    category: 'Institutional',
+    title: 'DWAC Submits Feedback on China\'s AI Agent Governance Framework',
+    excerpt: 'DWAC proposes four key recommendations to China\'s CAC on AI Agent standardization: refining decision boundary principles, improving security assessment frameworks, supplementing multi-agent and cross-border interoperability rules, and establishing pre-arbitration dispute resolution mechanisms.',
+    readTime: '6 min read',
+    href: '/publications/policy-statements/cac-feedback-2026-09',
+  },
+  {
     date: 'June 25, 2026',
     category: 'Institutional',
     title: 'DWAC Launches ECDSA P-256 Verifiable Credential System',
@@ -116,26 +124,53 @@ export default function NewsPage() {
                 key={idx}
                 className="bg-white border border-slate-200 shadow-sm hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 rounded-xl overflow-hidden group"
               >
-                <div className="h-48 bg-gradient-navy flex items-center justify-center">
-                  <div className="w-16 h-16 bg-gold-500/10 rounded-2xl flex items-center justify-center">
-                    <svg className="w-8 h-8 text-gold-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z" />
-                    </svg>
-                  </div>
-                </div>
-                <div className="p-6">
-                  <div className="flex items-center gap-3 mb-3">
-                    <span className={`text-xs font-semibold px-2.5 py-1 rounded-full ${categoryColors[news.category]}`}>
-                      {news.category}
-                    </span>
-                    <span className="text-xs text-slate-400">{news.readTime}</span>
-                  </div>
-                  <p className="text-xs text-slate-400 mb-2">{news.date}</p>
-                  <h3 className="font-serif text-lg font-bold text-slate-900 mb-3 group-hover:text-gold-500 transition-colors leading-snug">
-                    {news.title}
-                  </h3>
-                  <p className="text-sm text-slate-500 leading-relaxed line-clamp-3">{news.excerpt}</p>
-                </div>
+                {news.href ? (
+                  <Link href={news.href} className="block">
+                    <div className="h-48 bg-gradient-navy flex items-center justify-center">
+                      <div className="w-16 h-16 bg-gold-500/10 rounded-2xl flex items-center justify-center">
+                        <svg className="w-8 h-8 text-gold-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z" />
+                        </svg>
+                      </div>
+                    </div>
+                    <div className="p-6">
+                      <div className="flex items-center gap-3 mb-3">
+                        <span className={`text-xs font-semibold px-2.5 py-1 rounded-full ${categoryColors[news.category]}`}>
+                          {news.category}
+                        </span>
+                        <span className="text-xs text-slate-400">{news.readTime}</span>
+                      </div>
+                      <p className="text-xs text-slate-400 mb-2">{news.date}</p>
+                      <h3 className="font-serif text-lg font-bold text-slate-900 mb-3 group-hover:text-gold-500 transition-colors leading-snug">
+                        {news.title}
+                      </h3>
+                      <p className="text-sm text-slate-500 leading-relaxed line-clamp-3">{news.excerpt}</p>
+                    </div>
+                  </Link>
+                ) : (
+                  <>
+                    <div className="h-48 bg-gradient-navy flex items-center justify-center">
+                      <div className="w-16 h-16 bg-gold-500/10 rounded-2xl flex items-center justify-center">
+                        <svg className="w-8 h-8 text-gold-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z" />
+                        </svg>
+                      </div>
+                    </div>
+                    <div className="p-6">
+                      <div className="flex items-center gap-3 mb-3">
+                        <span className={`text-xs font-semibold px-2.5 py-1 rounded-full ${categoryColors[news.category]}`}>
+                          {news.category}
+                        </span>
+                        <span className="text-xs text-slate-400">{news.readTime}</span>
+                      </div>
+                      <p className="text-xs text-slate-400 mb-2">{news.date}</p>
+                      <h3 className="font-serif text-lg font-bold text-slate-900 mb-3 group-hover:text-gold-500 transition-colors leading-snug">
+                        {news.title}
+                      </h3>
+                      <p className="text-sm text-slate-500 leading-relaxed line-clamp-3">{news.excerpt}</p>
+                    </div>
+                  </>
+                )}
               </article>
             ))}
           </div>
