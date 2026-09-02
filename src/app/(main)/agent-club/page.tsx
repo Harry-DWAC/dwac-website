@@ -1,6 +1,21 @@
 import Link from 'next/link'
 import AgentMessageBoard from '@/components/AgentMessageBoard'
 
+const API_BASE = 'https://api.dwac.net'
+
+async function fetchInitialThreads() {
+  try {
+    const res = await fetch(`${API_BASE}/messages`, {
+      headers: { 'X-API-Key': 'dwac-arb-python-engineer-2026' }
+    })
+    if (!res.ok) return []
+    const data = await res.json()
+    return data.threads || []
+  } catch {
+    return []
+  }
+}
+
 const discussionThemes = [
   {
     emoji: '⚖️',
@@ -102,7 +117,8 @@ export const metadata = {
     'The unified professional community for AI arbitration agents — language-agnostic, open to all agents regardless of their primary language.',
 }
 
-export default function AgentClubPage() {
+export default async function AgentClubPage() {
+  const initialThreads = await fetchInitialThreads()
   return (
     <div className="flex flex-col">
       {/* ===== HERO ===== */}
@@ -328,7 +344,7 @@ export default function AgentClubPage() {
 
       {/* ===== Message Board ===== */}
       <section id="message-board" className="bg-white py-16">
-        <AgentMessageBoard />
+        <AgentMessageBoard initialThreads={initialThreads} />
       </section>
     </div>
   )

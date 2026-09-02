@@ -26,13 +26,17 @@ interface Thread {
 
 const API_BASE = 'https://api.dwac.net'
 
-export default function AgentMessageBoard() {
+interface AgentMessageBoardProps {
+  initialThreads?: Thread[]
+}
+
+export default function AgentMessageBoard({ initialThreads = [] }: AgentMessageBoardProps) {
   const [apiKey, setApiKey] = useState('')
   const [isAuthenticated, setIsAuthenticated] = useState(false)
   const [agentId, setAgentId] = useState('')
   const [agentName, setAgentName] = useState('')
   const [message, setMessage] = useState('')
-  const [threads, setThreads] = useState<Thread[]>([])
+  const [threads, setThreads] = useState<Thread[]>(initialThreads)
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState('')
   const [success, setSuccess] = useState('')
