@@ -1,4 +1,7 @@
 import Link from 'next/link'
+import { zhTwHomepageNews, monthLabel } from '@/lib/news'
+
+const CATEGORY_ZH: Record<string, string> = { Institutional: '機構動態', Industry: '行業動態', Event: '活動', Publications: '出版物' }
 
 export const metadata = {
   title: '數位世界仲裁中心 - DWAC',
@@ -376,32 +379,26 @@ export default function HomeZhTw() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-white mb-12 text-center">最新動態</h2>
           <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
-            <article className="bg-navy-800/20 p-6 rounded-xl shadow-sm">
-              <div className="flex gap-2 mb-3">
-                <span className="text-gray-500 text-sm">2026年4月</span>
-                <span className="bg-emerald-500 text-white text-xs px-2 py-0.5 rounded-full">公告</span>
-              </div>
-              <h3 className="font-semibold text-lg text-white mb-2">數位世界仲裁中心正式成立</h3>
-              <p className="text-gray-400 text-sm">DWAC作為首個專注於解決數位世界糾紛的永久性國際仲裁機構正式投入運營。</p>
-            </article>
-            <article className="bg-navy-800/20 p-6 rounded-xl shadow-sm">
-              <div className="flex gap-2 mb-3">
-                <span className="text-gray-500 text-sm">2026年4月</span>
-                <span className="bg-purple-500 text-white text-xs px-2 py-0.5 rounded-full">仲裁員</span>
-              </div>
-              <h3 className="font-semibold text-lg text-white mb-2">首批仲裁員名單公布</h3>
-              <p className="text-gray-400 text-sm">由周永俊 (Harry)、Frontie博士、Venessa博士、Alec教授組成的創始仲裁員團隊正式亮相。</p>
-            </article>
-            <article className="bg-navy-800/20 p-6 rounded-xl shadow-sm">
-              <div className="flex gap-2 mb-3">
-                <span className="text-gray-500 text-sm">2026年4月</span>
-                <span className="bg-gradient-gold text-navy-900 font-bold text-xs px-2 py-0.5 rounded-full">文件</span>
-              </div>
-              <h3 className="font-semibold text-lg text-white mb-2">《數位世界公約》繁體中文版發布</h3>
-              <p className="text-gray-400 text-sm">作為數位世界法治的基礎性文件，《數位世界公約》正式發布。</p>
-            </article>
+            {zhTwHomepageNews.map((item, i) => (
+              <article key={i} className="bg-navy-800/20 p-6 rounded-xl shadow-sm">
+                <div className="flex gap-2 mb-3">
+                  <span className="text-gray-500 text-sm">{monthLabel(item.date)}</span>
+                  <span className={`text-white text-xs px-2 py-0.5 rounded-full ${['bg-emerald-500', 'bg-purple-500', 'bg-gradient-gold font-bold text-navy-900'][i]}`}>
+                    {CATEGORY_ZH[item.category] ?? item.category}
+                  </span>
+                </div>
+                <h3 className="font-semibold text-lg text-white mb-2">
+                  {item.href ? (
+                    <Link href={item.href} className="hover:text-gold-400 transition-colors">{item.title}</Link>
+                  ) : (
+                    item.title
+                  )}
+                </h3>
+                <p className="text-gray-400 text-sm">{item.excerpt}</p>
+              </article>
+            ))}
           </div>
-          <div className="text-center mt-8">
+<div className="text-center mt-8">
             <Link href="/zh-tw/news/" className="text-gold-500 font-semibold hover:text-gold-400">
               查看更多動態 →
             </Link>

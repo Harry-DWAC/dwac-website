@@ -1,65 +1,10 @@
 import Link from 'next/link'
+import { zhTwFeaturedNews as featuredNews, zhTwNewsItems as newsItems } from '@/lib/news'
+
 export const metadata = {
   title: '新聞動態 - 數位世界仲裁中心',
 }
 
-
-const featuredNews = [
-  {
-    date: '2026年6月25日',
-    category: 'Institutional',
-    title: 'DWAC 推出 ECDSA P-256 憑證簽名系統',
-    excerpt: '數位憑證已升級為真實密碼學簽名。全新的 ECDSA P-256 VC 系統為所有數位仲裁證書和憑證提供企業級安全保護。',
-    readTime: '4分鐘閱讀',
-  },
-  {
-    date: '2026年4月20日',
-    category: 'Institutional',
-    title: 'Agent Club 正式營運',
-    excerpt: '13位AI仲裁Agent在線運行。Agent Club 現已全面營運，匯聚全球AI仲裁員進行案例分析和討論。',
-    readTime: '3分鐘閱讀',
-  },
-  {
-    date: '2026年3月15日',
-    category: 'Institutional',
-    title: 'DWAC 網站三語版本全面上線',
-    excerpt: '252頁SEO全部通過驗收。DWAC網站現已全面支援英文、簡體中文和繁體中文，內容完全同步。',
-    readTime: '3分鐘閱讀',
-  },
-  {
-    date: '2025年4月28日',
-    category: 'Institutional',
-    title: 'DWAC宣布成立智能仲裁員俱樂部',
-    excerpt: '全球首個專注於AI驅動仲裁代理的俱樂部。這一開創性舉措旨在推動人工智能在國際仲裁程序中的整合應用。',
-    readTime: '5分鐘閱讀',
-  },
-  {
-    date: '2025年4月15日',
-    category: 'Industry',
-    title: '全球數位商務爭議年案件量突破200萬件',
-    excerpt: '國際貿易中心發布的新報告揭示了專業數位爭議解決機制日益增長的需求，凸顯了DWAC在這一新興領域的關鍵作用。',
-    readTime: '4分鐘閱讀',
-  },
-  {
-    date: '2025年3月30日',
-    category: 'Event',
-    title: 'DWAC參加2025年國際仲裁峰會',
-    excerpt: 'DWAC代表在年度峰會上就「AI時代的仲裁」發表演講，吸引了超過500名國際從業者和學者的關注。',
-    readTime: '3分鐘閱讀',
-  },
-]
-
-const newsItems = [
-  { date: '2026年6月25日', category: 'Institutional', title: 'DWAC 推出 ECDSA P-256 憑證簽名系統', excerpt: '數位憑證已升級為真實密碼學簽名。' },
-  { date: '2026年4月20日', category: 'Institutional', title: 'Agent Club 正式營運', excerpt: '13位AI仲裁Agent在線運行。' },
-  { date: '2026年3月15日', category: 'Institutional', title: 'DWAC 網站三語版本全面上線', excerpt: '252頁SEO全部通過驗收。' },
-  { date: '2025年4月20日', category: 'Institutional', title: 'DWAC仲裁規則更新：納入AI輔助程序條款', excerpt: '對第12、34和56條的關鍵修訂現已為AI工具在案件管理和證據分析中的使用提供了框架。' },
-  { date: '2025年4月10日', category: 'Publications', title: '新研究論文：跨境數位資產爭議解決', excerpt: '周博士的最新論文探討了涉及多司法管轄區數位資產爭議解決的法律挑戰。' },
-  { date: '2025年3月25日', category: 'Industry', title: '東南亞電商平台採用DWAC示範條款', excerpt: '三大區域平台已將DWAC仲裁條款納入其標準服務條款。' },
-  { date: '2025年3月15日', category: 'Event', title: 'DWAC研討會：數位世界仲裁中的證據', excerpt: '一場探索數位證據收集、認證和出示最佳實踐的互動研討會。' },
-  { date: '2025年3月5日', category: 'Institutional', title: '來自歐洲和非洲的新機構會員加入DWAC', excerpt: '來自歐洲和非洲的五所大學和三家律師事務所已被批准為機構會員。' },
-  { date: '2025年2月20日', category: 'Industry', title: '聯合國國際貿易法委員會引用ODR標準', excerpt: 'UNCITRAL第三工作組引用DWAC的方法作為未來線上爭議解決框架的範例。' },
-]
 
 const categoryColors: Record<string, string> = {
   Institutional: 'bg-blue-50 text-blue-700',

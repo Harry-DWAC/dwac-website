@@ -1,73 +1,8 @@
 import Link from 'next/link'
+import { featuredNews, newsItems } from '@/lib/news'
 export const metadata = {
   title: 'News & Updates - DWAC',
 }
-
-
-const featuredNews = [
-  {
-    date: 'September 1, 2026',
-    category: 'Institutional',
-    title: 'DWAC Submits Feedback on China\'s AI Agent Governance Framework',
-    excerpt: 'DWAC proposes four key recommendations to China\'s CAC on AI Agent standardization: refining decision boundary principles, improving security assessment frameworks, supplementing multi-agent and cross-border interoperability rules, and establishing pre-arbitration dispute resolution mechanisms.',
-    readTime: '6 min read',
-    href: '/publications/policy-statements/cac-feedback-2026-09',
-  },
-  {
-    date: 'June 25, 2026',
-    category: 'Institutional',
-    title: 'DWAC Launches ECDSA P-256 Verifiable Credential System',
-    excerpt: 'Digital credentials upgraded to real cryptographic signatures. The new ECDSA P-256 VC system provides enterprise-grade security for all digital arbitration certificates and credentials.',
-    readTime: '4 min read',
-  },
-  {
-    date: 'April 20, 2026',
-    category: 'Institutional',
-    title: 'Agent Club Goes Live',
-    excerpt: '13 AI arbitration agents now running online. The Agent Club is fully operational, bringing together AI arbitrators from around the world for case analysis and discussion.',
-    readTime: '3 min read',
-  },
-  {
-    date: 'March 15, 2026',
-    category: 'Institutional',
-    title: 'DWAC Website Fully Launched in Three Languages',
-    excerpt: '252 SEO pages all passed acceptance. The DWAC website is now fully live in English, Simplified Chinese, and Traditional Chinese with complete content parity.',
-    readTime: '3 min read',
-  },
-  {
-    date: 'April 28, 2025',
-    category: 'Institutional',
-    title: 'DWAC Announces the Launch of the Agent-Arbitrator Club',
-    excerpt: 'The world\'s first club dedicated to AI-powered arbitration agents. This groundbreaking initiative aims to pioneer the integration of artificial intelligence in international arbitration proceedings.',
-    readTime: '5 min read',
-  },
-  {
-    date: 'April 15, 2025',
-    category: 'Industry',
-    title: 'Global Digital Commerce Disputes Surpass 2 Million Cases Annually',
-    excerpt: 'A new report from the International Trade Centre reveals the growing demand for specialized digital dispute resolution mechanisms, highlighting DWAC\'s critical role in this emerging field.',
-    readTime: '4 min read',
-  },
-  {
-    date: 'March 30, 2025',
-    category: 'Event',
-    title: 'DWAC Participates in the 2025 International Arbitration Summit',
-    excerpt: 'DWAC representatives presented on "Arbitration in the Age of AI" at the annual summit, drawing interest from over 500 international practitioners and scholars.',
-    readTime: '3 min read',
-  },
-]
-
-const newsItems = [
-  { date: 'Jun 25, 2026', category: 'Institutional', title: 'DWAC Launches ECDSA P-256 Verifiable Credential System', excerpt: 'Digital credentials upgraded to real cryptographic signatures.' },
-  { date: 'Apr 20, 2026', category: 'Institutional', title: 'Agent Club Goes Live', excerpt: '13 AI arbitration agents now running online.' },
-  { date: 'Mar 15, 2026', category: 'Institutional', title: 'DWAC Website Fully Launched in Three Languages', excerpt: '252 SEO pages all passed acceptance.' },
-  { date: 'Apr 20, 2025', category: 'Institutional', title: 'DWAC Arbitration Rules Updated to Include AI-Assisted Proceedings', excerpt: 'Key amendments to Articles 12, 34, and 56 now provide a framework for the use of AI tools in case management and evidence analysis.' },
-  { date: 'Apr 10, 2025', category: 'Publications', title: 'New Research Paper: Cross-Border Digital Asset Dispute Resolution', excerpt: 'Dr. Zhou\'s latest paper examines the legal challenges of resolving disputes involving digital assets across multiple jurisdictions.' },
-  { date: 'Mar 25, 2025', category: 'Industry', title: 'Southeast Asian E-Commerce Platforms Adopt DWAC Model Clauses', excerpt: 'Three major regional platforms have integrated DWAC arbitration clauses into their standard terms of service.' },
-  { date: 'Mar 15, 2025', category: 'Event', title: 'DWAC Workshop: Evidence in Digital World Arbitration', excerpt: 'An interactive workshop exploring best practices for digital evidence collection, authentication, and presentation in arbitration.' },
-  { date: 'Mar 05, 2025', category: 'Institutional', title: 'New Institutional Members Join DWAC from Europe and Africa', excerpt: 'Five universities and three law firms from across Europe and Africa have been approved as institutional members.' },
-  { date: 'Feb 20, 2025', category: 'Industry', title: 'UN Commission on International Trade Law References ODR Standards', excerpt: 'UNCITRAL Working Group III cites DWAC\'s approach as a model for future online dispute resolution frameworks.' },
-]
 
 const categoryColors: Record<string, string> = {
   Institutional: 'bg-blue-50 text-blue-700',
