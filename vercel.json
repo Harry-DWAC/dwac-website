@@ -186,6 +186,36 @@
       "permanent": true
     },
     {
+      "source": "/law-school/library",
+      "destination": "/library/",
+      "permanent": true
+    },
+    {
+      "source": "/law-school/library/",
+      "destination": "/library/",
+      "permanent": true
+    },
+    {
+      "source": "/zh-cn/law-school/library",
+      "destination": "/zh-cn/library/",
+      "permanent": true
+    },
+    {
+      "source": "/zh-cn/law-school/library/",
+      "destination": "/zh-cn/library/",
+      "permanent": true
+    },
+    {
+      "source": "/zh-tw/law-school/library",
+      "destination": "/zh-tw/library/",
+      "permanent": true
+    },
+    {
+      "source": "/zh-tw/law-school/library/",
+      "destination": "/zh-tw/library/",
+      "permanent": true
+    },
+    {
       "source": "/zh-cn/law-school/books",
       "destination": "/zh-cn/library/book/",
       "permanent": true
