@@ -264,6 +264,36 @@
       "source": "/zh-tw/news-and-insights",
       "destination": "/zh-tw/news/",
       "permanent": true
+    },
+    {
+      "source": "/rules-full",
+      "destination": "/rules/full/",
+      "permanent": true
+    },
+    {
+      "source": "/rules-full/",
+      "destination": "/rules/full/",
+      "permanent": true
+    },
+    {
+      "source": "/zh-cn/rules-full",
+      "destination": "/zh-cn/rules/full/",
+      "permanent": true
+    },
+    {
+      "source": "/zh-cn/rules-full/",
+      "destination": "/zh-cn/rules/full/",
+      "permanent": true
+    },
+    {
+      "source": "/zh-tw/rules-full",
+      "destination": "/zh-tw/rules/full/",
+      "permanent": true
+    },
+    {
+      "source": "/zh-tw/rules-full/",
+      "destination": "/zh-tw/rules/full/",
+      "permanent": true
     }
   ],
   "headers": [
