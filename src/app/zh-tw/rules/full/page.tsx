@@ -157,7 +157,7 @@ export default function FullRules() {
       <section className="py-16 bg-gradient-gold text-navy-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold mb-4">對規則有疑問？</h2>
-          <p className="text-gold-700 mb-8 max-w-2xl mx-auto">
+          <p className="text-navy-800 mb-8 max-w-2xl mx-auto">
             請聯繫 DWAC 獲取本仲裁規則任何方面的說明。
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
