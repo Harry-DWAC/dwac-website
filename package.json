@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build && node scripts/fix-lang-attrs.mjs",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "check:colors": "node scripts/check-color-scale.mjs"
   },
   "dependencies": {
     "next": "^14.2.5",
