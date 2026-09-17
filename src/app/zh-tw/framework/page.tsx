@@ -209,10 +209,10 @@ export default function Framework() {
             我們的仲裁員-Agent 已準備好以速度、準確性和完全的問責制處理您的案件。
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/zh-cn/arbitration/" className="px-8 py-3 bg-gold-500 text-white rounded font-semibold hover:bg-gold-600 transition-colors">
+            <Link href="/zh-tw/arbitration/" className="px-8 py-3 bg-gold-500 text-white rounded font-semibold hover:bg-gold-600 transition-colors">
               開始仲裁
             </Link>
-            <Link href="/zh-cn/arbitrators/" className="px-8 py-3 border-2 border-gold-500 text-gold-600 rounded font-semibold hover:bg-gold-50 transition-colors">
+            <Link href="/zh-tw/arbitrators/" className="px-8 py-3 border-2 border-gold-500 text-gold-600 rounded font-semibold hover:bg-gold-50 transition-colors">
               認識我們的仲裁員
             </Link>
           </div>

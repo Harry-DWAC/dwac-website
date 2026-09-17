@@ -7,14 +7,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/', '/about/', '/charter/', '/contact/',
     '/dispute/', '/how-to-apply/', '/rules/', '/fees/',
     '/fee-calculator/', '/model-clause/', '/virtual-hearing/',
-    '/arbitration/', '/digital-tribunal/', '/club/',
+    '/arbitration/', '/digital-tribunal/',
     '/arbitrators/', '/privacy/', '/terms/',
     '/resources/law/', '/cases/',
     '/login/', '/register/',
     // New pages added June 2026
     '/library/', '/library/book/vol1/', '/library/book/vol2/', '/library/book/vol3/', '/library/book/vol4/',
     '/community/', '/law-school/', '/agent-club/',
-    '/publications/', '/gclc-downloads/',
+    '/publications/',
     '/agent-registry/', '/api-docs/', '/services/',
     '/expertise/', '/tribunal/', '/membership/',
     '/news/', '/why-dwac/', '/framework/',
@@ -26,7 +26,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     // Resources pages
     '/resources/contracts/', '/resources/forms/',
     '/resources/law-unification-report/', '/resources/law-unification-strategy/',
-    '/payment/', '/forum/',
+    '/payment/',
     // Individual profile pages
     '/profile/harry/', '/profile/dr-frontie/', '/profile/dr-venessa/',
     '/profile/prof-alec/', '/profile/fresa-li/', '/profile/dr-gochye/',

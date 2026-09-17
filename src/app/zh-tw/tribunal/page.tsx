@@ -200,10 +200,10 @@ export default function TribunalZhCn() {
           <h2 className="text-3xl font-bold mb-4">有疑問？</h2>
           <p className="text-gold-300 mb-8 max-w-2xl mx-auto">秘書處随时为您提供仲裁庭組建相關問題的解答。</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/zh-cn/contact/" className="px-6 py-3 bg-navy-800/20 text-gold-500 font-semibold rounded-lg hover:bg-navy-800/40 transition-colors">
+            <Link href="/zh-tw/contact/" className="px-6 py-3 bg-navy-800/20 text-gold-500 font-semibold rounded-lg hover:bg-navy-800/40 transition-colors">
               聯繫我們
             </Link>
-            <Link href="/zh-cn/fees/" className="px-6 py-3 border-2 border-white text-white font-semibold rounded-lg hover:bg-navy-800/20/10 transition-colors">
+            <Link href="/zh-tw/fees/" className="px-6 py-3 border-2 border-white text-white font-semibold rounded-lg hover:bg-navy-800/20/10 transition-colors">
               查看費用表
             </Link>
           </div>

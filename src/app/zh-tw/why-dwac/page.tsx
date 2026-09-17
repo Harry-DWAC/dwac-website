@@ -212,10 +212,10 @@ export default function WhyDWAC() {
             今天線上提交您的爭議，獲得更快、更實惠的解決方案。
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/zh-cn/arbitration/how-to-apply/" className="px-8 py-3 bg-gold-500 text-white rounded font-semibold hover:bg-gold-600 transition-colors">
+            <Link href="/zh-tw/how-to-apply/" className="px-8 py-3 bg-gold-500 text-white rounded font-semibold hover:bg-gold-600 transition-colors">
               提交爭議
             </Link>
-            <Link href="/zh-cn/contact/" className="px-8 py-3 border-2 border-gold-500 text-gold-600 rounded font-semibold hover:bg-gold-50 transition-colors">
+            <Link href="/zh-tw/contact/" className="px-8 py-3 border-2 border-gold-500 text-gold-600 rounded font-semibold hover:bg-gold-50 transition-colors">
               聯絡我們
             </Link>
           </div>

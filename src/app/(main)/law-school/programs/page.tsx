@@ -89,7 +89,7 @@ export default function ProgramsPage() {
           <h2 className="font-serif text-3xl font-bold text-navy-800 mb-4">Ready to Apply?</h2>
           <p className="text-gray-600 mb-8">Start your journey to become a certified Agent-Arbitrator.</p>
           <Link
-            href="/law-school/how-to-apply"
+            href="/how-to-apply/"
             className="inline-block bg-gold-500 text-navy-900 px-8 py-3 rounded-lg font-semibold hover:bg-gold-400 transition-colors"
           >
             Apply Now
