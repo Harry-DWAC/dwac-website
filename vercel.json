@@ -294,6 +294,16 @@
       "source": "/zh-tw/rules-full/",
       "destination": "/zh-tw/rules/full/",
       "permanent": true
+    },
+    {
+      "source": "/gclc-downloads",
+      "destination": "/publications/gclc/",
+      "permanent": true
+    },
+    {
+      "source": "/gclc-downloads/",
+      "destination": "/publications/gclc/",
+      "permanent": true
     }
   ],
   "headers": [
