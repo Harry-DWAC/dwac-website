@@ -149,6 +149,7 @@ window.__waline_instance = init({
   imageUploader: false,
   highlighter: true,
   texRenderer: false,
+  emoji: ['/vendor/waline/emoji/weibo'],
 });
 `;
     document.body.appendChild(script);
