@@ -37,11 +37,13 @@ export default function WalineComment({ lang = "en", path }: WalineCommentProps)
     const serverURL = "https://comment.dwac.net";
     const pagePath = path || window.location.pathname;
 
-    // Load Waline CSS from CDN
+    // Load Waline CSS — self-hosted (public/vendor/waline/v3, 3.15.2).
+    // Was https://unpkg.com/... — blocked by our own CSP (style-src 'self') since 2026-08-28,
+    // which silently killed the whole comment board.
     if (!document.querySelector('link[href*="waline.css"]')) {
       const link = document.createElement("link");
       link.rel = "stylesheet";
-      link.href = "https://unpkg.com/@waline/client@v3/dist/waline.css";
+      link.href = "/vendor/waline/v3/waline.css";
       document.head.appendChild(link);
     }
 
@@ -82,6 +84,7 @@ export default function WalineComment({ lang = "en", path }: WalineCommentProps)
         /* Sort control styling */
         .waline-sort-bar { 
           display: flex; 
+          flex-wrap: wrap;
           align-items: center; 
           gap: 0.5rem; 
           margin-bottom: 1rem;
@@ -129,7 +132,7 @@ export default function WalineComment({ lang = "en", path }: WalineCommentProps)
     script.id = scriptId;
     script.type = "module";
     script.textContent = `
-import { init } from 'https://unpkg.com/@waline/client@v3/dist/waline.js';
+import { init } from '/vendor/waline/v3/waline.js';
 if (window.__waline_instance) { try { window.__waline_instance.destroy(); } catch(e) {} }
 window.__waline_instance = init({
   el: '#waline-container',
