@@ -52,10 +52,18 @@ export default function Vol2ZhTwPage() {
         {/* Downloads — Limited-Time Free Access */}
         <LibraryDownloadWidget />
 
+                {/* 取得入口 */}
         <div className="bg-white rounded-xl p-8 shadow-sm prose max-w-none">
-          <h2 className="font-serif text-2xl font-bold text-navy-800 mb-4">第一章：進階證據處理</h2>
-          <p className="text-gray-600 leading-relaxed mb-4">[全書內容待添加，當前為佔位文本。]</p>
-          <p className="text-gray-400 text-sm italic">第二卷完整內容即將上線。</p>
+          <h2 className="font-serif text-2xl font-bold text-navy-800 mb-4">取得第二卷</h2>
+          <p className="text-gray-600 leading-relaxed mb-4">
+            本卷是《全球網絡法律彙編》的一部分，完整正文（英文 / 簡體中文 / 繁體中文版）已在 DWAC 出版物專區發佈，提供 EPUB、Markdown、HTML 三種格式。
+          </p>
+          <p className="mb-2">
+            <a href="/zh-tw/publications/gclc/" className="text-gold-600 font-semibold hover:underline">→ 前往《全球網絡法律彙編》專區</a>
+          </p>
+          <p className="text-gray-500 text-sm">
+            需要全套彙編或機構授權？請聯繫 <a href="mailto:lingxi@dwac.net" className="underline">lingxi@dwac.net</a>。
+          </p>
         </div>
       </div>
     </div>
