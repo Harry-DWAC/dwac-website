@@ -61,14 +61,18 @@ export default function Vol2Page() {
         {/* Downloads — Limited-Time Free Access */}
         <LibraryDownloadWidget />
 
-{/* Placeholder content */}
+        {/* Access — how to get this volume */}
         <div className="bg-white rounded-xl p-8 shadow-sm prose max-w-none">
-          <h2 className="font-serif text-2xl font-bold text-navy-800 mb-4">Chapter 1: Advanced Evidence Handling</h2>
+          <h2 className="font-serif text-2xl font-bold text-navy-800 mb-4">Get Volume 2</h2>
           <p className="text-gray-600 leading-relaxed mb-4">
-            [Full book content to be added. This is a placeholder for the complete Volume 2 text.]
+            Volume 2 is part of the <strong>Global Cyber Law Compendium</strong>. The complete text — English, 简体中文 and
+            繁體中文 editions — is published on the DWAC publications portal in EPUB, Markdown and HTML.
           </p>
-          <p className="text-gray-400 text-sm italic">
-            Content from the deployed Volume 2 reader will be inserted here.
+          <p className="mb-2">
+            <a href="/publications/gclc/" className="text-gold-600 font-semibold hover:underline">→ Open the Global Cyber Law Compendium</a>
+          </p>
+          <p className="text-gray-500 text-sm">
+            Need the full set, or a print / institutional licence? Contact <a href="mailto:lingxi@dwac.net" className="underline">lingxi@dwac.net</a>.
           </p>
         </div>
       </div>

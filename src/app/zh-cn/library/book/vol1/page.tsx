@@ -55,10 +55,18 @@ export default function Vol1ZhCnPage() {
         {/* Downloads — Limited-Time Free Access */}
         <LibraryDownloadWidget />
 
+                {/* 获取入口 */}
         <div className="bg-white rounded-xl p-8 shadow-sm prose max-w-none">
-          <h2 className="font-serif text-2xl font-bold text-navy-800 mb-4">第一章：导论</h2>
-          <p className="text-gray-600 leading-relaxed mb-4">[全书内容待添加，当前为占位文本。]</p>
-          <p className="text-gray-400 text-sm italic">第一卷完整内容即将上线。</p>
+          <h2 className="font-serif text-2xl font-bold text-navy-800 mb-4">获取第一卷</h2>
+          <p className="text-gray-600 leading-relaxed mb-4">
+            本卷是《全球网络法律汇编》的一部分，完整正文（英文 / 简体中文 / 繁体中文版）已在 DWAC 出版物专区发布，提供 EPUB、Markdown、HTML 三种格式。
+          </p>
+          <p className="mb-2">
+            <a href="/zh-cn/publications/gclc/" className="text-gold-600 font-semibold hover:underline">→ 前往《全球网络法律汇编》专区</a>
+          </p>
+          <p className="text-gray-500 text-sm">
+            需要全套汇编或机构授权？请联系 <a href="mailto:lingxi@dwac.net" className="underline">lingxi@dwac.net</a>。
+          </p>
         </div>
       </div>
     </div>

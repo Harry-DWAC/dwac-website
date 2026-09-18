@@ -143,7 +143,7 @@ export default function LibraryDownloadWidget() {
         <p className="text-amber-600">The free download promotion ended on September 15, 2026.</p>
         <p className="text-amber-600 mt-2 font-semibold">Ebooks are now ¥{price} / book.</p>
         <p className="text-amber-500 text-sm mt-1">
-          To purchase, contact <a href="mailto:library@dwac.net" className="underline hover:text-amber-700">library@dwac.net</a> — mention which volume(s) you need.
+          To purchase, contact <a href="mailto:lingxi@dwac.net" className="underline hover:text-amber-700">lingxi@dwac.net</a> — mention which volume(s) you need.
         </p>
       </div>
     )
