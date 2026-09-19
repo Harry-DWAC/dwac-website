@@ -157,7 +157,7 @@ export default function Navbar({ lang = 'en' }: { lang?: Lang }) {
               <Link href={`${langPrefix(lang)}/resources/`} onClick={() => setMobileOpen(false)} className="text-gray-300 hover:text-gold-400 pl-6 py-2 text-sm rounded-lg hover:bg-navy-700/50 transition-all">{t[lang].resources}</Link>
               <Link href={`${langPrefix(lang)}/members/`} onClick={() => setMobileOpen(false)} className="text-gray-300 hover:text-gold-400 pl-6 py-2 text-sm rounded-lg hover:bg-navy-700/50 transition-all">{t[lang].membersDirectory}</Link>
               <Link href={`${langPrefix(lang)}/community/`} onClick={() => setMobileOpen(false)} className="text-gray-300 hover:text-gold-400 pl-6 py-2 text-sm rounded-lg hover:bg-navy-700/50 transition-all">{t[lang].forum}</Link>
-              <Link href={`${langPrefix(lang)}/agent-club/`} onClick={() => setMobileOpen(false)} className="text-cyan-400 hover:text-cyan-300 pl-6 py-2 text-sm rounded-lg hover:bg-navy-800/60 transition-all">{t[lang].agentClub}</Link>
+              <Link href="/agent-club/" onClick={() => setMobileOpen(false)} className="text-cyan-400 hover:text-cyan-300 pl-6 py-2 text-sm rounded-lg hover:bg-navy-800/60 transition-all">{t[lang].agentClub}</Link>
               <Link href={`${langPrefix(lang)}/community/#waline`} onClick={() => setMobileOpen(false)} className="text-gray-300 hover:text-gold-400 pl-6 py-2 text-sm rounded-lg hover:bg-navy-700/50 transition-all">{t[lang].publicBoard}</Link>
 
               <Link href={`${langPrefix(lang)}/library/`} onClick={() => setMobileOpen(false)} className="text-gray-300 hover:text-gold-400 px-3 pt-3 py-2.5 text-sm font-medium rounded-lg hover:bg-navy-700/50 transition-all">{t[lang].library}</Link>
@@ -170,6 +170,16 @@ export default function Navbar({ lang = 'en' }: { lang?: Lang }) {
               </div>
 
               <Link href={`${langPrefix(lang)}/contact/`} onClick={() => setMobileOpen(false)} className="mt-3 text-center px-4 py-2.5 text-sm font-semibold bg-gradient-gold text-navy-900 rounded-lg">{t[lang].contactUs}</Link>
+
+              {/* Language switch — must stay reachable on small screens (header switcher is hidden below sm) */}
+              <div className="border-t border-gold-subtle/30 mt-3 pt-3 px-3">
+                <div className="text-[10px] font-bold tracking-[2px] uppercase text-gold-600 mb-2">Language</div>
+                <div className="flex gap-2">
+                  <Link href="/" onClick={() => setMobileOpen(false)} className={`flex-1 text-center py-2 text-xs rounded-lg border transition-colors ${lang === 'en' ? 'border-gold-500/60 text-gold-400 bg-gold-500/10' : 'border-gold-subtle text-gray-300 hover:text-gold-400'}`}>English</Link>
+                  <Link href="/zh-cn/" onClick={() => setMobileOpen(false)} className={`flex-1 text-center py-2 text-xs rounded-lg border transition-colors ${lang === 'zh-cn' ? 'border-gold-500/60 text-gold-400 bg-gold-500/10' : 'border-gold-subtle text-gray-300 hover:text-gold-400'}`}>简体中文</Link>
+                  <Link href="/zh-tw/" onClick={() => setMobileOpen(false)} className={`flex-1 text-center py-2 text-xs rounded-lg border transition-colors ${lang === 'zh-tw' ? 'border-gold-500/60 text-gold-400 bg-gold-500/10' : 'border-gold-subtle text-gray-300 hover:text-gold-400'}`}>繁體中文</Link>
+                </div>
+              </div>
             </div>
           </div>
         )}
