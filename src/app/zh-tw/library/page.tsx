@@ -18,7 +18,7 @@ const books = [
       md: '/images/library/vol1-cover-512.jpg',
       lg: '/images/library/vol1-cover-1024.jpg',
     },
-    href: '/zh-tw/library/book/vol1',
+    href: '/zh-tw/library/book/vol1/',
     desc: '數位世界仲裁的基礎概念與框架。',
   },
   {
@@ -31,7 +31,7 @@ const books = [
       md: '/images/library/vol2-cover-en-512.jpg',
       lg: '/images/library/vol2-cover-en-1024.jpg',
     },
-    href: '/zh-tw/library/book/vol2',
+    href: '/zh-tw/library/book/vol2/',
     desc: '數位世界爭議解決的進階實踐與案例研究。',
   },
   {
@@ -39,7 +39,7 @@ const books = [
     titleZh: '全球網絡法彙編（卷三）— AI 法律問題研究',
     titleEn: 'Global Cyber Law Compendium (Volume III)',
     cover: '/images/library/vol3-cover.jpg',
-    href: '/zh-tw/library/book/vol3',
+    href: '/zh-tw/library/book/vol3/',
     desc: '人工智慧時代的法律框架與治理模型。',
   },
   {
@@ -47,7 +47,7 @@ const books = [
     titleZh: '全球仲裁規則彙編（卷四）',
     titleEn: 'Global Arbitration Rules Reference (Volume IV)',
     cover: '/images/library/vol4-cover.jpg',
-    href: '/zh-tw/library/book/vol4',
+    href: '/zh-tw/library/book/vol4/',
     desc: '全球主要仲裁機構規則全面參考指南。',
   },
 ]

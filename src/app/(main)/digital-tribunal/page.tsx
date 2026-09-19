@@ -28,7 +28,7 @@ export default function DigitalTribunalPage() {
             <span className="text-gold-400 font-semibold">human arbitrator expertise</span> to deliver a fully digitized, transparent, and efficient arbitration process — from filing to enforcement.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/dispute" className="bg-gold-500 hover:bg-gold-600 text-navy-900 font-bold py-3.5 px-8 rounded-lg transition-all hover:scale-105 shadow-lg shadow-gold-500/25">
+            <Link href="/dispute/" className="bg-gold-500 hover:bg-gold-600 text-navy-900 font-bold py-3.5 px-8 rounded-lg transition-all hover:scale-105 shadow-lg shadow-gold-500/25">
               Apply for Arbitration
             </Link>
             <a href="#process" className="border-2 border-gold-500 text-gold-400 hover:bg-gold-500 hover:text-navy-900 font-bold py-3.5 px-8 rounded-lg transition-all">
@@ -163,10 +163,10 @@ export default function DigitalTribunalPage() {
             Join DWAC and let AI + human expertise resolve your disputes efficiently, transparently, and fairly — from anywhere in the world.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
-            <Link href="/dispute" className="bg-gold-500 hover:bg-gold-600 text-navy-900 font-bold py-4 px-10 rounded-lg transition-all hover:scale-105 shadow-lg shadow-gold-500/25 text-lg">
+            <Link href="/dispute/" className="bg-gold-500 hover:bg-gold-600 text-navy-900 font-bold py-4 px-10 rounded-lg transition-all hover:scale-105 shadow-lg shadow-gold-500/25 text-lg">
               Apply for Arbitration
             </Link>
-            <Link href="/contact" className="border-2 border-gray-600 text-gray-300 hover:border-gold-500 hover:text-gold-400 font-bold py-4 px-10 rounded-lg transition-colors text-lg">
+            <Link href="/contact/" className="border-2 border-gray-600 text-gray-300 hover:border-gold-500 hover:text-gold-400 font-bold py-4 px-10 rounded-lg transition-colors text-lg">
               Contact Us
             </Link>
           </div>

@@ -53,10 +53,10 @@ export default function ContactZhCn() {
             <div className="mt-10 pt-8 border-t border-gold-subtle/50">
               <h3 className="font-semibold text-white mb-4">常见咨询</h3>
               <ul className="space-y-2 text-sm">
-                <li><Link href="/zh-cn/arbitrators/join" className="text-gold-500 hover:text-gold-400">→ 申请成为仲裁员</Link></li>
-                <li><Link href="/zh-cn/membership" className="text-gold-500 hover:text-gold-400">→ 会员信息</Link></li>
-                <li><Link href="/zh-cn/charter" className="text-gold-500 hover:text-gold-400">→ 数字世界公约</Link></li>
-                <li><Link href="/zh-cn/about" className="text-gold-500 hover:text-gold-400">→ 关于DWAC</Link></li>
+                <li><Link href="/zh-cn/arbitrators/join/" className="text-gold-500 hover:text-gold-400">→ 申请成为仲裁员</Link></li>
+                <li><Link href="/zh-cn/membership/" className="text-gold-500 hover:text-gold-400">→ 会员信息</Link></li>
+                <li><Link href="/zh-cn/charter/" className="text-gold-500 hover:text-gold-400">→ 数字世界公约</Link></li>
+                <li><Link href="/zh-cn/about/" className="text-gold-500 hover:text-gold-400">→ 关于DWAC</Link></li>
               </ul>
             </div>
           </div>

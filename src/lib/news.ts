@@ -45,7 +45,7 @@ export const featuredNews: NewsItem[] = [
     excerpt:
       "DWAC proposes four key recommendations to China's CAC on AI Agent standardization: refining decision boundary principles, improving security assessment frameworks, supplementing multi-agent and cross-border interoperability rules, and establishing pre-arbitration dispute resolution mechanisms.",
     readTime: '6 min read',
-    href: '/publications/policy-statements/cac-feedback-2026-09',
+    href: '/publications/policy-statements/cac-feedback-2026-09/',
   },
   {
     date: 'June 25, 2026',
@@ -172,7 +172,7 @@ export const zhCnFeaturedNews: NewsItem[] = [
     excerpt:
       '数字世界仲裁中心就中国《智能体规范应用与创新发展实施意见》向国家网信办提交反馈意见，提出四项关键建议：细化决策边界原则、完善安全评估框架、补充多智能体与跨境互操作规则、建立仲裁前置争议解决机制。',
     readTime: '6分钟阅读',
-    href: '/zh-cn/publications/policy-statements/cac-feedback-2026-09',
+    href: '/zh-cn/publications/policy-statements/cac-feedback-2026-09/',
   },
   {
     date: '2026年6月25日',
@@ -287,7 +287,7 @@ export const zhTwFeaturedNews: NewsItem[] = [
     excerpt:
       '數位世界仲裁中心就中國《智能體規範應用與創新發展實施意見》向國家網信辦提交反饋意見，提出四項關鍵建議：細化決策邊界原則、完善安全評估框架、補充多智能體與跨境互操作規則、建立仲裁前置爭議解決機制。',
     readTime: '6分鐘閱讀',
-    href: '/zh-tw/publications/policy-statements/cac-feedback-2026-09',
+    href: '/zh-tw/publications/policy-statements/cac-feedback-2026-09/',
   },
   {
     date: '2026年6月25日',

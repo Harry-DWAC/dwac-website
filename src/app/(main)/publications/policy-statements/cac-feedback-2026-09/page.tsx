@@ -148,7 +148,7 @@ export default function CACFeedbackPage() {
           <h3 className="text-xl font-serif font-bold text-navy-900 mb-3">Related Publications</h3>
           <p className="text-slate-600 mb-6">Explore DWAC&apos;s research on AI governance and digital arbitration.</p>
           <a 
-            href="/publications/gclc" 
+            href="/publications/gclc/" 
             className="inline-flex items-center gap-2 px-6 py-3 bg-navy-900 text-white rounded-lg hover:bg-navy-800 transition-colors"
           >
             View Global Cyber Law Compendium

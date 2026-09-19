@@ -11,7 +11,7 @@ export default function Vol3Page() {
   return (
     <div className="flex flex-col min-h-screen bg-gray-50">
       <div className="bg-navy-800 text-white py-3 px-4 flex items-center justify-between sticky top-0 z-10">
-        <a href="/library" className="text-gold-400 hover:underline text-sm">← Back to Library</a>
+        <a href="/library/" className="text-gold-400 hover:underline text-sm">← Back to Library</a>
         <span className="text-sm text-gray-300">DWAC Professional Library · Volume III</span>
       </div>
 

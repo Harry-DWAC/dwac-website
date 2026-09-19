@@ -45,11 +45,22 @@ const exists = (href) => {
 }
 
 const dead = new Map()
+const noSlash = new Map()
 for (const page of pages) {
   const html = fs.readFileSync(page, 'utf8')
   const hrefs = [...html.matchAll(/href="([^"]+)"/g)].map((m) => m[1])
   for (const h of hrefs) {
     if (/^(https?:|mailto:|tel:|#|javascript:)/i.test(h)) continue
+    // 尾斜杠守卫：trailingSlash:true 下，指向目录的无尾斜杠链接会多一次 308 跳转
+    // 先剥掉 #锚点 / ?查询，再判断路径部分是否以 / 结尾
+    const pathPart = dec(h).split('#')[0].split('?')[0]
+    if (!pathPart.endsWith('/') && !/\.[a-zA-Z0-9]{2,5}$/.test(pathPart)) {
+      const clean = pathPart.replace(/\/+$/, '')
+      if (files.has(clean + '/index.html')) {
+        if (!noSlash.has(h)) noSlash.set(h, new Set())
+        noSlash.get(h).add('/' + path.relative(root, page))
+      }
+    }
     if (!exists(h)) {
       if (!dead.has(h)) dead.set(h, new Set())
       dead.get(h).add('/' + path.relative(root, page))
@@ -57,8 +68,15 @@ for (const page of pages) {
   }
 }
 
+if (noSlash.size) {
+  console.error(`check:links ⚠ ${noSlash.size} 个站内链接缺尾斜杠（会多一跳 308）:`)
+  for (const [href, pagesSet] of noSlash.entries()) {
+    console.error(`  ${href}  (${pagesSet.size} 页引用，如 ${[...pagesSet][0]})`)
+  }
+}
+
 if (dead.size === 0) {
-  console.log(`check:links ✓ 无站内死链 (扫描 ${pages.length} 页)`)
+  console.log(`check:links ✓ 无站内死链 (扫描 ${pages.length} 页)${noSlash.size ? '，尾斜杠告警见上' : ''}`)
   process.exit(0)
 }
 

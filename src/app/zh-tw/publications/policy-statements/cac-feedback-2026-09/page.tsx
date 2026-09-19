@@ -146,7 +146,7 @@ export default function CACFeedbackPage() {
           <h3 className="text-xl font-serif font-bold text-navy-900 mb-3">相關出版物</h3>
           <p className="text-slate-600 mb-6">探索 DWAC 在 AI 治理與數位仲裁領域的研究成果。</p>
           <a 
-            href="/zh-tw/publications/gclc" 
+            href="/zh-tw/publications/gclc/" 
             className="inline-flex items-center gap-2 px-6 py-3 bg-navy-900 text-white rounded-lg hover:bg-navy-800 transition-colors"
           >
             查看《數位世界法律彙編》

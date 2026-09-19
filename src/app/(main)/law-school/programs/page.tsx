@@ -39,7 +39,7 @@ export default function ProgramsPage() {
       {/* Breadcrumb */}
       <div className="bg-gray-50 border-b">
         <div className="max-w-7xl mx-auto px-4 py-3 text-sm">
-          <Link href="/law-school" className="text-gold-500 hover:underline">Law School</Link>
+          <Link href="/law-school/" className="text-gold-500 hover:underline">Law School</Link>
           <span className="mx-2 text-gray-400">/</span>
           <span className="text-gray-600">Programs</span>
         </div>

@@ -10,7 +10,7 @@ export default function Vol4PageZhTw() {
   return (
     <div className="flex flex-col min-h-screen bg-gray-50">
       <div className="bg-navy-800 text-white py-3 px-4 flex items-center justify-between sticky top-0 z-10">
-        <a href="/zh-tw/library" className="text-gold-400 hover:underline text-sm">← 返回圖書館</a>
+        <a href="/zh-tw/library/" className="text-gold-400 hover:underline text-sm">← 返回圖書館</a>
         <span className="text-sm text-gray-300">DWAC 專業圖書館 · 第四卷</span>
       </div>
 

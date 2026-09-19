@@ -11,7 +11,7 @@ export default function Vol3PageZhCn() {
   return (
     <div className="flex flex-col min-h-screen bg-gray-50">
       <div className="bg-navy-800 text-white py-3 px-4 flex items-center justify-between sticky top-0 z-10">
-        <a href="/zh-cn/library" className="text-gold-400 hover:underline text-sm">← 返回图书馆</a>
+        <a href="/zh-cn/library/" className="text-gold-400 hover:underline text-sm">← 返回图书馆</a>
         <span className="text-sm text-gray-300">DWAC 专业图书馆 · 第三卷</span>
       </div>
 
