@@ -6,7 +6,21 @@ export const metadata: Metadata = {
   description: 'DWAC Professional Library — four authoritative volumes on digital world law, arbitration, and AI governance.',
 }
 
-const books = [
+type Book = {
+  href: string
+  vol: string
+  title: string
+  subtitle: string
+  desc: string
+  cover: string
+  /** 96×128 缩略图用的低分辨率版（缺省时回退到 cover） */
+  coverSmall?: string
+  /** 2x/3x 屏用的 srcSet（缺省时不输出该属性） */
+  coverSrcSet?: string
+  files: { label: string; href: string }[]
+}
+
+const books: Book[] = [
   {
     href: '/library/book/vol1/',
     vol: 'Volume I',
@@ -14,6 +28,9 @@ const books = [
     subtitle: '世界各国关于网络空间的立法汇编',
     desc: 'Comprehensive compilation of cyberspace legislation from jurisdictions worldwide.',
     cover: '/images/library/vol1-cover.jpg',
+    coverSmall: '/images/library/vol1-cover-400.jpg',
+    coverSrcSet:
+      '/images/library/vol1-cover-400.jpg 400w, /images/library/vol1-cover-512.jpg 512w, /images/library/vol1-cover-1024.jpg 1024w',
     files: [
       { label: 'EN EPUB', href: '/gclc-downloads/vol-i/Global-Cyber-Law-Compendium-V1-EN-v8.epub' },
       { label: 'CN EPUB', href: '/gclc-downloads/vol-i/Global-Cyber-Law-Compendium-V1-CN-v25.epub' },
@@ -28,6 +45,9 @@ const books = [
     subtitle: '世界各地涉网纠纷案例研究',
     desc: 'Case studies of internet-related disputes from jurisdictions around the world.',
     cover: '/images/library/vol2-cover-en.jpg',
+    coverSmall: '/images/library/vol2-cover-en-400.jpg',
+    coverSrcSet:
+      '/images/library/vol2-cover-en-400.jpg 400w, /images/library/vol2-cover-en-512.jpg 512w, /images/library/vol2-cover-en-1024.jpg 1024w',
     files: [
       { label: 'EN EPUB', href: '/gclc-downloads/vol-ii/Global-Cyber-Law-Compendium-V2_Publication-EN-v12.epub' },
       { label: 'CN EPUB', href: '/gclc-downloads/vol-ii/Global-Cyber-Law-Compendium-V2_Complete-CN_Final-v33.epub' },
@@ -92,8 +112,12 @@ export default function BookIndexPage() {
                 <Link href={book.href} className="p-6 pb-4 flex gap-5 group">
                   <div className="w-24 h-32 bg-navy-100 rounded-lg overflow-hidden flex-shrink-0">
                     <img
-                      src={book.cover}
+                      src={book.coverSmall || book.cover}
+                      srcSet={book.coverSrcSet}
+                      sizes="96px"
                       alt={book.title}
+                      loading="lazy"
+                      decoding="async"
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     />
                   </div>

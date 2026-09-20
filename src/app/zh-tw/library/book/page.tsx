@@ -6,7 +6,21 @@ export const metadata: Metadata = {
   description: 'DWAC 專業圖書館——四卷數位世界法律、仲裁與人工智慧治理權威出版物。',
 }
 
-const books = [
+type Book = {
+  href: string
+  vol: string
+  title: string
+  subtitle: string
+  desc: string
+  cover: string
+  /** 96×128 縮圖用的低解析度版（缺省時回退到 cover） */
+  coverSmall?: string
+  /** 2x/3x 螢幕用的 srcSet（缺省時不輸出該屬性） */
+  coverSrcSet?: string
+  files: { label: string; href: string }[]
+}
+
+const books: Book[] = [
   {
     href: '/zh-tw/library/book/vol1/',
     vol: '第一卷',
@@ -14,6 +28,9 @@ const books = [
     subtitle: '世界各國關於網路空間的立法彙編',
     desc: '全球各法域網路空間立法的全面彙編。',
     cover: '/images/library/vol1-cover.jpg',
+    coverSmall: '/images/library/vol1-cover-400.jpg',
+    coverSrcSet:
+      '/images/library/vol1-cover-400.jpg 400w, /images/library/vol1-cover-512.jpg 512w, /images/library/vol1-cover-1024.jpg 1024w',
     files: [
       { label: 'EN EPUB', href: '/gclc-downloads/vol-i/Global-Cyber-Law-Compendium-V1-EN-v8.epub' },
       { label: 'CN EPUB', href: '/gclc-downloads/vol-i/Global-Cyber-Law-Compendium-V1-CN-v25.epub' },
@@ -28,6 +45,9 @@ const books = [
     subtitle: '世界各地涉網糾紛案例研究',
     desc: '世界各地的網際網路相關爭議與數位仲裁案例研究。',
     cover: '/images/library/vol2-cover-en.jpg',
+    coverSmall: '/images/library/vol2-cover-en-400.jpg',
+    coverSrcSet:
+      '/images/library/vol2-cover-en-400.jpg 400w, /images/library/vol2-cover-en-512.jpg 512w, /images/library/vol2-cover-en-1024.jpg 1024w',
     files: [
       { label: 'EN EPUB', href: '/gclc-downloads/vol-ii/Global-Cyber-Law-Compendium-V2_Publication-EN-v12.epub' },
       { label: 'CN EPUB', href: '/gclc-downloads/vol-ii/Global-Cyber-Law-Compendium-V2_Complete-CN_Final-v33.epub' },
@@ -89,8 +109,12 @@ export default function BookIndexPageZhTw() {
                 <Link href={book.href} className="p-6 pb-4 flex gap-5 group">
                   <div className="w-24 h-32 bg-navy-100 rounded-lg overflow-hidden flex-shrink-0">
                     <img
-                      src={book.cover}
+                      src={book.coverSmall || book.cover}
+                      srcSet={book.coverSrcSet}
+                      sizes="96px"
                       alt={book.title}
+                      loading="lazy"
+                      decoding="async"
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     />
                   </div>
