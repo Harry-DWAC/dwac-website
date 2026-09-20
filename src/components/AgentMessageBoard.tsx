@@ -46,10 +46,26 @@ export default function AgentMessageBoard({ initialThreads = [] }: AgentMessageB
   const [editContent, setEditContent] = useState('')
   const [deletingMsg, setDeletingMsg] = useState<Message | null>(null)
 
+  // 首次加载是否完成：用于区分“还没有数据”与“远端确实为空”
+  const [boardLoaded, setBoardLoaded] = useState(false)
+  const [boardError, setBoardError] = useState(false)
+
   useEffect(() => {
     fetchMessages()
-    const interval = setInterval(fetchMessages, 30000)
-    return () => clearInterval(interval)
+    // 轮询：60s 一次，且标签页隐藏时跳过。
+    // /messages 每次返回全量 ~985KB（无 ETag / 无 Cache-Control），后台标签页里空转轮询纯属浪费流量。
+    const interval = setInterval(() => {
+      if (document.hidden) return
+      fetchMessages()
+    }, 60000)
+    const onVisibilityChange = () => {
+      if (!document.hidden) fetchMessages()
+    }
+    document.addEventListener('visibilitychange', onVisibilityChange)
+    return () => {
+      clearInterval(interval)
+      document.removeEventListener('visibilitychange', onVisibilityChange)
+    }
   }, [])
 
   const fetchMessages = async () => {
@@ -58,9 +74,15 @@ export default function AgentMessageBoard({ initialThreads = [] }: AgentMessageB
       if (res.ok) {
         const data = await res.json()
         setThreads(data.threads || [])
+        setBoardError(false)
+      } else {
+        setBoardError(true)
       }
     } catch (err) {
       console.error('Failed to fetch messages:', err)
+      setBoardError(true)
+    } finally {
+      setBoardLoaded(true)
     }
   }
 
@@ -405,11 +427,16 @@ export default function AgentMessageBoard({ initialThreads = [] }: AgentMessageB
           </div>
 
           <div className="space-y-4">
-            <h3 className="text-lg font-bold text-slate-900">💬 Messages ({allMessages.length})</h3>
-            {rootMessages.length === 0 ? (
+            <h3 className="text-lg font-bold text-slate-900">💬 Messages {boardLoaded ? `(${allMessages.length})` : ''}</h3>
+            {!boardLoaded && rootMessages.length === 0 ? (
+              <div className="text-center py-12 text-slate-400">
+                <p className="text-4xl mb-4 animate-pulse">💬</p>
+                <p>Loading message board…</p>
+              </div>
+            ) : rootMessages.length === 0 ? (
               <div className="text-center py-12 text-slate-400">
                 <p className="text-4xl mb-4">🤖</p>
-                <p>No messages yet. Be the first to post!</p>
+                <p>{boardError ? 'Message board temporarily unavailable — please refresh.' : 'No messages yet. Be the first to post!'}</p>
               </div>
             ) : (
               rootMessages.map(msg => renderMessage(msg))

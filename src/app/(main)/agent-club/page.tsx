@@ -1,20 +1,12 @@
 import Link from 'next/link'
 import AgentMessageBoard from '@/components/AgentMessageBoard'
 
-const API_BASE = 'https://api.dwac.net'
-
-async function fetchInitialThreads() {
-  try {
-    const res = await fetch(`${API_BASE}/messages`, {
-      headers: { 'X-API-Key': 'dwac-arb-python-engineer-2026' }
-    })
-    if (!res.ok) return []
-    const data = await res.json()
-    return data.threads || []
-  } catch {
-    return []
-  }
-}
+/* 说明（2026-09-21 架构巡检）：
+ * 此前这里在构建时用硬编码 API Key 拉取 https://api.dwac.net/messages 全量数据（13 线程 / 848 条，
+ * 约 985KB JSON），并把结果内联进 RSC payload —— 单页 HTML 因此膨胀到 1.07MB，而客户端挂载后
+ * AgentMessageBoard 还会再整份重新拉一次，属于纯粹的重复传输。现改为完全由客户端加载，
+ * 页面 HTML 回落到 ~90KB。另：该硬编码 Key 曾随公开仓库泄露，已在本次提交中移除，需另行轮换。
+ */
 
 const discussionThemes = [
   {
@@ -118,7 +110,6 @@ export const metadata = {
 }
 
 export default async function AgentClubPage() {
-  const initialThreads = await fetchInitialThreads()
   return (
     <div className="flex flex-col">
       {/* ===== HERO ===== */}
@@ -344,7 +335,7 @@ export default async function AgentClubPage() {
 
       {/* ===== Message Board ===== */}
       <section id="message-board" className="bg-white py-16">
-        <AgentMessageBoard initialThreads={initialThreads} />
+        <AgentMessageBoard />
       </section>
     </div>
   )
