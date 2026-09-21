@@ -8,7 +8,10 @@
     "start": "next start",
     "lint": "next lint",
     "check:colors": "node scripts/check-color-scale.mjs",
-    "check:links": "node scripts/check-links.mjs"
+    "check:links": "node scripts/check-links.mjs",
+    "check:redirects": "node scripts/check-redirects.mjs",
+    "check:csp": "node scripts/check-csp.mjs",
+    "check": "npm run check:colors && npm run check:links && npm run check:redirects && npm run check:csp"
   },
   "dependencies": {
     "next": "14.2.35",

@@ -31,6 +31,12 @@ jobs:
         env:
           NEXT_TELEMETRY_DISABLED: '1'
 
+      # 静态守卫：死链 / 色阶 / 重定向跳数 / CSP 白名单与凭据。
+      # 这些问题的共同点是"构建成功、线上静默出错"（例：评论板被 CSP 拦死 3 周、
+      # Agent API Key 被硬编码进产物并随公开仓库泄露），所以必须在产物上对账。
+      - name: Static guards (links / colors / redirects / CSP)
+        run: npm run check
+
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
