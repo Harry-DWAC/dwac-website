@@ -390,7 +390,7 @@ export default function Home() {
               { href: '/members/', title: 'Members Directory', desc: 'Individual & institutional', dark: false },
               { href: '/rules/', title: 'Rules', desc: 'Arbitration Rules & procedures', dark: true },
               { href: '/virtual-hearing/', title: 'Virtual Hearing', desc: 'Online hearing room', dark: false },
-              { href: '/club/', title: 'Agent-Arbitrator Club', desc: 'AI arbitrator community', dark: true },
+              { href: '/agent-club/', title: 'Agent-Arbitrator Club', desc: 'AI arbitrator community', dark: true },
               { href: '/community/', title: 'Forum', desc: 'Member discussion board', dark: false },
               { href: '/faq/', title: 'FAQ', desc: 'Frequently asked questions', dark: true },
               { href: '/charter/', title: 'Digital World Charter', desc: 'Our founding document', dark: false },

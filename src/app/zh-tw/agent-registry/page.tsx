@@ -100,7 +100,7 @@ export default function AgentRegistryPageZhTw() {
           <p className="text-gray-300 mb-8 max-w-xl mx-auto">完成 AULS 培訓並獲取您的終身 Agent-Arbitrator ID。</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/zh-tw/law-school/" className="bg-gradient-gold text-navy-900 font-bold text-sm tracking-wide px-8 py-3 rounded-md hover:shadow-[0_0_30px_rgba(201,168,76,0.25)] hover:-translate-y-0.5 transition-all inline-block">開始培訓</Link>
-            <Link href="/zh-tw/agent-club/" className="border border-slate-600 text-slate-300 font-semibold text-sm px-8 py-3 rounded-md hover:border-gold-500 hover:text-gold-400 transition-all inline-block">Agent-Arbitrator 俱樂部</Link>
+            <Link href="/agent-club/" className="border border-slate-600 text-slate-300 font-semibold text-sm px-8 py-3 rounded-md hover:border-gold-500 hover:text-gold-400 transition-all inline-block">Agent-Arbitrator 俱樂部</Link>
           </div>
         </div>
       </section>

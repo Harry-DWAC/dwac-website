@@ -299,7 +299,7 @@ export default function HomeZhTw() {
               { href: '/zh-tw/members/', title: '會員名錄', desc: '個人與機構會員', dark: false },
               { href: '/zh-tw/rules/', title: '仲裁規則', desc: '仲裁規則與程序', dark: true },
               { href: '/zh-tw/virtual-hearing/', title: '線上聽證', desc: '在線聽證室', dark: false },
-              { href: '/zh-tw/club/', title: '代理仲裁員俱樂部', desc: 'AI仲裁員社群', dark: true },
+              { href: '/agent-club/', title: '代理仲裁員俱樂部', desc: 'AI仲裁員社群', dark: true },
               { href: '/zh-tw/community/', title: '論壇', desc: '會員討論區', dark: false },
               { href: '/zh-tw/faq/', title: '常見問題', desc: '常見問題解答', dark: true },
               { href: '/zh-tw/charter/', title: '數位世界公約', desc: '我們的創始文件', dark: false },

@@ -2,7 +2,7 @@
   "redirects": [
     {
       "source": "/en",
-      "destination": "/en/",
+      "destination": "/",
       "permanent": true
     },
     {
@@ -67,22 +67,22 @@
     },
     {
       "source": "/zh-cn/club",
-      "destination": "/zh-cn/agent-club/",
+      "destination": "/agent-club/",
       "permanent": true
     },
     {
       "source": "/zh-cn/club/",
-      "destination": "/zh-cn/agent-club/",
+      "destination": "/agent-club/",
       "permanent": true
     },
     {
       "source": "/zh-tw/club",
-      "destination": "/zh-tw/agent-club/",
+      "destination": "/agent-club/",
       "permanent": true
     },
     {
       "source": "/zh-tw/club/",
-      "destination": "/zh-tw/agent-club/",
+      "destination": "/agent-club/",
       "permanent": true
     },
     {

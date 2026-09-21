@@ -11,25 +11,45 @@ export default function Home() {
   return (
     <>
       <div className="flex flex-col">
-      {/* Hero Section */}
-      <section className="bg-navy-800 text-white py-20 lg:py-32">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-4xl mx-auto">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-              <span className="text-gold-400">数字世界</span><br />
-              仲裁中心
-            </h1>
-            <p className="text-xl md:text-2xl text-gray-300 mb-8">
-              首个专注于解决数字世界纠纷的永久性国际仲裁机构。公平、高效、全球可执行。
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/zh-cn/contact/" className="px-8 py-3 bg-gold-500/[0.06] hover:bg-gold-500 text-white font-semibold rounded-lg transition-colors">
-                提起仲裁
-              </Link>
-              <Link href="/zh-cn/arbitrators/join/" className="px-8 py-3 border-2 border-gold-500 text-gold-400 hover:bg-gold-500/[0.05]0 hover:text-white font-semibold rounded-lg transition-colors">
-                成为仲裁员
-              </Link>
-            </div>
+      {/* ===== HERO — Deep Navy（与 EN / zh-TW 对齐：衬线标题 + 金色渐变 + 网格底纹） ===== */}
+      <section className="relative pt-[120px] pb-20 lg:pt-[140px] lg:pb-32 text-center px-4 sm:px-6 lg:px-8 bg-gradient-navy">
+        {/* Subtle grid overlay */}
+        <div className="absolute inset-0 bg-grid-gold opacity-30" />
+
+        <div className="relative max-w-4xl mx-auto">
+          {/* Badge */}
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 border border-gold-medium rounded-full mb-8">
+            <span className="w-2 h-2 bg-gold-500 rounded-full animate-pulse" />
+            <span className="text-xs font-semibold tracking-[2px] uppercase text-gold-400">
+              世界首个数字世界仲裁机构
+            </span>
+          </div>
+
+          {/* Heading */}
+          <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white leading-[1.15] mb-6">
+            <span className="text-gradient-gold">数字世界</span><br />
+            仲裁中心
+          </h1>
+
+          {/* Subtitle */}
+          <p className="text-lg md:text-xl text-slate-300 max-w-2xl mx-auto mb-10 leading-relaxed">
+            首个专注于解决数字世界纠纷的永久性国际仲裁机构——公平、高效、全球可执行。
+          </p>
+
+          {/* CTAs */}
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              href="/zh-cn/contact/"
+              className="px-8 py-3.5 bg-gradient-gold text-navy-900 font-bold text-sm tracking-wide rounded-md hover:shadow-[0_0_30px_rgba(201,168,76,0.25)] hover:-translate-y-0.5 transition-all"
+            >
+              提起仲裁
+            </Link>
+            <Link
+              href="/zh-cn/arbitrators/join/"
+              className="px-8 py-3.5 border border-slate-500 text-slate-200 font-semibold text-sm tracking-wide rounded-md hover:border-gold-500 hover:text-gold-400 hover:bg-gold-500/[0.03] transition-all"
+            >
+              成为仲裁员
+            </Link>
           </div>
         </div>
       </section>
@@ -110,7 +130,7 @@ export default function Home() {
               { href: '/zh-cn/members/', title: '会员名录', desc: '个人与机构会员', dark: false },
               { href: '/zh-cn/rules/', title: '仲裁规则', desc: '仲裁规则与程序', dark: true },
               { href: '/zh-cn/virtual-hearing/', title: '线上听证', desc: '在线听证室', dark: false },
-              { href: '/zh-cn/club/', title: '代理仲裁员俱乐部', desc: 'AI仲裁员社群', dark: true },
+              { href: '/agent-club/', title: '代理仲裁员俱乐部', desc: 'AI仲裁员社群', dark: true },
               { href: '/zh-cn/community/', title: '论坛', desc: '会员讨论区', dark: false },
               { href: '/zh-cn/faq/', title: '常见问题', desc: '常见问题解答', dark: true },
               { href: '/zh-cn/charter/', title: '数字世界公约', desc: '我们的创始文件', dark: false },

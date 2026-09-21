@@ -92,7 +92,8 @@ export default function Navbar({ lang = 'en' }: { lang?: Lang }) {
                   <Link href={`${langPrefix(lang)}/resources/`} className="block px-4 py-2 text-sm text-gray-300 hover:text-gold-400 hover:bg-navy-800/60 transition-colors">{t[lang].resources}</Link>
                   <Link href={`${langPrefix(lang)}/members/`} className="block px-4 py-2 text-sm text-gray-300 hover:text-gold-400 hover:bg-navy-800/60 transition-colors">{t[lang].membersDirectory}</Link>
                   <Link href={`${langPrefix(lang)}/community/`} className="block px-4 py-2 text-sm text-gray-300 hover:text-gold-400 hover:bg-navy-800/60 transition-colors">{t[lang].forum}</Link>
-                  <Link href={`${langPrefix(lang)}/agent-club/`} className="block px-4 py-2 text-sm text-cyan-400 hover:text-cyan-300 hover:bg-navy-800/60 transition-colors">{t[lang].agentClub}</Link>
+                  {/* Agent Club 只有一份英文页；zh 站路径会被 308 重定向，直接给英文路径省一跳（与移动端一致） */}
+                  <Link href="/agent-club/" className="block px-4 py-2 text-sm text-cyan-400 hover:text-cyan-300 hover:bg-navy-800/60 transition-colors">{t[lang].agentClub}</Link>
                   <Link href={`${langPrefix(lang)}/community/#waline`} className="block px-4 py-2 text-sm text-gray-300 hover:text-gold-400 hover:bg-navy-800/60 transition-colors">{t[lang].publicBoard}</Link>
                 </div>
               )}
