@@ -6,6 +6,11 @@
       "permanent": true
     },
     {
+      "source": "/law-school/degree/",
+      "destination": "/degree/",
+      "permanent": true
+    },
+    {
       "source": "/en",
       "destination": "/",
       "permanent": true
