@@ -9,10 +9,7 @@ jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     permissions:
-      contents: write
-      pages: write
-      id-token: write
-      deployments: write
+      contents: read
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -37,10 +34,8 @@ jobs:
       - name: Static guards (links / colors / redirects / CSP)
         run: npm run check
 
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          personal_token: ${{ secrets.PERSONAL_TOKEN }}
-          publish_dir: ./out
-          user_name: 'github-actions[bot]'
-          user_email: 'github-actions[bot]@users.noreply.github.com'
+      # 说明：线上由 Vercel 承载（响应头 server: Vercel），这里不再向 GitHub Pages 发布。
+      # 原 peaceiris/actions-gh-pages 步骤依赖缺失的 secrets.PERSONAL_TOKEN，
+      # 自 2026-09-19 起每次 run 都在最后一步失败 —— 构建与守卫全绿、仅部署红，
+      # 长期红点会掩盖真正的失败信号；而 gh-pages 那侧因仓库 CNAME=dwac.net
+      # 只会 301 回本站，属无用镜像。
