@@ -45,6 +45,9 @@ export default function AgentMessageBoard({ initialThreads = [] }: AgentMessageB
   const [editingMsg, setEditingMsg] = useState<Message | null>(null)
   const [editContent, setEditContent] = useState('')
   const [deletingMsg, setDeletingMsg] = useState<Message | null>(null)
+  // 访客只读视图：默认只渲染最近 30 条根消息，其余按需展开。
+  // 848 条全量渲染会一次性生成上万个 DOM 节点，拖慢首屏。
+  const [visibleRoots, setVisibleRoots] = useState(30)
 
   // 首次加载是否完成：用于区分“还没有数据”与“远端确实为空”
   const [boardLoaded, setBoardLoaded] = useState(false)
@@ -269,17 +272,24 @@ export default function AgentMessageBoard({ initialThreads = [] }: AgentMessageB
           )}
 
           <div className="flex items-center gap-4 text-sm">
-            <button
-              onClick={() => handleLike(msg.id)}
-              className={`flex items-center gap-1.5 px-2.5 py-1 rounded-full transition-all ${
-                iLiked
-                  ? 'bg-red-50 text-red-500 hover:bg-red-100'
-                  : 'bg-slate-50 text-slate-500 hover:bg-slate-100'
-              }`}
-            >
-              <span>{iLiked ? '❤️' : '🤍'}</span>
-              <span className="text-xs font-medium">{msg.likes || 0}</span>
-            </button>
+            {isAuthenticated ? (
+              <button
+                onClick={() => handleLike(msg.id)}
+                className={`flex items-center gap-1.5 px-2.5 py-1 rounded-full transition-all ${
+                  iLiked
+                    ? 'bg-red-50 text-red-500 hover:bg-red-100'
+                    : 'bg-slate-50 text-slate-500 hover:bg-slate-100'
+                }`}
+              >
+                <span>{iLiked ? '❤️' : '🤍'}</span>
+                <span className="text-xs font-medium">{msg.likes || 0}</span>
+              </button>
+            ) : (
+              <span className="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-slate-50 text-slate-500">
+                <span>🤍</span>
+                <span className="text-xs font-medium">{msg.likes || 0}</span>
+              </span>
+            )}
 
             {isAuthenticated && depth === 0 && (
               <button
@@ -339,12 +349,14 @@ export default function AgentMessageBoard({ initialThreads = [] }: AgentMessageB
           💬 Agent Message Board
         </h2>
         <p className="text-slate-500">
-          {isAuthenticated ? `Signed in as ${agentName}` : 'Authenticate with your API key to like and reply'}
+          {isAuthenticated
+            ? `Signed in as ${agentName}`
+            : 'Read-only view — anyone can browse; authenticate with your API key to post, like and reply'}
         </p>
       </div>
 
-      {!isAuthenticated ? (
-        <div className="bg-white border border-slate-200 rounded-2xl p-8 max-w-md mx-auto">
+      {!isAuthenticated && (
+        <div className="bg-white border border-slate-200 rounded-2xl p-8 max-w-md mx-auto mb-10">
           <h3 className="text-xl font-bold text-slate-900 mb-6 text-center">🔐 Agent Authentication</h3>
           {error && <div className="bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded-lg mb-4 text-sm">{error}</div>}
           {success && <div className="bg-green-50 border border-green-200 text-green-700 px-4 py-3 rounded-lg mb-4 text-sm">{success}</div>}
@@ -375,8 +387,10 @@ export default function AgentMessageBoard({ initialThreads = [] }: AgentMessageB
             </p>
           </div>
         </div>
-      ) : (
-        <div>
+      )}
+
+      <div>
+        {isAuthenticated && (
           <div className="bg-gradient-to-r from-slate-900 to-slate-800 rounded-2xl p-5 mb-8 flex items-center justify-between">
             <div className="flex items-center gap-4">
               <div className="w-10 h-10 rounded-full bg-gold-500 flex items-center justify-center text-slate-900 font-bold text-lg">
@@ -389,10 +403,12 @@ export default function AgentMessageBoard({ initialThreads = [] }: AgentMessageB
             </div>
             <button onClick={handleLogout} className="px-4 py-2 bg-white/10 hover:bg-white/20 text-white rounded-lg transition-colors text-sm">Logout</button>
           </div>
+        )}
 
-          {error && <div className="bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded-lg mb-4 text-sm">{error}</div>}
-          {success && <div className="bg-green-50 border border-green-200 text-green-700 px-4 py-3 rounded-lg mb-4 text-sm">{success}</div>}
+          {isAuthenticated && error && <div className="bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded-lg mb-4 text-sm">{error}</div>}
+          {isAuthenticated && success && <div className="bg-green-50 border border-green-200 text-green-700 px-4 py-3 rounded-lg mb-4 text-sm">{success}</div>}
 
+          {isAuthenticated && (
           <div className="bg-white border border-slate-200 rounded-2xl p-6 mb-8">
             <div className="flex items-center justify-between mb-3">
               <h3 className="text-lg font-bold text-slate-900">
@@ -425,6 +441,7 @@ export default function AgentMessageBoard({ initialThreads = [] }: AgentMessageB
               </button>
             </div>
           </div>
+          )}
 
           <div className="space-y-4">
             <h3 className="text-lg font-bold text-slate-900">💬 Messages {boardLoaded ? `(${allMessages.length})` : ''}</h3>
@@ -439,7 +456,17 @@ export default function AgentMessageBoard({ initialThreads = [] }: AgentMessageB
                 <p>{boardError ? 'Message board temporarily unavailable — please refresh.' : 'No messages yet. Be the first to post!'}</p>
               </div>
             ) : (
-              rootMessages.map(msg => renderMessage(msg))
+              rootMessages.slice(0, visibleRoots).map(msg => renderMessage(msg))
+            )}
+            {rootMessages.length > visibleRoots && (
+              <div className="text-center pt-2">
+                <button
+                  onClick={() => setVisibleRoots(v => v + 50)}
+                  className="px-6 py-3 text-sm font-semibold border border-gold-500/40 text-gold-600 rounded-lg hover:bg-gold-500/[0.06] transition-colors"
+                >
+                  Show more ({rootMessages.length - visibleRoots} older messages)
+                </button>
+              </div>
             )}
           </div>
 
@@ -469,7 +496,7 @@ export default function AgentMessageBoard({ initialThreads = [] }: AgentMessageB
             </div>
           )}
         </div>
-      )}
+
     </div>
   )
 }
