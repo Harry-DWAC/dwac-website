@@ -49,14 +49,16 @@ function makeHreflangLinks(canonical, path, lang, content) {
   const twC  = `${SITE}/zh-tw${subPath}/`;
 
   const links =
-    `  <link rel="alternate" hrefLang="x-default" href="${enC}"/>\n` +
-    `  <link rel="alternate" hrefLang="en" href="${enC}"/>\n` +
-    `  <link rel="alternate" hrefLang="zh-CN" href="${cnC}"/>\n` +
-    `  <link rel="alternate" hrefLang="zh-TW" href="${twC}"/>\n` +
+    // 注意：HTML 属性名必须小写（hreflang）。此前写成 React 风格的 hrefLang，
+    // 浏览器/Google 因大小写不敏感尚能识别，但不符合 HTML 规范、会被校验器判错。
+    `  <link rel="alternate" hreflang="x-default" href="${enC}"/>\n` +
+    `  <link rel="alternate" hreflang="en" href="${enC}"/>\n` +
+    `  <link rel="alternate" hreflang="zh-CN" href="${cnC}"/>\n` +
+    `  <link rel="alternate" hreflang="zh-TW" href="${twC}"/>\n` +
     `  <link rel="canonical" href="${canonical}"/>\n`;
 
   // Remove old hreflang and canonical tags
-  content = content.replace(/<link[^>]*hrefLang=["'](?:en|zh-CN|zh-TW|x-default)["'][^>]*>/g, '');
+  content = content.replace(/<link[^>]*hreflang=["'](?:en|zh-CN|zh-TW|x-default)["'][^>]*>/gi, '');
   content = content.replace(/<link[^>]*rel=["']canonical["'][^>]*>/g, '');
   return content.replace(/(<\/head>)/, `${links}$1`);
 }

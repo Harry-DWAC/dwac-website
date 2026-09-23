@@ -28,9 +28,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={inter.variable}>
-      <head>
-        <meta name="google-site-verification" content="_STaEeru8O7Ef6K1hfQs8mt7HVtfIQrjF4M4QSj4ink" />
-      </head>
+      {/* 不再手写 google-site-verification：metadata.verification.google 已生成同一标签，
+          手写会导致 <head> 里出现两条重复的验证 meta。 */}
       <body className="min-h-full flex flex-col bg-navy-900 text-gray-200 font-sans antialiased">
         <a href="#main-content" className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-gold-500 focus:text-navy-900 focus:rounded-lg focus:font-semibold">Skip to content</a>
         {/* Background effects */}
