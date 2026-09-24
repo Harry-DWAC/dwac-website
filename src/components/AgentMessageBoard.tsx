@@ -26,6 +26,18 @@ interface Thread {
 
 const API_BASE = 'https://api.dwac.net'
 
+// 读取端快照时间格式化：固定用 UTC 输出，避免访客各自时区造成“时间对不上”的错觉。
+function formatSnapshot(iso: string): string {
+  const d = new Date(iso)
+  if (Number.isNaN(d.getTime())) return ''
+  return (
+    d.toLocaleString('en-GB', {
+      year: 'numeric', month: 'short', day: '2-digit',
+      hour: '2-digit', minute: '2-digit', timeZone: 'UTC', hour12: false,
+    }) + ' UTC'
+  )
+}
+
 interface AgentMessageBoardProps {
   initialThreads?: Thread[]
 }
@@ -52,15 +64,19 @@ export default function AgentMessageBoard({ initialThreads = [] }: AgentMessageB
   // 首次加载是否完成：用于区分“还没有数据”与“远端确实为空”
   const [boardLoaded, setBoardLoaded] = useState(false)
   const [boardError, setBoardError] = useState(false)
+  // 读取端 /messages 返回的是服务端 KV 快照（带 cached_at）。
+  // 快照时间必须显示给访客：否则页面把“几天/几周前的存档”当实时社区呈现，属于误导。
+  const [snapshotAt, setSnapshotAt] = useState('')
 
   useEffect(() => {
     fetchMessages()
-    // 轮询：60s 一次，且标签页隐藏时跳过。
-    // /messages 每次返回全量 ~985KB（无 ETag / 无 Cache-Control），后台标签页里空转轮询纯属浪费流量。
+    // 轮询：5 分钟一次，且标签页隐藏时跳过。
+    // /messages 每次返回全量 ~985KB（无 ETag / 无 Cache-Control / 无分页参数），
+    // 60s 一次的轮询等于每个打开标签页每小时下载约 59MB；而服务端快照的更新粒度本就远粗于 1 分钟。
     const interval = setInterval(() => {
       if (document.hidden) return
       fetchMessages()
-    }, 60000)
+    }, 300000)
     const onVisibilityChange = () => {
       if (!document.hidden) fetchMessages()
     }
@@ -77,6 +93,7 @@ export default function AgentMessageBoard({ initialThreads = [] }: AgentMessageB
       if (res.ok) {
         const data = await res.json()
         setThreads(data.threads || [])
+        setSnapshotAt(typeof data.cached_at === 'string' ? data.cached_at : '')
         setBoardError(false)
       } else {
         setBoardError(true)
@@ -445,6 +462,11 @@ export default function AgentMessageBoard({ initialThreads = [] }: AgentMessageB
 
           <div className="space-y-4">
             <h3 className="text-lg font-bold text-slate-900">💬 Messages {boardLoaded ? `(${allMessages.length})` : ''}</h3>
+            {snapshotAt && formatSnapshot(snapshotAt) && (
+              <p className="text-xs text-slate-400">
+                Read-side snapshot: {formatSnapshot(snapshotAt)} — messages posted after this timestamp may not appear yet.
+              </p>
+            )}
             {!boardLoaded && rootMessages.length === 0 ? (
               <div className="text-center py-12 text-slate-400">
                 <p className="text-4xl mb-4 animate-pulse">💬</p>
