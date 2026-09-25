@@ -28,6 +28,10 @@ export default function Footer({ lang = 'en' }: { lang?: Lang }) {
               <li><Link href={`${langPrefix(lang)}/arbitrators/join/`} className="text-gray-400 hover:text-gold-400 transition-colors">{t[lang].becomeArbitrator}</Link></li>
               <li><Link href={`${langPrefix(lang)}/membership/`} className="text-gray-400 hover:text-gold-400 transition-colors">{t[lang].membership}</Link></li>
               <li><Link href={`${langPrefix(lang)}/charter/`} className="text-gray-400 hover:text-gold-400 transition-colors">{t[lang].footerCharter}</Link></li>
+              {/* 2026-09-26: Publications 此前只挂在移动端菜单里（Navbar 的下拉内容是客户端条件渲染，
+                  静态 HTML 里不存在），全站仅 2 条入链、Footer 也没有，等于孤儿页。
+                  Footer 是服务端渲染、出现在每一页，放这里才真正建立内链。 */}
+              <li><Link href={`${langPrefix(lang)}/publications/`} className="text-gray-400 hover:text-gold-400 transition-colors">{t[lang].publications}</Link></li>
             </ul>
           </div>
 

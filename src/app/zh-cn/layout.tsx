@@ -22,7 +22,7 @@ export default function ZhCnLayout({
   return (
     <>
       <Navbar lang="zh-cn" />
-      <main className="flex-1">
+      <main id="main-content" className="flex-1">
         <ErrorBoundary>
           {children}
         </ErrorBoundary>

@@ -91,8 +91,19 @@ function extractPageTitle(html) {
 }
 
 function extractMetaDescription(html) {
-  const m = html.match(/<meta[^>]*name=["']description["'][^>]*content=["']([^"']*)["']/);
-  return m ? m[1].trim() : '';
+  // v3 — 2026-09-26: 旧的 [^"']* 会在英文撇号处截断（"The world's first …" → "The world"），
+  // 使 8 个页面（/forum/、gclc-downloads 各卷、/zh/）的 og:description 变成半个词。
+  // 改为一律按引号配对取值，双引号优先（Next 默认输出双引号），再退回单引号。
+  const patterns = [
+    /<meta[^>]*name=["']description["'][^>]*content="([^"]*)"/,
+    /<meta[^>]*content="([^"]*)"[^>]*name=["']description["']/,
+    /<meta[^>]*name=["']description["'][^>]*content='([^']*)'/,
+  ];
+  for (const p of patterns) {
+    const m = html.match(p);
+    if (m) return m[1].trim();
+  }
+  return '';
 }
 
 // ---- MAIN ----
@@ -159,8 +170,12 @@ for (const file of files) {
       `  <meta property="og:image:height" content="630"/>\n$1`);
   }
 
-  // 10. Override English meta description on locale pages with localized version
-  if (lang !== 'en') {
+  // 10. Override English meta description on locale pages with localized version.
+  //     v3 — 2026-09-26: 加 CJK 判定。此前无条件覆盖，把 zh-cn/zh-tw 各 45 个页面里
+  //     手写的中文描述全部抹成同一句通用兜底，导致 178/278 个页面只有 3 条 description。
+  //     现在只对"还没本地化"（不含中日韩字符）的描述做兜底替换。
+  const isLocalized = /[\u3400-\u4dbf\u4e00-\u9fff\u3040-\u30ff]/.test(pageDesc || '');
+  if (lang !== 'en' && !isLocalized) {
     const localizedDesc = (FALLBACKS[lang] || FALLBACKS.en).desc;
     html = html.replace(
       /(<meta[^>]*name=["']description["'][^>]*content=["'])[^"']*(["'])/,
@@ -177,11 +192,16 @@ for (const file of files) {
     );
   }
 
-  // 11. Add main-content id for skip-to-content accessibility
-  html = html.replace(
-    /(<div class="relative z-10">)/,
-    '<div class="relative z-10" id="main-content">'
-  );
+  // 11. Skip-to-content 兜底。真正的目标现在由三个 layout 直接写在 <main id="main-content"> 上
+  //     （v3 — 2026-09-26）。此前 id 挂在最外层包裹 div 上，而那个 div 把 Navbar 包在里面，
+  //     键盘用户按"跳到主内容"会落回页首，等于无效。
+  //     这里只对没有 <main id="main-content"> 的页面（如根 not-found）保留旧兜底，且保证幂等。
+  if (!html.includes('id="main-content"')) {
+    html = html.replace(
+      /(<div class="relative z-10">)/,
+      '<div class="relative z-10" id="main-content">'
+    );
+  }
 
   // 12. JSON-LD structured data for ALL pages
   //     Remove old JSON-LD blocks injected by previous postbuild runs
@@ -217,14 +237,9 @@ for (const file of files) {
       name: orgName,
       url: `${SITE}${localePrefix}/`,
       inLanguage: lang,
-      potentialAction: {
-        '@type': 'SearchAction',
-        target: {
-          '@type': 'EntryPoint',
-          urlTemplate: `${SITE}${localePrefix}/?q={search_term_string}`,
-        },
-        'query-input': 'required name=search_term_string',
-      },
+      // v3 — 2026-09-26: 移除 potentialAction/SearchAction。全仓库 0 处 searchParams，
+      // 没有任何代码消费 ?q=，SearchAction 声明的站内搜索框形同虚设（并属误导性结构化数据）；
+      // Google 也已下线 Sitelinks Searchbox 富结果。将来真接站内搜索再加回。
     });
     schemas.push({
       '@context': 'https://schema.org',

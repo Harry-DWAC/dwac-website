@@ -22,7 +22,7 @@ export default function ZhTwLayout({
   return (
     <>
       <Navbar lang="zh-tw" />
-      <main className="flex-1">
+      <main id="main-content" className="flex-1">
         <ErrorBoundary>
           {children}
         </ErrorBoundary>
