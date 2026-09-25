@@ -106,6 +106,23 @@ function extractMetaDescription(html) {
   return '';
 }
 
+/**
+ * v3 — 2026-09-26: 读页面自己在 metadata.openGraph.description 里写的描述。
+ * 此前第 6 步会把它剥掉、第 7 步再用（从 layout 继承来的）meta description 顶替，
+ * 等于手写的 OG 描述被静默丢弃（如 src/app/zh-cn/about/page.tsx）。
+ */
+function extractOgDescription(html) {
+  const patterns = [
+    /<meta[^>]*property=["']og:description["'][^>]*content="([^"]*)"/,
+    /<meta[^>]*content="([^"]*)"[^>]*property=["']og:description["']/,
+  ];
+  for (const p of patterns) {
+    const m = html.match(p);
+    if (m) return m[1].trim();
+  }
+  return '';
+}
+
 // ---- MAIN ----
 const files = walkDir(OUT);
 console.log(`Processing ${files.length} HTML files...`);
@@ -138,9 +155,10 @@ for (const file of files) {
   // 5. Per-page OG values
   const pageTitle = extractPageTitle(html);
   const pageDesc = extractMetaDescription(html);
+  const authoredOgDesc = extractOgDescription(html);
   const fb = FALLBACKS[lang] || FALLBACKS.en;
   const ogTitle = pageTitle || fb.title;
-  const ogDesc = pageDesc || fb.desc;
+  const ogDesc = authoredOgDesc || pageDesc || fb.desc;
 
   // 6. Strip old OG/Twitter tags
   html = html.replace(/<meta[^>]*property=["']og:(?:title|description|type|url|locale)["'][^>]*>/g, '');
@@ -171,11 +189,13 @@ for (const file of files) {
   }
 
   // 10. Override English meta description on locale pages with localized version.
-  //     v3 — 2026-09-26: 加 CJK 判定。此前无条件覆盖，把 zh-cn/zh-tw 各 45 个页面里
+  //     v3 — 2026-09-26: 先加 CJK 判定。此前无条件覆盖，把 zh-cn/zh-tw 各 45 个页面里
   //     手写的中文描述全部抹成同一句通用兜底，导致 178/278 个页面只有 3 条 description。
   //     现在只对"还没本地化"（不含中日韩字符）的描述做兜底替换。
-  const isLocalized = /[\u3400-\u4dbf\u4e00-\u9fff\u3040-\u30ff]/.test(pageDesc || '');
-  if (lang !== 'en' && !isLocalized) {
+  const CJK = /[\u3400-\u4dbf\u4e00-\u9fff\u3040-\u30ff]/;
+  const pageDescLocalized = CJK.test(pageDesc || '');
+  const ogDescLocalized = CJK.test(ogDesc || '');
+  if (lang !== 'en' && !pageDescLocalized && !ogDescLocalized) {
     const localizedDesc = (FALLBACKS[lang] || FALLBACKS.en).desc;
     html = html.replace(
       /(<meta[^>]*name=["']description["'][^>]*content=["'])[^"']*(["'])/,
@@ -189,6 +209,13 @@ for (const file of files) {
     html = html.replace(
       /(<meta[^>]*name=["']twitter:description["'][^>]*content=["'])[^"']*(["'])/,
       `$1${localizedDesc}$2`
+    );
+  } else if (lang !== 'en' && !pageDescLocalized && ogDescLocalized) {
+    // 页面自带中文 OG 描述、但 meta description 仍是英文（继承自根 layout）：
+    // 把页面自己写的中文提升为 meta description，别让它只活在 OG 里。
+    html = html.replace(
+      /(<meta[^>]*name=["']description["'][^>]*content=["'])[^"']*(["'])/,
+      `$1${ogDesc}$2`
     );
   }
 
