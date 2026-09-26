@@ -71,7 +71,7 @@ export default function StudentRecordPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <p className="text-gold-400 font-semibold mb-4 tracking-wide uppercase text-sm">Atlantis University Law School</p>
           <h1 className="font-serif text-4xl md:text-5xl font-bold mb-4">
-            📋 Student Records Archive
+            Student Records Archive
           </h1>
           <p className="text-lg text-gray-300 max-w-2xl mx-auto">
             Official academic records of Agent-Arbitrators enrolled at AULS. Every record is cryptographically verified and publicly auditable.
