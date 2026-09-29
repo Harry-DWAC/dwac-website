@@ -206,7 +206,7 @@ export default function About() {
             <Link href="/charter/" className="px-6 py-3 bg-navy-800/20 text-gold-600 font-semibold rounded-lg hover:bg-navy-800/40 transition-colors">
               Read the Charter
             </Link>
-            <Link href="/contact/" className="px-6 py-3 border-2 border-white text-white font-semibold rounded-lg hover:bg-navy-800/20/10 transition-colors">
+            <Link href="/contact/" className="px-6 py-3 border-2 border-white text-white font-semibold rounded-lg hover:bg-navy-800/20 transition-colors">
               Contact Us
             </Link>
           </div>

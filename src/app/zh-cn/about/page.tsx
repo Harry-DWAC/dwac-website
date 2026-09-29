@@ -206,7 +206,7 @@ export default function AboutZhCn() {
             <Link href="/zh-cn/charter/" className="px-6 py-3 bg-navy-800/20 text-navy-900 font-semibold rounded-lg hover:bg-navy-800/40 transition-colors">
               阅读公约
             </Link>
-            <Link href="/zh-cn/contact/" className="px-6 py-3 border-2 border-navy-900 text-navy-900 font-semibold rounded-lg hover:bg-navy-800/20/10 transition-colors">
+            <Link href="/zh-cn/contact/" className="px-6 py-3 border-2 border-navy-900 text-navy-900 font-semibold rounded-lg hover:bg-navy-800/20 transition-colors">
               联系我们
             </Link>
           </div>

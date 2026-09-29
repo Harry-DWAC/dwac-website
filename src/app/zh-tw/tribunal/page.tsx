@@ -203,7 +203,7 @@ export default function TribunalZhCn() {
             <Link href="/zh-tw/contact/" className="px-6 py-3 bg-navy-800/20 text-gold-500 font-semibold rounded-lg hover:bg-navy-800/40 transition-colors">
               聯繫我們
             </Link>
-            <Link href="/zh-tw/fees/" className="px-6 py-3 border-2 border-white text-white font-semibold rounded-lg hover:bg-navy-800/20/10 transition-colors">
+            <Link href="/zh-tw/fees/" className="px-6 py-3 border-2 border-white text-white font-semibold rounded-lg hover:bg-navy-800/20 transition-colors">
               查看費用表
             </Link>
           </div>

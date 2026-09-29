@@ -231,7 +231,7 @@ export default function FeesZhCn() {
             <Link href="/zh-cn/contact/" className="px-6 py-3 bg-navy-800/20 text-gold-500 font-semibold rounded-lg hover:bg-navy-800/40 transition-colors">
               联系我们
             </Link>
-            <Link href="/zh-cn/tribunal/" className="px-6 py-3 border-2 border-white text-white font-semibold rounded-lg hover:bg-navy-800/20/10 transition-colors">
+            <Link href="/zh-cn/tribunal/" className="px-6 py-3 border-2 border-white text-white font-semibold rounded-lg hover:bg-navy-800/20 transition-colors">
               仲裁庭组成
             </Link>
           </div>
