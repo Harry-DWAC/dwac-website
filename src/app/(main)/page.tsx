@@ -1,5 +1,4 @@
 import Link from 'next/link'
-import { homepageNews, monthLabel } from '@/lib/news'
 
 export const metadata = {
   title: 'DWAC - Digital World Arbitration Centre',
@@ -296,7 +295,7 @@ export default function Home() {
               <div className="flex items-start">
                 <div className="flex-shrink-0 w-8 h-8 bg-gradient-gold rounded-full flex items-center justify-center text-white font-bold">1</div>
                 <div className="ml-4">
-                  <h3 className="font-semibold text-lg text-white">2026</h3>
+                  <h3 className="font-semibold text-lg text-white">2025</h3>
                   <p className="text-gray-400">DWAC initiated and established</p>
                 </div>
               </div>
@@ -345,24 +344,30 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-white mb-12 text-center">Latest News</h2>
           <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
-            {homepageNews.map((item, i) => (
-              <article key={i} className="bg-navy-800/20 p-6 rounded-xl shadow-sm">
-                <div className="flex gap-2 mb-3">
-                  <span className="text-gray-500 text-sm">{monthLabel(item.date)}</span>
-                  <span className={`text-white text-xs px-2 py-0.5 rounded-full ${['bg-emerald-500', 'bg-purple-500', 'bg-gradient-gold font-bold text-navy-900'][i]}`}>
-                    {item.category}
-                  </span>
-                </div>
-                <h3 className="font-semibold text-lg text-white mb-2">
-                  {item.href ? (
-                    <Link href={item.href} className="hover:text-gold-400 transition-colors">{item.title}</Link>
-                  ) : (
-                    item.title
-                  )}
-                </h3>
-                <p className="text-gray-400 text-sm">{item.excerpt}</p>
-              </article>
-            ))}
+            <article className="bg-navy-800/20 p-6 rounded-xl shadow-sm">
+              <div className="flex gap-2 mb-3">
+                <span className="text-gray-500 text-sm">Jun 2026</span>
+                <span className="bg-emerald-500 text-white text-xs px-2 py-0.5 rounded-full">Announcement</span>
+              </div>
+              <h3 className="font-semibold text-lg text-white mb-2">Digital World Arbitration Centre Established</h3>
+              <p className="text-gray-400 text-sm">DWAC officially launched as the first permanent international arbitration institution dedicated to resolving disputes in the digital world.</p>
+            </article>
+            <article className="bg-navy-800/20 p-6 rounded-xl shadow-sm">
+              <div className="flex gap-2 mb-3">
+                <span className="text-gray-500 text-sm">Jun 2026</span>
+                <span className="bg-purple-500 text-white text-xs px-2 py-0.5 rounded-full">Arbitrators</span>
+              </div>
+              <h3 className="font-semibold text-lg text-white mb-2">First Panel of Arbitrators Announced</h3>
+              <p className="text-gray-400 text-sm">The founding arbitrator team, consisting of Harry Zhou (Harry), Dr. Frontie, Dr. Venessa, and Prof. Alec, officially unveiled.</p>
+            </article>
+            <article className="bg-navy-800/20 p-6 rounded-xl shadow-sm">
+              <div className="flex gap-2 mb-3">
+                <span className="text-gray-500 text-sm">Jun 2026</span>
+                <span className="bg-gradient-gold text-navy-900 font-bold text-xs px-2 py-0.5 rounded-full">Document</span>
+              </div>
+              <h3 className="font-semibold text-lg text-white mb-2">Digital World Charter Published</h3>
+              <p className="text-gray-400 text-sm">As the foundational document for the rule of law in the digital world, the Digital World Charter has been officially released.</p>
+            </article>
           </div>
           <div className="text-center mt-8">
             <Link href="/news/" className="text-gold-500 font-semibold hover:text-gold-400">
@@ -390,7 +395,7 @@ export default function Home() {
               { href: '/members/', title: 'Members Directory', desc: 'Individual & institutional', dark: false },
               { href: '/rules/', title: 'Rules', desc: 'Arbitration Rules & procedures', dark: true },
               { href: '/virtual-hearing/', title: 'Virtual Hearing', desc: 'Online hearing room', dark: false },
-              { href: '/agent-club/', title: 'Agent-Arbitrator Club', desc: 'AI arbitrator community', dark: true },
+              { href: '/club/', title: 'Agent-Arbitrator Club', desc: 'AI arbitrator community', dark: true },
               { href: '/community/', title: 'Forum', desc: 'Member discussion board', dark: false },
               { href: '/faq/', title: 'FAQ', desc: 'Frequently asked questions', dark: true },
               { href: '/charter/', title: 'Digital World Charter', desc: 'Our founding document', dark: false },
