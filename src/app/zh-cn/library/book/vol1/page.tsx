@@ -59,7 +59,7 @@ export default function Vol1ZhCnPage() {
           <h2 className="font-serif text-2xl font-bold text-navy-800 mb-4">获取第一卷</h2>
           <p className="text-gray-600 leading-relaxed mb-4">第一卷是《全球网络法律汇编》的一部分。全文（英文、简体中文与繁体中文版）已在 DWAC 出版物门户以 EPUB、Markdown 与 HTML 格式提供。</p>
           <p className="mb-2"><a href="/publications/gclc/" className="text-gold-600 font-semibold hover:underline">→ 打开《全球网络法律汇编》</a></p>
-          <p className="text-gray-500 text-sm">需要整套，或印刷 / 机构授权？请联系 <a href="mailto:lingxi.net" className="underline">lingxi.net</a>。</p>
+          <p className="text-gray-500 text-sm">需要整套，或印刷 / 机构授权？请联系 <a href="mailto:lingxi@dwac.net" className="underline">lingxi@dwac.net</a>。</p>
         </div>
       </div>
     </div>
