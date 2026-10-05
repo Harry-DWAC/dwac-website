@@ -89,6 +89,8 @@ export default function LibraryPage() {
                       <img
                         src={book.coverSrcSet.sm}
                         alt={book.titleEn}
+                        width={266}
+                        height={400}
                         className="w-auto h-full object-contain shadow-lg group-hover:scale-105 transition-transform duration-300"
                         loading="lazy"
                       />
@@ -97,6 +99,8 @@ export default function LibraryPage() {
                     <img
                       src={book.cover}
                       alt={book.titleEn}
+                      width={600}
+                      height={800}
                       className="w-auto h-full object-contain shadow-lg group-hover:scale-105 transition-transform duration-300"
                       loading="lazy"
                     />
