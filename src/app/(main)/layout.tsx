@@ -1,17 +1,9 @@
 import type { Metadata } from 'next'
-import Navbar from '@/components/Navbar'
-import Footer from '@/components/Footer'
-import ErrorBoundary from '@/components/ErrorBoundary'
+import SiteShell from '@/components/SiteShell'
+import { buildAlternates } from '@/lib/site'
 
 export const metadata: Metadata = {
-  alternates: {
-    canonical: 'https://www.dwac.net',
-    languages: {
-      'en': 'https://www.dwac.net',
-      'zh-CN': 'https://www.dwac.net/zh-cn',
-      'zh-TW': 'https://www.dwac.net/zh-tw',
-    },
-  },
+  alternates: buildAlternates('https://www.dwac.net'),
 }
 
 export default function MainLayout({
@@ -19,15 +11,5 @@ export default function MainLayout({
 }: {
   children: React.ReactNode
 }) {
-  return (
-    <>
-      <Navbar lang="en" />
-      <main id="main-content" className="flex-1">
-        <ErrorBoundary>
-          {children}
-        </ErrorBoundary>
-      </main>
-      <Footer lang="en" />
-    </>
-  )
+  return <SiteShell lang="en">{children}</SiteShell>
 }

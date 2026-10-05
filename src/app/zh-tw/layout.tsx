@@ -1,17 +1,9 @@
 import type { Metadata } from 'next'
-import Navbar from '@/components/Navbar'
-import ErrorBoundary from '@/components/ErrorBoundary'
-import Footer from '@/components/Footer'
+import SiteShell from '@/components/SiteShell'
+import { buildAlternates } from '@/lib/site'
 
 export const metadata: Metadata = {
-  alternates: {
-    canonical: 'https://www.dwac.net/zh-tw',
-    languages: {
-      'en': 'https://www.dwac.net',
-      'zh-CN': 'https://www.dwac.net/zh-cn',
-      'zh-TW': 'https://www.dwac.net/zh-tw',
-    },
-  },
+  alternates: buildAlternates('https://www.dwac.net/zh-tw'),
 }
 
 export default function ZhTwLayout({
@@ -19,15 +11,5 @@ export default function ZhTwLayout({
 }: {
   children: React.ReactNode
 }) {
-  return (
-    <>
-      <Navbar lang="zh-tw" />
-      <main id="main-content" className="flex-1">
-        <ErrorBoundary>
-          {children}
-        </ErrorBoundary>
-      </main>
-      <Footer lang="zh-tw" />
-    </>
-  )
+  return <SiteShell lang="zh-tw">{children}</SiteShell>
 }
