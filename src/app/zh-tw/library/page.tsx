@@ -83,7 +83,7 @@ export default function LibraryPageZhTw() {
               >
                 <div className="aspect-[3/4] bg-navy-50 flex items-center justify-center overflow-hidden">
                   {book.coverSrcSet ? (
-                    <picture>
+                    <picture className="block h-full">
                       <source media="(min-width: 1024px)" srcSet={book.coverSrcSet.lg} type="image/jpeg" />
                       <source media="(min-width: 768px)" srcSet={book.coverSrcSet.md} type="image/jpeg" />
                       <img
