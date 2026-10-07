@@ -1,10 +1,12 @@
 'use client'
 
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 import { useState } from 'react'
-import { type Lang, t, langPrefix } from './i18n'
+import { type Lang, t, langPrefix, localeHref } from './i18n'
 
 export default function Navbar({ lang = 'en' }: { lang?: Lang }) {
+  const pathname = usePathname()
   const [mobileOpen, setMobileOpen] = useState(false)
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null)
 
@@ -30,11 +32,13 @@ export default function Navbar({ lang = 'en' }: { lang?: Lang }) {
             <Link href={homeHref} className="font-serif text-xl font-bold text-white tracking-[2px] hover:text-gold-400 transition-colors">
               DWAC
             </Link>
-            <span className="hidden lg:block text-xs text-gray-500 tracking-wide ml-1">{t[lang].logoSubtext}</span>
+            <span className="hidden xl:block text-xs text-gray-500 tracking-wide ml-1">{t[lang].logoSubtext}</span>
           </div>
 
-          {/* Desktop Nav */}
-          <div className="hidden xl:flex items-center gap-1">
+          {/* Desktop Nav — lg 起就给（1024–1279 是 iPad 横屏 / 13" 笔记本，旧写法
+              hidden xl:flex 让这一档只剩汉堡菜单）。logo 副标题同时收到 xl，
+              实测 1024px 全展开需 1044px > 可用 1016px，藏掉副标题后余量充裕。 */}
+          <div className="hidden lg:flex items-center gap-1">
             <Link href={homeHref} className="hover-underline text-gray-400 hover:text-white text-sm font-medium px-2 py-1 transition-colors">{t[lang].home}</Link>
 
             {/* About dropdown */}
@@ -114,14 +118,14 @@ export default function Navbar({ lang = 'en' }: { lang?: Lang }) {
             {/* Auth buttons — always visible */}
             <Link href={`${langPrefix(lang)}/login/`} className="hidden sm:inline-block px-2.5 py-1 text-xs font-medium rounded text-gray-400 hover:text-gold-400 transition-colors">{t[lang].signIn}</Link>
             <Link href={`${langPrefix(lang)}/register/`} className="hidden sm:inline-block px-2.5 py-1 text-xs font-semibold rounded border border-gold-500/40 text-gold-400 hover:bg-gold-500/[0.05] transition-all">{t[lang].register}</Link>
-            <Link href="/" className={`hidden sm:inline-block px-2 py-0.5 text-xs font-semibold rounded ${lang === 'en' ? 'bg-gold-500/20 text-gold-400' : 'bg-navy-600/50 text-gray-500 hover:text-gray-300'} transition-colors`}>EN</Link>
-            <Link href="/zh-cn/" className={`hidden sm:inline-block px-2 py-0.5 text-xs font-medium rounded ${lang === 'zh-cn' ? 'bg-gold-500/20 text-gold-400' : 'bg-navy-600/50 text-gray-500 hover:text-gray-300'} transition-colors`}>简</Link>
-            <Link href="/zh-tw/" className={`hidden sm:inline-block px-2 py-0.5 text-xs font-medium rounded ${lang === 'zh-tw' ? 'bg-gold-500/20 text-gold-400' : 'bg-navy-600/50 text-gray-500 hover:text-gray-300'} transition-colors`}>繁</Link>
+            <Link href={localeHref(pathname, 'en')} className={`hidden sm:inline-block px-2 py-0.5 text-xs font-semibold rounded ${lang === 'en' ? 'bg-gold-500/20 text-gold-400' : 'bg-navy-600/50 text-gray-500 hover:text-gray-300'} transition-colors`}>EN</Link>
+            <Link href={localeHref(pathname, 'zh-cn')} className={`hidden sm:inline-block px-2 py-0.5 text-xs font-medium rounded ${lang === 'zh-cn' ? 'bg-gold-500/20 text-gold-400' : 'bg-navy-600/50 text-gray-500 hover:text-gray-300'} transition-colors`}>简</Link>
+            <Link href={localeHref(pathname, 'zh-tw')} className={`hidden sm:inline-block px-2 py-0.5 text-xs font-medium rounded ${lang === 'zh-tw' ? 'bg-gold-500/20 text-gold-400' : 'bg-navy-600/50 text-gray-500 hover:text-gray-300'} transition-colors`}>繁</Link>
 
             {/* Mobile Toggle */}
             <button
               onClick={() => setMobileOpen(!mobileOpen)}
-              className="xl:hidden flex flex-col gap-[5px] p-1"
+              className="lg:hidden flex flex-col gap-[5px] p-1"
               aria-label="Toggle menu"
             >
               <span className={`block w-6 h-0.5 bg-gray-400 transition-transform ${mobileOpen ? 'rotate-45 translate-y-[5.5px]' : ''}`} />
@@ -133,7 +137,7 @@ export default function Navbar({ lang = 'en' }: { lang?: Lang }) {
 
         {/* Mobile Menu */}
         {mobileOpen && (
-          <div className="xl:hidden border-t border-gold-subtle bg-navy-900/95 backdrop-blur-xl py-4 animate-fade-in max-h-[80vh] overflow-y-auto">
+          <div className="lg:hidden border-t border-gold-subtle bg-navy-900/95 backdrop-blur-xl py-4 animate-fade-in max-h-[80vh] overflow-y-auto">
             <div className="flex flex-col gap-0.5">
               <Link href={homeHref} onClick={() => setMobileOpen(false)} className="text-gray-300 hover:text-gold-400 px-3 py-2.5 text-sm font-medium rounded-lg hover:bg-navy-700/50 transition-all">{t[lang].home}</Link>
 
@@ -173,13 +177,14 @@ export default function Navbar({ lang = 'en' }: { lang?: Lang }) {
 
               <Link href={`${langPrefix(lang)}/contact/`} onClick={() => setMobileOpen(false)} className="mt-3 text-center px-4 py-2.5 text-sm font-semibold bg-gradient-gold text-navy-900 rounded-lg">{t[lang].contactUs}</Link>
 
-              {/* Language switch — must stay reachable on small screens (header switcher is hidden below sm) */}
+              {/* Language switch — must stay reachable on small screens (header switcher is hidden below sm).
+                  hrefs 由 localeHref 生成：保持当前页面，只换语言前缀。 */}
               <div className="border-t border-gold-subtle/30 mt-3 pt-3 px-3">
                 <div className="text-[10px] font-bold tracking-[2px] uppercase text-gold-600 mb-2">Language</div>
                 <div className="flex gap-2">
-                  <Link href="/" onClick={() => setMobileOpen(false)} className={`flex-1 text-center py-2 text-xs rounded-lg border transition-colors ${lang === 'en' ? 'border-gold-500/60 text-gold-400 bg-gold-500/10' : 'border-gold-subtle text-gray-300 hover:text-gold-400'}`}>English</Link>
-                  <Link href="/zh-cn/" onClick={() => setMobileOpen(false)} className={`flex-1 text-center py-2 text-xs rounded-lg border transition-colors ${lang === 'zh-cn' ? 'border-gold-500/60 text-gold-400 bg-gold-500/10' : 'border-gold-subtle text-gray-300 hover:text-gold-400'}`}>简体中文</Link>
-                  <Link href="/zh-tw/" onClick={() => setMobileOpen(false)} className={`flex-1 text-center py-2 text-xs rounded-lg border transition-colors ${lang === 'zh-tw' ? 'border-gold-500/60 text-gold-400 bg-gold-500/10' : 'border-gold-subtle text-gray-300 hover:text-gold-400'}`}>繁體中文</Link>
+                  <Link href={localeHref(pathname, 'en')} onClick={() => setMobileOpen(false)} className={`flex-1 text-center py-2 text-xs rounded-lg border transition-colors ${lang === 'en' ? 'border-gold-500/60 text-gold-400 bg-gold-500/10' : 'border-gold-subtle text-gray-300 hover:text-gold-400'}`}>English</Link>
+                  <Link href={localeHref(pathname, 'zh-cn')} onClick={() => setMobileOpen(false)} className={`flex-1 text-center py-2 text-xs rounded-lg border transition-colors ${lang === 'zh-cn' ? 'border-gold-500/60 text-gold-400 bg-gold-500/10' : 'border-gold-subtle text-gray-300 hover:text-gold-400'}`}>简体中文</Link>
+                  <Link href={localeHref(pathname, 'zh-tw')} onClick={() => setMobileOpen(false)} className={`flex-1 text-center py-2 text-xs rounded-lg border transition-colors ${lang === 'zh-tw' ? 'border-gold-500/60 text-gold-400 bg-gold-500/10' : 'border-gold-subtle text-gray-300 hover:text-gold-400'}`}>繁體中文</Link>
                 </div>
               </div>
             </div>

@@ -11,6 +11,26 @@
       "permanent": true
     },
     {
+      "source": "/zh-cn/law-school/degree",
+      "destination": "/zh-cn/degree/",
+      "permanent": true
+    },
+    {
+      "source": "/zh-cn/law-school/degree/",
+      "destination": "/zh-cn/degree/",
+      "permanent": true
+    },
+    {
+      "source": "/zh-tw/law-school/degree",
+      "destination": "/zh-tw/degree/",
+      "permanent": true
+    },
+    {
+      "source": "/zh-tw/law-school/degree/",
+      "destination": "/zh-tw/degree/",
+      "permanent": true
+    },
+    {
       "source": "/en",
       "destination": "/",
       "permanent": true

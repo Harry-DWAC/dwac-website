@@ -14,6 +14,37 @@ export function langPrefix(lang: Lang): string {
   return `/${lang}`
 }
 
+/**
+ * 三语镜像路由里**没有中文孪生页**的真实页面。
+ *
+ * 覆盖（构建后实测）：`/agent-club/` 是语言无关的统一社区页（zh 路径在 vercel.json
+ * 里 308 回英文页）、`/api/docs/` 与 `/404/` 是工具页。切换语言时这些页不做前缀
+ * 替换，而是回到目标语言首页 —— 否则会造出软 404（静态导出没有服务器兜底）。
+ * 守卫：`npm run check:i18n` 会盯着「三语目录是否镜像」，新增例外必须同步这里。
+ */
+export const LOCALE_ROUTE_EXCEPTIONS = ['/agent-club/', '/api/docs/', '/404/']
+
+/**
+ * 语言切换目标地址：保持当前页面，只换语言前缀。
+ *
+ * 旧实现三个语言键写死 `/`、`/zh-cn/`、`/zh-tw/`，于是**在任何子页切换语言都会
+ * 被扔回该语言首页**（例：在 `/zh-cn/rules/` 点\"繁\"会掉到 `/zh-tw/` 首页，读一半
+ * 的规则页丢了）。三语目录本就 90+ 页镜像，改写前缀即可原地换语言。
+ *
+ * @param pathname 当前路径（`usePathname()`，形如 `/zh-cn/rules/`）
+ * @param target   目标语言
+ */
+export function localeHref(pathname: string | null | undefined, target: Lang): string {
+  const raw = (pathname || '/').split('?')[0].split('#')[0]
+  // 先剥掉当前语言前缀，拿到语言无关的路径
+  const bare = raw.replace(/^\/zh-(cn|tw)(?=\/|$)/, '') || '/'
+  const path = bare.endsWith('/') ? bare : `${bare}/`
+  const prefix = langPrefix(target)
+  if (prefix === '') return path
+  if (LOCALE_ROUTE_EXCEPTIONS.includes(path)) return `${prefix}/`
+  return `${prefix}${path}`
+}
+
 export const t = {
   en: {
     logoSubtext: 'Digital World Arbitration Centre',
