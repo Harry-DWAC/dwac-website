@@ -338,6 +338,15 @@
   ],
   "headers": [
     {
+      "source": "/.well-known/agent",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "application/json; charset=utf-8"
+        }
+      ]
+    },
+    {
       "source": "/(.*)",
       "headers": [
         {
