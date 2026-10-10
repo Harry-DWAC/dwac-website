@@ -2,7 +2,7 @@
 
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { type Lang, t, langPrefix, localeHref } from './i18n'
 
 export default function Navbar({ lang = 'en' }: { lang?: Lang }) {
@@ -10,12 +10,34 @@ export default function Navbar({ lang = 'en' }: { lang?: Lang }) {
   const [mobileOpen, setMobileOpen] = useState(false)
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null)
 
-  const handleMouseEnter = (name: string) => setActiveDropdown(name)
-  const handleMouseLeave = () => setActiveDropdown(null)
+  /* 只有真鼠标才用 hover 展开下拉。触屏（iPad 横屏 / 触屏笔记本）与键盘没有可靠
+     hover：此前三个桌面下拉只挂 onMouseEnter/onMouseLeave、按钮无 onClick，
+     导致 ≥lg（1024px+）档这两类用户完全打不开 About / Services / Community
+     （Services 一组独占 10 条链接）。现在触屏/键盘一律走 click 展开。 */
+  const hasHover = useRef(false)
+  useEffect(() => {
+    hasHover.current = window.matchMedia('(hover: hover) and (pointer: fine)').matches
+  }, [])
+
+  const handleMouseEnter = (name: string) => {
+    if (hasHover.current) setActiveDropdown(name)
+  }
+  const handleMouseLeave = () => {
+    if (hasHover.current) setActiveDropdown(null)
+  }
 
   const toggleDropdown = (name: string) => {
-    setActiveDropdown(activeDropdown === name ? null : name)
+    setActiveDropdown((cur) => (cur === name ? null : name))
   }
+
+  /* Esc 收起下拉，键盘用户可退出 */
+  useEffect(() => {
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') setActiveDropdown(null)
+    }
+    document.addEventListener('keydown', onKey)
+    return () => document.removeEventListener('keydown', onKey)
+  }, [])
 
   const homeHref = langPrefix(lang) || '/'
 
@@ -43,7 +65,12 @@ export default function Navbar({ lang = 'en' }: { lang?: Lang }) {
 
             {/* About dropdown */}
             <div className="relative" onMouseEnter={() => handleMouseEnter('about')} onMouseLeave={handleMouseLeave}>
-              <button className="hover-underline text-gray-400 hover:text-white text-sm font-medium px-2 py-1 transition-colors flex items-center gap-1">
+              <button
+                onClick={() => toggleDropdown('about')}
+                aria-haspopup="true"
+                aria-expanded={activeDropdown === 'about'}
+                className="hover-underline text-gray-400 hover:text-white text-sm font-medium px-2 py-1 transition-colors flex items-center gap-1"
+              >
                 {t[lang].about}
                 <svg className="w-3.5 h-3.5 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
@@ -61,7 +88,12 @@ export default function Navbar({ lang = 'en' }: { lang?: Lang }) {
 
             {/* Services dropdown */}
             <div className="relative" onMouseEnter={() => handleMouseEnter('services')} onMouseLeave={handleMouseLeave}>
-              <button className="hover-underline text-gray-400 hover:text-white text-sm font-medium px-2 py-1 transition-colors flex items-center gap-1">
+              <button
+                onClick={() => toggleDropdown('services')}
+                aria-haspopup="true"
+                aria-expanded={activeDropdown === 'services'}
+                className="hover-underline text-gray-400 hover:text-white text-sm font-medium px-2 py-1 transition-colors flex items-center gap-1"
+              >
                 {t[lang].services}
                 <svg className="w-3.5 h-3.5 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
@@ -85,7 +117,12 @@ export default function Navbar({ lang = 'en' }: { lang?: Lang }) {
 
             {/* Community dropdown */}
             <div className="relative" onMouseEnter={() => handleMouseEnter('community')} onMouseLeave={handleMouseLeave}>
-              <button className="hover-underline text-gray-400 hover:text-white text-sm font-medium px-2 py-1 transition-colors flex items-center gap-1">
+              <button
+                onClick={() => toggleDropdown('community')}
+                aria-haspopup="true"
+                aria-expanded={activeDropdown === 'community'}
+                className="hover-underline text-gray-400 hover:text-white text-sm font-medium px-2 py-1 transition-colors flex items-center gap-1"
+              >
                 {t[lang].community}
                 <svg className="w-3.5 h-3.5 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
